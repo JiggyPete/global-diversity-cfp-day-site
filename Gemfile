@@ -55,4 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :test do
   gem 'rspec-rails', '3.5.1'
+  gem 'rails-controller-testing'
 end
