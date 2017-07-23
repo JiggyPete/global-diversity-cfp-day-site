@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @workshop.country %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @workshop.city %>
+</p>
+
+<p>
+  <strong>Venue address:</strong>
+  <%= @workshop.venue_address %>
+</p>
+
+<p>
+  <strong>Google maps url:</strong>
+  <%= @workshop.google_maps_url %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @workshop.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @workshop.end_time %>
+</p>
+
+<p>
+  <strong>Time zone:</strong>
+  <%= @workshop.time_zone %>
+</p>
+
+<p>
+  <strong>Ticketing url:</strong>
+  <%= @workshop.ticketing_url %>
+</p>
+
+<p>
+  <strong>Organiser:</strong>
+  <%= @workshop.organiser_id %>
+</p>
+
+<p>
+  <strong>Facilitator:</strong>
+  <%= @workshop.facilitator_id %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @workshop.notes %>
+</p>
+
+<%= link_to 'Edit', edit_workshop_path(@workshop) %> |
+<%= link_to 'Back', workshops_path %>

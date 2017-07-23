@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170723170607) do
+ActiveRecord::Schema.define(version: 20170723174039) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,22 @@ ActiveRecord::Schema.define(version: 20170723170607) do
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "workshops", force: :cascade do |t|
+    t.string "country"
+    t.string "city"
+    t.text "venue_address"
+    t.string "google_maps_url"
+    t.time "start_time"
+    t.time "end_time"
+    t.string "time_zone"
+    t.string "ticketing_url"
+    t.integer "organiser_id"
+    t.integer "facilitator_id"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

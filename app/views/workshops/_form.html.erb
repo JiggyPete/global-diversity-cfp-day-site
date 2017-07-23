@@ -1,0 +1,73 @@
+<%= form_with(model: workshop, local: true) do |form| %>
+  <% if workshop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(workshop.errors.count, "error") %> prohibited this workshop from being saved:</h2>
+
+      <ul>
+      <% workshop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country, id: :workshop_country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :workshop_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :venue_address %>
+    <%= form.text_area :venue_address, id: :workshop_venue_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :google_maps_url %>
+    <%= form.text_field :google_maps_url, id: :workshop_google_maps_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_time %>
+    <%= form.time_select :start_time, id: :workshop_start_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_time %>
+    <%= form.time_select :end_time, id: :workshop_end_time %>
+  </div>
+
+  <div class="field">
+    <% time_zones = ActiveSupport::TimeZone.all.map(&:name).sort %>
+    <%= form.label :time_zone %>
+    <%= form.select :time_zone, time_zones, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ticketing_url %>
+    <%= form.text_field :ticketing_url, id: :workshop_ticketing_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :organiser_id %>
+    <%= form.number_field :organiser_id, id: :workshop_organiser_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facilitator_id %>
+    <%= form.number_field :facilitator_id, id: :workshop_facilitator_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes, id: :workshop_notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
