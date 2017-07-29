@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :country %>
-    <%= form.text_field :country, id: :workshop_country %>
+    <%= form.select :country, ISO3166::Country.all.map(&:name).sort, include_blank: true %>
   </div>
 
   <div class="field">
