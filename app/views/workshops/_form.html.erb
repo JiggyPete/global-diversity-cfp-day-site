@@ -42,9 +42,8 @@
   </div>
 
   <div class="field">
-    <% time_zones = ActiveSupport::TimeZone.all.map(&:name).sort %>
     <%= form.label :time_zone %>
-    <%= form.select :time_zone, time_zones, include_blank: true %>
+    <%= form.select :time_zone, timezone_codes, include_blank: true %>
   </div>
 
   <div class="field">
