@@ -30,6 +30,19 @@ ActiveRecord::Schema.define(version: 20170723174039) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.string "full_name"
+    t.text "biography"
+    t.text "picture_url"
+    t.text "run_workshop_explaination"
+    t.boolean "admin"
+    t.boolean "organiser"
+    t.boolean "facilitator"
+    t.boolean "mentor"
+    t.string "preferred_contact_method"
+    t.string "preferred_contact_value"
+    t.string "displayed_email"
+    t.string "displayed_twitter"
+    t.string "displayed_github"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
@@ -38,6 +51,7 @@ ActiveRecord::Schema.define(version: 20170723174039) do
   end
 
   create_table "workshops", force: :cascade do |t|
+    t.string "continent"
     t.string "country"
     t.string "city"
     t.text "venue_address"

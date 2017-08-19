@@ -1,6 +1,7 @@
 class CreateWorkshops < ActiveRecord::Migration[5.1]
   def change
     create_table :workshops do |t|
+      t.string :continent
       t.string :country
       t.string :city
       t.text :venue_address
