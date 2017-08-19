@@ -9,17 +9,28 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-      <%= link_to "Your workshop", new_workshop_path %>
-      <%= link_to "Log out", destroy_user_session_path %>
-    <% else %>
-      <%= link_to "Log in", new_user_session_path %>
-      <%= link_to "Sign up", new_user_registration_path %>
-    <% end %>
+    <header class="navbar navbar-light navbar-toggleable-md app-navbar">
+      <nav class="container">
 
+        <div class="d-flex justify-content-between hidden-lg-up">
+          <label class="navbar-brand" href="/">
+            Global Diversity CFP Day
+          </label>
+          <% if user_signed_in? %>
+            <%= link_to "Your workshop", new_workshop_path, class: "navbar-brand" %>
+            <%= link_to "Log out", destroy_user_session_path, class: "navbar-brand", method: :delete %>
+          <% else %>
+            <%= link_to "Log in", new_user_session_path, class: "navbar-brand" %>
+          <% end %>
+        </div>
+
+      </nav>
+    </header>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
