@@ -1,4 +1,10 @@
 module WorkshopsHelper
+  def continent_select_options
+    I18n.t('workshop.continents').map do |continent|
+      continent
+    end
+  end
+
   def timezone_codes
     [
      "ACST",

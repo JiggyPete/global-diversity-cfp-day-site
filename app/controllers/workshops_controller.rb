@@ -17,6 +17,7 @@ class WorkshopsController < ApplicationController
 
   def create
     @workshop = Workshop.new(workshop_params)
+    @workshop.organiser = current_user
 
     respond_to do |format|
       if @workshop.save
@@ -50,13 +51,12 @@ class WorkshopsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_workshop
-      @workshop = Workshop.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def workshop_params
-      params.require(:workshop).permit(:country, :city, :venue_address, :google_maps_url, :start_time, :end_time, :time_zone, :ticketing_url, :organiser_id, :facilitator_id, :notes)
-    end
+  def set_workshop
+    @workshop = Workshop.find(params[:id])
+  end
+
+  def workshop_params
+    params.require(:workshop).permit(:continent, :country, :city, :venue_address, :google_maps_url, :start_time, :end_time, :time_zone, :ticketing_url, :organiser_id, :facilitator_id, :notes)
+  end
 end
