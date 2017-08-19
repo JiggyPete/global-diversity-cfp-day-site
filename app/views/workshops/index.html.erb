@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Continent</th>
       <th>Country</th>
       <th>City</th>
       <th>Venue address</th>
@@ -23,6 +24,7 @@
   <tbody>
     <% @workshops.each do |workshop| %>
       <tr>
+        <td><%= workshop.continent %></td>
         <td><%= workshop.country %></td>
         <td><%= workshop.city %></td>
         <td><%= workshop.venue_address %></td>
@@ -44,4 +46,4 @@
 
 <br>
 
-<%= link_to 'New Workshop', new_workshop_path %>
+<%= link_to 'New Workshop', new_workshop_path if current_user.admin? %>

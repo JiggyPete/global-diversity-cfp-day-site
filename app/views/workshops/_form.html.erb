@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :continent %>
+    <%= form.select :continent, continent_select_options %>
+  </div>
+
+  <div class="field">
     <%= form.label :country %>
     <%= form.select :country, ISO3166::Country.all.map(&:name).sort, include_blank: true %>
   </div>
@@ -49,11 +54,6 @@
   <div class="field">
     <%= form.label :ticketing_url %>
     <%= form.text_field :ticketing_url, id: :workshop_ticketing_url %>
-  </div>
-
-  <div class="field">
-    <%= form.label :organiser_id %>
-    <%= form.number_field :organiser_id, id: :workshop_organiser_id %>
   </div>
 
   <div class="field">
