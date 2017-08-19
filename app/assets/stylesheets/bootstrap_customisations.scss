@@ -1,0 +1,14 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$banner-background: yellow;
+$banner-foreground: black;
+
+.app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $banner-background;
+  color: $banner-foreground;
+  width: 100%;
+}
