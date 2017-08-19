@@ -9,6 +9,9 @@ class WorkshopsController < ApplicationController
   end
 
   def new
+    if current_workshop.present?
+      redirect_to workshop_path(current_workshop)
+
     @workshop = Workshop.new
   end
 
@@ -53,10 +56,14 @@ class WorkshopsController < ApplicationController
   private
 
   def set_workshop
-    @workshop = current_user.workshop
+    @workshop = current_workshop
   end
 
   def workshop_params
     params.require(:workshop).permit(:continent, :country, :city, :venue_address, :google_maps_url, :start_time, :end_time, :time_zone, :ticketing_url, :organiser_id, :facilitator_id, :notes)
+  end
+
+  def current_workshop
+    current_user.workshop
   end
 end
