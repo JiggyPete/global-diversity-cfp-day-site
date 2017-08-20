@@ -11,6 +11,7 @@ class WorkshopsController < ApplicationController
   def new
     if current_workshop.present?
       redirect_to workshop_path(current_workshop)
+    end
 
     @workshop = Workshop.new
   end

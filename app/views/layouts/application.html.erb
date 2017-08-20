@@ -17,7 +17,7 @@
             Global Diversity CFP Day
           </label>
           <% if user_signed_in? %>
-            <%= link_to "Your workshop", new_workshop_path, class: "navbar-brand" %>
+            <%= link_to "My workshop", workshop_landing_page_for(current_user), class: "navbar-brand" %>
             <%= link_to "Log out", destroy_user_session_path, class: "navbar-brand", method: :delete %>
           <% else %>
             <%= link_to "Log in", new_user_session_path, class: "navbar-brand" %>

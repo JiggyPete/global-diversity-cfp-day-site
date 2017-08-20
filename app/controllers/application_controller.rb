@@ -4,8 +4,10 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  include ApplicationHelper
+
   def after_sign_in_path_for(user)
-    user.workshop.present? ?  workshop_path(user.workshop) : new_workshop_path
+    workshop_landing_page_for(user)
   end
 
   protected
