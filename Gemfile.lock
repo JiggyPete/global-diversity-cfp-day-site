@@ -77,6 +77,9 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    devise_invitable (1.7.2)
+      actionmailer (>= 4.1.0)
+      devise (>= 4.0.0)
     diff-lcs (1.2.5)
     erubi (1.6.0)
     execjs (2.7.0)
@@ -222,7 +225,8 @@ DEPENDENCIES
   bootstrap-sass (= 3.3.7)
   coffee-rails (~> 4.2)
   countries
-  devise
+  devise (~> 4.3)
+  devise_invitable (~> 1.7.0)
   letter_opener
   listen (>= 3.0.5, < 3.2)
   pg (= 0.18.4)

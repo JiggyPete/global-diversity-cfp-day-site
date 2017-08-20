@@ -47,12 +47,22 @@
 
 <p>
   <strong>Organiser:</strong>
-  <%= @workshop.organiser_id %>
+  <%= @workshop.organiser.full_name %>
 </p>
 
 <p>
-  <strong>Facilitator:</strong>
-  <%= @workshop.facilitator_id %>
+  <% if @workshop.facilitator.present? %>
+    <strong>Facilitator:</strong>
+    <%= @workshop.facilitator.full_name %>
+  <% else %>
+    <%= form_tag invite_team_members_path do %>
+      <%= label_tag 'Invite Facilitator' %>
+      <%= label_tag 'Facilitator email address' %>
+      <%= email_field_tag 'email', '' %>
+      <%= hidden_field_tag 'facilitator', true %>
+      <%= submit_tag "Send Invititation" %>
+    <% end %>
+  <% end %>
 </p>
 
 <p>

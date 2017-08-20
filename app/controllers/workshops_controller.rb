@@ -63,8 +63,4 @@ class WorkshopsController < ApplicationController
   def workshop_params
     params.require(:workshop).permit(:continent, :country, :city, :venue_address, :google_maps_url, :start_time, :end_time, :time_zone, :ticketing_url, :organiser_id, :facilitator_id, :notes)
   end
-
-  def current_workshop
-    current_user.workshop
-  end
 end

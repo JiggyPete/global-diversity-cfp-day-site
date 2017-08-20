@@ -26,5 +26,36 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  describe "#workshop" do
+    context "when organiser" do
+      it "provides the associated workshop" do
+        organiser = create_user(email: 'organiser@example.com', organiser: true)
+        workshop = Workshop.create organiser: organiser
+
+        expect(organiser.workshop).to eql(workshop)
+      end
+    end
+
+    context "when facilitator" do
+      it "provides the associated workshop" do
+        organiser = create_user(email: 'organiser@example.com', organiser: true)
+        facilitator = create_user(email: 'facilitator@example.com', facilitator: true)
+        workshop = Workshop.create organiser: organiser, facilitator: facilitator
+
+        expect(facilitator.workshop).to eql(workshop)
+      end
+    end
+  end
+
+  def create_user(attrs)
+    default_attrs = {email: 'user@example.com', full_name: 'The user', biography: "Hello", picture_url: "http://google.com", run_workshop_explaination: "❤️", password: "password", password_confirmation: "password"}
+
+    result = User.new(default_attrs.merge(attrs))
+    result.skip_confirmation!
+    result.save!
+
+    result
+  end
 end
 
