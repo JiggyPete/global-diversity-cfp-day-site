@@ -42,6 +42,64 @@ RSpec.describe Workshop, type: :model do
     end
   end
 
+
+  describe "#status" do
+    let!(:workshop) do
+      Workshop.create continent: "Europe",
+        country: "United Kingdom",
+        city: "Glasgow",
+        venue_address: "City Centre",
+        google_maps_url: "http://google.com",
+        start_time: Time.now,
+        end_time: Time.now,
+        time_zone: 'GMT',
+        ticketing_url: "http://google.com"
+    end
+    let!(:organiser) { create_user email: "organiser@example.com", organiser: true, workshop: workshop }
+    let!(:facilitator) { create_user email: "facilitator@example.com", facilitator: true, workshop: workshop }
+    let!(:mentor) { create_user email: "mentor@example.com", mentor: true, workshop: workshop }
+
+    context "#draft" do
+      [
+        "continent",
+        "country",
+        "city",
+        "venue_address",
+        "google_maps_url",
+        "start_time",
+        "end_time",
+        "time_zone",
+        "ticketing_url"
+      ].each do |attr|
+        it "has no #{attr}" do
+          workshop.update attr => nil
+          expect(workshop.status).to eql("draft")
+        end
+      end
+
+      it "has no organiser" do
+        organiser.delete
+        expect(workshop.status).to eql("draft")
+      end
+
+      it "has no facilitator" do
+        facilitator.delete
+        expect(workshop.status).to eql("draft")
+      end
+
+      it "has no mentors" do
+        mentor.delete
+        expect(workshop.status).to eql("draft")
+      end
+    end
+
+    context "#awaiting_approval" do
+      it "has all the correct parts" do
+        expect(workshop.status).to eql("awaiting_approval")
+      end
+    end
+  end
+
   def create_user(attrs)
     default_attrs = {email: 'user@example.com', full_name: 'The user', biography: "Hello", picture_url: "http://google.com", run_workshop_explaination: "❤️", password: "password", password_confirmation: "password"}
 
