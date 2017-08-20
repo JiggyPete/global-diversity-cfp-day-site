@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20170820065338) do
     t.text "biography"
     t.text "picture_url"
     t.text "run_workshop_explaination"
+    t.integer "workshop_id"
     t.boolean "admin"
     t.boolean "organiser"
     t.boolean "facilitator"
@@ -72,8 +73,6 @@ ActiveRecord::Schema.define(version: 20170820065338) do
     t.time "end_time"
     t.string "time_zone"
     t.string "ticketing_url"
-    t.integer "organiser_id"
-    t.integer "facilitator_id"
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

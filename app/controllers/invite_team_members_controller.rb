@@ -1,9 +1,8 @@
 class InviteTeamMembersController < ApplicationController
   def create
-    user = User.invite!(user_params)
-    current_workshop.update(facilitator: user)
+    User.invite!(user_params.merge(workshop: current_workshop))
 
-    redirect_to :back
+    redirect_to workshop_path(current_workshop)
   end
 
   private

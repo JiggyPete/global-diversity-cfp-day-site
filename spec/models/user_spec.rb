@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe "associations" do
-    it { should have_one(:workshop)}
+    it { should belong_to(:workshop)}
   end
 
   describe "validations" do
@@ -23,27 +23,6 @@ RSpec.describe User, type: :model do
         subject = User.new picture_url: "invalid"
         subject.valid?
         expect(subject.errors[:picture_url]).to eql(["is not a valid URL"])
-      end
-    end
-  end
-
-  describe "#workshop" do
-    context "when organiser" do
-      it "provides the associated workshop" do
-        organiser = create_user(email: 'organiser@example.com', organiser: true)
-        workshop = Workshop.create organiser: organiser
-
-        expect(organiser.workshop).to eql(workshop)
-      end
-    end
-
-    context "when facilitator" do
-      it "provides the associated workshop" do
-        organiser = create_user(email: 'organiser@example.com', organiser: true)
-        facilitator = create_user(email: 'facilitator@example.com', facilitator: true)
-        workshop = Workshop.create organiser: organiser, facilitator: facilitator
-
-        expect(facilitator.workshop).to eql(workshop)
       end
     end
   end

@@ -10,8 +10,6 @@ class CreateWorkshops < ActiveRecord::Migration[5.1]
       t.time :end_time
       t.string :time_zone
       t.string :ticketing_url
-      t.integer :organiser_id
-      t.integer :facilitator_id
       t.text :notes
 
       t.timestamps

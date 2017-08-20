@@ -52,7 +52,12 @@
 
 <p>
   <% if @workshop.facilitator.present? %>
-    <strong>Facilitator:</strong>
+    <strong>
+      <% unless @workshop.facilitator.invitation_accepted? %>
+        PENDING
+      <% end %>
+      Facilitator:
+    </strong>
     <%= @workshop.facilitator.full_name %>
   <% else %>
     <%= form_tag invite_team_members_path do %>

@@ -21,10 +21,10 @@ class WorkshopsController < ApplicationController
 
   def create
     @workshop = Workshop.new(workshop_params)
-    @workshop.organiser = current_user
+    current_user.workshop = @workshop
 
     respond_to do |format|
-      if @workshop.save
+      if @current_user.save
         format.html { redirect_to @workshop, notice: 'Workshop was successfully created.' }
         format.json { render :show, status: :created, location: @workshop }
       else

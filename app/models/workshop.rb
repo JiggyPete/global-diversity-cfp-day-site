@@ -1,4 +1,9 @@
 class Workshop < ApplicationRecord
-  belongs_to :organiser, class_name: "User"
-  belongs_to :facilitator, class_name: "User", optional: true
+  def organiser
+    @organiser ||= User.where(workshop_id: id, organiser: true).first
+  end
+
+  def facilitator
+    @facilitator ||= User.where(workshop_id: id, facilitator: true).first
+  end
 end

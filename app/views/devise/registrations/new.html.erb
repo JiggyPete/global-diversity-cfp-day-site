@@ -8,6 +8,8 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
+  <%= f.hidden_field :organiser, value: true %>
+
   <%= render "devise/shared/form", f: f %>
 
   <div class="actions">

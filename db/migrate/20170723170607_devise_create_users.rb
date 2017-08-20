@@ -35,6 +35,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.text :biography
       t.text :picture_url
       t.text :run_workshop_explaination
+      t.integer :workshop_id
       t.boolean :admin
       t.boolean :organiser
       t.boolean :facilitator
