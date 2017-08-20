@@ -6,4 +6,9 @@ class Workshop < ApplicationRecord
   def facilitator
     @facilitator ||= User.where(workshop_id: id, facilitator: true).first
   end
+
+  def mentors
+    @mentors ||= User.where(workshop_id: id, mentor: true)
+  end
 end
+

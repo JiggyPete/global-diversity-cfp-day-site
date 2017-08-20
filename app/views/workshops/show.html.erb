@@ -52,13 +52,19 @@
 
 <p>
   <% if @workshop.facilitator.present? %>
+
+    <% if @workshop.facilitator.invitation_accepted? %>
     <strong>
-      <% unless @workshop.facilitator.invitation_accepted? %>
-        PENDING
-      <% end %>
       Facilitator:
     </strong>
     <%= @workshop.facilitator.full_name %>
+    <% else %>
+      <strong>
+        PENDING Facilitator:
+      </strong>
+      <%= @workshop.facilitator.email %>
+    <% end %>
+
   <% else %>
     <%= form_tag invite_team_members_path do %>
       <%= label_tag 'Invite Facilitator' %>
@@ -69,6 +75,32 @@
     <% end %>
   <% end %>
 </p>
+
+<p>
+  <% @workshop.mentors.each do |mentor| %>
+
+    <% if mentor.invitation_accepted? %>
+    <strong>
+      Mentor:
+    </strong>
+    <%= mentor.full_name %>
+    <% else %>
+      <strong>
+        PENDING Mentor:
+      </strong>
+      <%= mentor.email %>
+    <% end %>
+  <% end %>
+
+  <%= form_tag invite_team_members_path do %>
+    <%= label_tag 'Invite Mentor' %>
+    <%= label_tag 'Mentor email address' %>
+    <%= email_field_tag 'email', '' %>
+    <%= hidden_field_tag 'mentor', true %>
+    <%= submit_tag "Send Invititation" %>
+  <% end %>
+</p>
+
 
 <p>
   <strong>Notes:</strong>

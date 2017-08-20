@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :full_name, :biography, :picture_url, :run_workshop_explaination, :organiser, :displayed_email, :displayed_twitter, :displayed_github])
-    devise_parameter_sanitizer.permit(:accept_invitation, keys: [:full_name, :biography, :picture_url, :run_workshop_explaination, :organiser, :displayed_email, :displayed_twitter, :displayed_github])
+    devise_parameter_sanitizer.permit(:accept_invitation, keys: [:full_name, :biography, :picture_url, :run_workshop_explaination, :displayed_email, :displayed_twitter, :displayed_github])
   end
 
 end

@@ -8,6 +8,6 @@ class InviteTeamMembersController < ApplicationController
   private
 
   def user_params
-    params.permit(:email, :facilitator)
+    params.permit(:email, :facilitator, :mentor)
   end
 end
