@@ -1,4 +1,19 @@
 class Workshop < ApplicationRecord
+  MANDATORY_FIELDS_FOR_APPROVAL = [
+    "continent",
+    "country",
+    "city",
+    "venue_address",
+    "google_maps_url",
+    "start_time",
+    "end_time",
+    "time_zone",
+    "ticketing_url",
+    "organiser",
+    "facilitator",
+    "mentors"
+  ]
+
   def organiser
     @organiser ||= User.where(workshop_id: id, organiser: true).first
   end
@@ -12,28 +27,32 @@ class Workshop < ApplicationRecord
   end
 
   def status
-    return "awaiting_approval" if necessary_attrs_supplied?
-    "draft"
+    return "draft" unless necessary_attrs_supplied?
+    "awaiting_approval"
+  end
+
+  def percentage_complete
+    return 100 if status != "draft"
+
+    ((number_of_mandatory_fields_complete.to_f/number_of_mandatory_fields)*100).round
   end
 
   private
 
-  def necessary_attrs_supplied?
-    values = [
-      "continent",
-      "country",
-      "city",
-      "venue_address",
-      "google_maps_url",
-      "start_time",
-      "end_time",
-      "time_zone",
-      "ticketing_url",
-      "organiser",
-      "facilitator"
-    ].map {|attr| send(attr) }
+  def number_of_mandatory_fields
+    MANDATORY_FIELDS_FOR_APPROVAL.length
+  end
 
-    values.all?{|value| value.present? } && mentors.present?
+  def number_of_mandatory_fields_complete
+    mandatory_values.select{|value| value.present? }.length
+  end
+
+  def necessary_attrs_supplied?
+    mandatory_values.all?{|value| value.present? }
+  end
+
+  def mandatory_values
+    MANDATORY_FIELDS_FOR_APPROVAL.map {|attr| send(attr) }
   end
 end
 
