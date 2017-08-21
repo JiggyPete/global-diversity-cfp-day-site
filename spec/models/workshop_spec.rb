@@ -43,21 +43,6 @@ RSpec.describe Workshop, type: :model do
   end
 
   describe "#percentage_complete" do
-    # let!(:workshop) do
-    #   Workshop.create continent: "Europe",
-    #     country: "United Kingdom",
-    #     city: "Glasgow",
-    #     venue_address: "City Centre",
-    #     google_maps_url: "http://google.com",
-    #     start_time: Time.now,
-    #     end_time: Time.now,
-    #     time_zone: 'GMT',
-    #     ticketing_url: "http://google.com"
-    # end
-    # let!(:organiser) { create_user email: "organiser@example.com", organiser: true, workshop: workshop }
-    # let!(:facilitator) { create_user email: "facilitator@example.com", facilitator: true, workshop: workshop }
-    # let!(:mentor) { create_user email: "mentor@example.com", mentor: true, workshop: workshop }
-
     context "one mandetory field complete" do
       let(:workshop) { Workshop.new }
       let(:single_mandetory_field_complete_percentage) { 8 }
@@ -108,17 +93,17 @@ RSpec.describe Workshop, type: :model do
       end
 
       it "has organiser" do
-        organiser = create_user email: "organiser@example.com", organiser: true, workshop: workshop
+        create_organiser(workshop)
         expect(workshop.percentage_complete).to eql(single_mandetory_field_complete_percentage)
       end
 
       it "has facilitator" do
-        facilitator = create_user email: "facilitator@example.com", facilitator: true, workshop: workshop
+        facilitator = create_facilitator(workshop)
         expect(workshop.percentage_complete).to eql(single_mandetory_field_complete_percentage)
       end
 
       it "has mentors" do
-        mentor = create_user email: "mentor@example.com", mentor: true, workshop: workshop
+        mentor = create_mentor(workshop)
         expect(workshop.percentage_complete).to eql(single_mandetory_field_complete_percentage)
       end
     end
@@ -160,7 +145,7 @@ RSpec.describe Workshop, type: :model do
       let(:workshop) { create_workshop }
 
       it "has 11 fields complete" do
-        create_user email: "organiser@example.com", organiser: true, workshop: workshop
+        create_organiser(workshop)
 
         expect(workshop.percentage_complete).to eql(83)
       end
@@ -170,8 +155,8 @@ RSpec.describe Workshop, type: :model do
       let(:workshop) { create_workshop }
 
       it "has 11 fields complete" do
-        create_user email: "organiser@example.com", organiser: true, workshop: workshop
-        create_user email: "facilitator@example.com", facilitator: true, workshop: workshop
+        create_organiser(workshop)
+        create_facilitator(workshop)
 
         expect(workshop.percentage_complete).to eql(92)
       end
@@ -181,9 +166,9 @@ RSpec.describe Workshop, type: :model do
       let(:workshop) { create_workshop }
 
       it "has 12 fields complete" do
-        create_user email: "organiser@example.com", organiser: true, workshop: workshop
-        create_user email: "facilitator@example.com", facilitator: true, workshop: workshop
-        create_user email: "mentor@example.com", mentor: true, workshop: workshop
+        create_organiser(workshop)
+        create_facilitator(workshop)
+        create_mentor(workshop)
 
         expect(workshop.percentage_complete).to eql(100)
       end
@@ -202,9 +187,9 @@ RSpec.describe Workshop, type: :model do
           time_zone: 'GMT',
           ticketing_url: "http://google.com"
       end
-      let!(:organiser) { create_user email: "organiser@example.com", organiser: true, workshop: workshop }
-      let!(:facilitator) { create_user email: "facilitator@example.com", facilitator: true, workshop: workshop }
-      let!(:mentor) { create_user email: "mentor@example.com", mentor: true, workshop: workshop }
+      let!(:organiser) { create_organiser(workshop) }
+      let!(:facilitator) { create_facilitator(workshop) }
+      let!(:mentor) { create_mentor(workshop) }
 
 
       it "has all the correct parts" do
@@ -215,9 +200,9 @@ RSpec.describe Workshop, type: :model do
 
   describe "#status" do
     let!(:workshop) { create_workshop }
-    let!(:organiser) { create_user email: "organiser@example.com", organiser: true, workshop: workshop }
-    let!(:facilitator) { create_user email: "facilitator@example.com", facilitator: true, workshop: workshop }
-    let!(:mentor) { create_user email: "mentor@example.com", mentor: true, workshop: workshop }
+    let!(:organiser) { create_organiser(workshop) }
+    let!(:facilitator) { create_facilitator(workshop) }
+    let!(:mentor) { create_mentor(workshop) }
 
     context "#draft" do
       [
@@ -258,6 +243,18 @@ RSpec.describe Workshop, type: :model do
         expect(workshop.status).to eql("awaiting_approval")
       end
     end
+  end
+
+  def create_organiser(workshop)
+    create_user email: "organiser@example.com", organiser: true, workshop: workshop
+  end
+
+  def create_facilitator(workshop)
+    create_user email: "facilitator@example.com", facilitator: true, workshop: workshop
+  end
+
+  def create_mentor(workshop)
+    create_user email: "mentor@example.com", mentor: true, workshop: workshop
   end
 
   def create_user(attrs)
