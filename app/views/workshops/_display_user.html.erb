@@ -1,0 +1,7 @@
+<strong>
+  <% unless user.invitation_accepted? %>
+    PENDING
+  <% end %>
+  <%= user_type %>:
+</strong>
+<%= user_name user %>

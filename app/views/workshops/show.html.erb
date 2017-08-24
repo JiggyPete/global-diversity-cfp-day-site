@@ -52,54 +52,20 @@
 
 <p>
   <% if @workshop.facilitator.present? %>
-
-    <% if @workshop.facilitator.invitation_accepted? %>
-    <strong>
-      Facilitator:
-    </strong>
-    <%= user_name @workshop.facilitator %>
-    <% else %>
-      <strong>
-        PENDING Facilitator:
-      </strong>
-      <%= user_name @workshop.facilitator %>
-    <% end %>
-
+    <%= render 'display_user', user: @workshop.facilitator, user_type: "Facilitator" %>
   <% else %>
-    <%= form_tag invite_team_members_path do %>
-      <%= label_tag 'Invite Facilitator' %>
-      <%= label_tag 'Facilitator email address' %>
-      <%= email_field_tag 'email', '' %>
-      <%= hidden_field_tag 'facilitator', true %>
-      <%= submit_tag "Send Invititation" %>
-    <% end %>
+    <%= render 'invite_user', user_type: "Facilitator" %>
   <% end %>
 </p>
 
 <p>
   <% @workshop.mentors.each do |mentor| %>
     <p>
-      <% if mentor.invitation_accepted? %>
-        <strong>
-          Mentor:
-        </strong>
-        <%= user_name mentor %>
-      <% else %>
-        <strong>
-          PENDING Mentor:
-        </strong>
-        <%= user_name mentor %>
-      <% end %>
+      <%= render 'display_user', user: mentor, user_type: "Mentor" %>
     </p>
   <% end %>
 
-  <%= form_tag invite_team_members_path do %>
-    <%= label_tag 'Invite Mentor' %>
-    <%= label_tag 'Mentor email address' %>
-    <%= email_field_tag 'email', '' %>
-    <%= hidden_field_tag 'mentor', true %>
-    <%= submit_tag "Send Invititation" %>
-  <% end %>
+  <%= render 'invite_user', user_type: "Mentor" %>
 </p>
 
 
