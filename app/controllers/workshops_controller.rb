@@ -1,10 +1,6 @@
 class WorkshopsController < ApplicationController
   before_action :set_workshop, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @workshops = Workshop.all
-  end
-
   def show
   end
 
