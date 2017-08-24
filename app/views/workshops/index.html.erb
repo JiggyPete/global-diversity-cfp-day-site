@@ -16,6 +16,7 @@
       <th>Ticketing url</th>
       <th>Organiser</th>
       <th>Facilitator</th>
+      <th>Mentors</th>
       <th>Notes</th>
       <th colspan="3"></th>
     </tr>
@@ -33,8 +34,13 @@
         <td><%= workshop.end_time %></td>
         <td><%= workshop.time_zone %></td>
         <td><%= workshop.ticketing_url %></td>
-        <td><%= workshop.organiser_id %></td>
-        <td><%= workshop.facilitator_id %></td>
+        <td><%= workshop.organiser.full_name %></td>
+        <td><%= workshop.facilitator.full_name %></td>
+        <td>
+          <% workshop.mentors.each do |mentor| %>
+            <p><%= mentor.full_name %></p>
+          <% end %>
+        </td>
         <td><%= workshop.notes %></td>
         <td><%= link_to 'Show', workshop %></td>
         <td><%= link_to 'Edit', edit_workshop_path(workshop) %></td>

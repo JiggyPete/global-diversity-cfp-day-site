@@ -78,18 +78,19 @@
 
 <p>
   <% @workshop.mentors.each do |mentor| %>
-
-    <% if mentor.invitation_accepted? %>
-    <strong>
-      Mentor:
-    </strong>
-    <%= mentor.full_name %>
-    <% else %>
-      <strong>
-        PENDING Mentor:
-      </strong>
-      <%= mentor.email %>
-    <% end %>
+    <p>
+      <% if mentor.invitation_accepted? %>
+        <strong>
+          Mentor:
+        </strong>
+        <%= mentor.full_name %>
+      <% else %>
+        <strong>
+          PENDING Mentor:
+        </strong>
+        <%= mentor.email %>
+      <% end %>
+    </p>
   <% end %>
 
   <%= form_tag invite_team_members_path do %>
@@ -107,5 +108,4 @@
   <%= @workshop.notes %>
 </p>
 
-<%= link_to 'Edit', edit_workshop_path(@workshop) %> |
-<%= link_to 'Back', workshops_path %>
+<%= link_to 'Edit', edit_workshop_path(@workshop) %>
