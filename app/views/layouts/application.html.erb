@@ -4,8 +4,12 @@
     <title>Global Diversity CFP Day</title>
     <%= csrf_meta_tags %>
 
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
   </head>
 
   <body>
@@ -15,15 +19,17 @@
         <div class="d-flex justify-content-between hidden-lg-up">
           <a href="/">
             <label class="navbar-brand">
-              Global Diversity CFP Day
+              global diversity CFP day
             </label>
           </a>
-          <% if user_signed_in? %>
-            <%= link_to "My workshop", workshop_landing_page_for(current_user), class: "navbar-brand" %>
-            <%= link_to "Log out", destroy_user_session_path, class: "navbar-brand", method: :delete %>
-          <% else %>
-            <%= link_to "Log in", new_user_session_path, class: "navbar-brand" %>
-          <% end %>
+          <div class="pull-right right-nav">
+            <% if user_signed_in? %>
+              <%= link_to "Workshop", workshop_landing_page_for(current_user), class: "navbar-brand" %>
+              <%= link_to "Log out", destroy_user_session_path, class: "navbar-brand", method: :delete %>
+            <% else %>
+              <%= link_to "Log in", new_user_session_path %>
+            <% end %>
+          </div>
         </div>
 
       </nav>
