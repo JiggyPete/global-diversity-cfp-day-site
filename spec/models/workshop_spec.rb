@@ -175,7 +175,7 @@ RSpec.describe Workshop, type: :model do
     end
 
 
-    context "#awaiting_approval" do
+    context "#pending" do
       let!(:workshop) do
         Workshop.create continent: "Europe",
           country: "United Kingdom",
@@ -238,9 +238,9 @@ RSpec.describe Workshop, type: :model do
       end
     end
 
-    context "#awaiting_approval" do
+    context "#pending" do
       it "has all the correct parts" do
-        expect(workshop.status).to eql("awaiting_approval")
+        expect(workshop.status).to eql("pending")
       end
     end
   end

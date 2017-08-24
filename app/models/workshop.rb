@@ -28,7 +28,7 @@ class Workshop < ApplicationRecord
 
   def status
     return "draft" unless necessary_attrs_supplied?
-    "awaiting_approval"
+    "pending"
   end
 
   def percentage_complete
