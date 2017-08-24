@@ -36,3 +36,11 @@ $banner-hover: black;
     color: $banner-hover;
   }
 }
+
+h1, h2, h3, comfortaa {
+  font-family: 'Comfortaa', cursive;
+}
+
+.jumbotron {
+  background-color: lighten($banner-background, 35%);
+}
