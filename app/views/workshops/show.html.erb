@@ -47,7 +47,7 @@
 
 <p>
   <strong>Organiser:</strong>
-  <%= @workshop.organiser.full_name %>
+  <%= user_name @workshop.organiser %>
 </p>
 
 <p>
@@ -57,12 +57,12 @@
     <strong>
       Facilitator:
     </strong>
-    <%= @workshop.facilitator.full_name %>
+    <%= user_name @workshop.facilitator %>
     <% else %>
       <strong>
         PENDING Facilitator:
       </strong>
-      <%= @workshop.facilitator.email %>
+      <%= user_name @workshop.facilitator %>
     <% end %>
 
   <% else %>
@@ -83,12 +83,12 @@
         <strong>
           Mentor:
         </strong>
-        <%= mentor.full_name %>
+        <%= user_name mentor %>
       <% else %>
         <strong>
           PENDING Mentor:
         </strong>
-        <%= mentor.email %>
+        <%= user_name mentor %>
       <% end %>
     </p>
   <% end %>

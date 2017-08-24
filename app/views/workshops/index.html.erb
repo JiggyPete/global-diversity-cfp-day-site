@@ -34,11 +34,11 @@
         <td><%= workshop.end_time %></td>
         <td><%= workshop.time_zone %></td>
         <td><%= workshop.ticketing_url %></td>
-        <td><%= workshop.organiser.full_name %></td>
-        <td><%= workshop.facilitator.full_name %></td>
+        <td><%= user_name workshop.organiser %></td>
+        <td><%= user_name workshop.facilitator %></td>
         <td>
           <% workshop.mentors.each do |mentor| %>
-            <p><%= mentor.full_name %></p>
+            <p><%= user_name mentor %></p>
           <% end %>
         </td>
         <td><%= workshop.notes %></td>
