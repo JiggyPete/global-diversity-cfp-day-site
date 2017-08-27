@@ -42,10 +42,6 @@
     <h2>Subject Matter</h2>
     These workshops have no specific language, framework or process as a focus. Even if your talk isn’t even related to tech we want to hear from you too! In short, if there is something that you want to shout to the world we're here to help you get there regardless of the boundaries of technology or communities.
   </p>
-  <p>
-    There have been many diversity outreach efforts in the past, and we are still on the long journey to achieve equality in tech. Please join us on Saturday 3rd February 2018 to take that first step to bring your unique voice to the stage.
-  </p>
-
 </div>
 
 <hr/>
@@ -71,6 +67,9 @@
   <h3>
     What will you need to get this moving?
   </h3>
+  <% if current_user.nil? %>
+    <%= link_to "Sign up now", new_user_registration_path, class: "ticket-button btn btn-warning" %>
+  <% end %>
   <ol>
     <li>Ensure you agree to our Code of Conduct as you will be in charge of enforcing it.</li>
     <li>A warm postive approach to working with newbie speakers and strong value in the contribution they bring to the industry.</li>
@@ -81,7 +80,9 @@
     <li>A burning desire to promote your workshop to every tech community within 100 miles of the venue.</li>
   </ol>
 
-  <% if current_user.nil? %>
-    <%= link_to "Sign up now", new_user_registration_path, class: "ticket-button btn btn-warning" %>
-  <% end %>
+
+  <p>
+    There have been many diversity outreach efforts in the past, and we are still on the long journey to achieve equality in tech. Please join us on Saturday 3rd February 2018 to take that first step to bring your unique voice to the stage.
+  </p>
+
 </div>
