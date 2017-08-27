@@ -1,0 +1,87 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$banner-background: yellow;
+$banner-foreground: #666;
+$banner-hover: black;
+
+.app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $banner-background;
+  color: $banner-foreground;
+  width: 100%;
+
+  label {
+    margin-top: 1rem;
+    font-family: 'Comfortaa', cursive;
+    font-size: 3rem;
+  }
+
+  a label:hover {
+    color: black;
+  }
+}
+
+.navbar-brand:hover {
+  background-color: none;
+}
+
+.right-nav {
+  margin-top: 1rem;
+
+  a:hover {
+    background-color: yellow;
+    color: $banner-hover;
+  }
+}
+
+h1, h2, h3, comfortaa {
+  font-family: 'Comfortaa', cursive;
+}
+
+.jumbotron {
+  background-color: lighten($banner-background, 35%);
+}
+
+.background-chad {
+  background-image: image-url("people/chad.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+}
+
+.background-jaycee {
+  background-image: image-url("people/jaycee.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+}
+
+.background-jem {
+  background-image: image-url("people/jem.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+}
+
+.background-kim {
+  background-image: image-url("people/kim.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+}
+
+.background-livi {
+  background-image: image-url("people/livi.jpg");
+  background-size: cover;
+  height: 600px;
+}
+
+.background-sareh {
+  background-image: image-url("people/sareh.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+}
