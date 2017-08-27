@@ -146,3 +146,45 @@ footer
     text-decoration: none;
   }
 }
+
+.percentage-complete {
+  float: right;
+  height: 100px;
+  width: 100px;
+  background: orange;
+  border-radius: 50%;
+  position: relative;
+
+  .number {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+  }
+
+  .text {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+  }
+}
+
+.complete {
+  float: right;
+  height: 100px;
+  width: 100px;
+  background: limegreen;
+  border-radius: 50%;
+  position: relative;
+
+  .number {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+  }
+
+  .text {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+  }
+}

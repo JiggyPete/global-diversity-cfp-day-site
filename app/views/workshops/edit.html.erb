@@ -1,5 +1,10 @@
 <h1>Editing Workshop</h1>
 
+<div class="<%= @workshop.percentage_complete == 100 ? "complete" : "percentage-complete" %>">
+  <div class="number"><%= @workshop.percentage_complete %>%</div>
+  <div class="text">Complete</div>
+</div>
+
 <%= render 'form', workshop: @workshop %>
 
 <%= link_to 'Show', @workshop %>
