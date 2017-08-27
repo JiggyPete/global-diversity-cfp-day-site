@@ -2,6 +2,8 @@
 
 <%= render 'percentage_complete', workshop: @workshop %>
 
+<h1>Workshop Management</h1>
+
 <p>
   <strong>Continent:</strong>
   <%= @workshop.continent %>
@@ -79,4 +81,5 @@
   <%= @workshop.notes %>
 </p>
 
-<%= link_to 'Edit', edit_workshop_path(@workshop) %>
+<br/>
+<%= link_to 'Edit', edit_workshop_path(@workshop), class: 'btn btn-warning pull-right' %>
