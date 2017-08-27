@@ -11,7 +11,7 @@ en:
         biography: Bio
         picture_url: Square profile picture url
         run_workshop_explaination: Why do you want to be involved in a workshop?
-        displayed_email: Which email address would you like displayed on the site? (optional)
+        displayed_email: Which email address would you like displayed on the site? This will be used by attendees and potential volunteers to contact you.
         displayed_twitter: What is your twitter username? This will be displayed on the site (optional)
         displayed_github: What is your github username? This will be displayed on the site (optional)
   workshop:

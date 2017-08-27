@@ -1,35 +1,42 @@
 <div class="field">
-  <%= f.label :full_name %><br />
+  <%= f.label :full_name %>
+
   <%= f.text_field :full_name %>
 </div>
 
 <div class="field">
-  <%= f.label :biography %><br />
+  <%= f.label :biography %>
+
   <%= f.text_area :biography %>
 </div>
 
 <div class="field">
-  <%= f.label :picture_url %><br />
+  <%= f.label :picture_url %>
+
   <%= f.text_field :picture_url %>
 </div>
 
 <div class="field">
-  <%= f.label :run_workshop_explaination %><br />
+  <%= f.label :run_workshop_explaination %>
+
   <%= f.text_area :run_workshop_explaination %>
 </div>
 
 <div class="field">
-  <%= f.label :displayed_email %><br />
+  <%= f.label :displayed_email %>
+
   <%= f.text_field :displayed_email %>
 </div>
 
 <div class="field">
-  <%= f.label :displayed_twitter %><br />
+  <%= f.label :displayed_twitter %>
+
   <%= f.text_field :displayed_twitter %>
 </div>
 
 <div class="field">
-  <%= f.label :displayed_github %><br />
+  <%= f.label :displayed_github %>
+
   <%= f.text_field :displayed_github %>
 </div>
 
@@ -37,11 +44,14 @@
   <%= f.label :password %>
   <% if @minimum_password_length %>
   <em>(<%= @minimum_password_length %> characters minimum)</em>
-  <% end %><br />
+  <% end %>
+  <br/>
+
   <%= f.password_field :password, autocomplete: "off" %>
 </div>
 
 <div class="field">
-  <%= f.label :password_confirmation %><br />
+  <%= f.label :password_confirmation %>
+
   <%= f.password_field :password_confirmation, autocomplete: "off" %>
 </div>
