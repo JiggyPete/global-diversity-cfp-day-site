@@ -27,7 +27,6 @@
               <%= link_to "Workshop", workshop_landing_page_for(current_user), class: "navbar-brand" %>
               <%= link_to "Log out", destroy_user_session_path, class: "navbar-brand", method: :delete %>
             <% else %>
-              <%= link_to "Workshops", "#workshops", class: "navbar-brand" %>
               <%= link_to "Log in", new_user_session_path, class: "navbar-brand" %>
             <% end %>
           </div>
