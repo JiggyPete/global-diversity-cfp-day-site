@@ -52,24 +52,27 @@
   <%= user_name @workshop.organiser %>
 </p>
 
-<p>
-  <% if @workshop.facilitator.present? %>
-    <%= render 'display_user', user: @workshop.facilitator, user_type: "Facilitator" %>
-  <% else %>
-    <%= render 'invite_user', user_type: "Facilitator" %>
-  <% end %>
-</p>
+<div class="grouping">
+  <p>
+    <% if @workshop.facilitator.present? %>
+      <%= render 'display_user', user: @workshop.facilitator, user_type: "Facilitator" %>
+    <% else %>
+      <%= render 'invite_user', user_type: "Facilitator" %>
+    <% end %>
+  </p>
+</div>
 
-<p>
-  <% @workshop.mentors.each do |mentor| %>
-    <p>
-      <%= render 'display_user', user: mentor, user_type: "Mentor" %>
-    </p>
-  <% end %>
+<div class="grouping">
+  <p>
+    <% @workshop.mentors.each do |mentor| %>
+      <p>
+        <%= render 'display_user', user: mentor, user_type: "Mentor" %>
+      </p>
+    <% end %>
 
-  <%= render 'invite_user', user_type: "Mentor" %>
-</p>
-
+    <%= render 'invite_user', user_type: "Mentor" %>
+  </p>
+</div>
 
 <p>
   <strong>Notes:</strong>
