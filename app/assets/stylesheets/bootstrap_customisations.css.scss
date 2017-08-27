@@ -7,6 +7,7 @@ $site-yellow--light: lighten($site-yellow, 15%);
 $banner-text-color: black;
 $banner-text-color-hover: lighten($banner-text-color, 45%);
 
+$footer-background-color: lighten(black, 25%);
 
 .app-navbar {
   position: fixed;
@@ -125,13 +126,23 @@ h1, h2, h3, comfortaa {
 
 footer
 {
-    height: 4rem;
-    background-color: lighten(black, 25%);
-    color: $site-yellow;
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
+  height: 4rem;
+  background-color: $footer-background-color;
+  color: $site-yellow;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-link {
+  color: $site-yellow;
+
+  &:hover {
+    color: $site-yellow--light;
+    background-color: $footer-background-color;
+    text-decoration: none;
+  }
 }
