@@ -1,26 +1,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$banner-background: yellow;
-$banner-foreground: #666;
-$banner-hover: black;
+$banner-background: lighten(yellow, 25%);
+$banner-text-color: black ;
+$banner-text-color-hover: lighten($banner-text-color, 45%);
 
 .app-navbar {
   position: fixed;
   top: 0;
   left: 0;
   background-color: $banner-background;
-  color: $banner-foreground;
+
   width: 100%;
 
   label {
+    color: $banner-text-color;
     margin-top: 1rem;
     font-family: 'Comfortaa', cursive;
     font-size: 3rem;
   }
 
+  a label {
+    color: $banner-text-color;
+  }
+
   a label:hover {
-    color: black;
+    color: $banner-text-color;
   }
 }
 
@@ -32,8 +37,8 @@ $banner-hover: black;
   margin-top: 1rem;
 
   a:hover {
-    background-color: yellow;
-    color: $banner-hover;
+    background-color: $banner-background;
+    color: $banner-text-color-hover;
   }
 }
 
@@ -42,7 +47,7 @@ h1, h2, h3, comfortaa {
 }
 
 .jumbotron {
-  background-color: lighten($banner-background, 35%);
+  background-color: $banner-background;
 }
 
 .background-chad {
