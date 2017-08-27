@@ -17,6 +17,16 @@ class Workshop < ApplicationRecord
     "mentors"
   ]
 
+  def self.workshops_grouped_for_homepage
+    result = Workshop.all.order(:continent, :country, :city).group_by(&:continent)
+
+    result.keys.each do |continent|
+      result[continent] = result[continent].group_by(&:country)
+    end
+
+    result
+  end
+
   def organiser
     @organiser ||= User.where(workshop_id: id, organiser: true).first
   end
