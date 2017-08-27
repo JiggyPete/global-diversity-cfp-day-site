@@ -2,6 +2,12 @@ require 'rails_helper'
 
 RSpec.describe Workshop, type: :model do
 
+  describe "validation" do
+    it { should validate_presence_of(:continent) }
+    it { should validate_presence_of(:country) }
+    it { should validate_presence_of(:city) }
+  end
+
   describe "#organiser" do
     let!(:workshop) { Workshop.create }
     let!(:organiser) { create_user(organiser: true, workshop: workshop) }
@@ -245,6 +251,86 @@ RSpec.describe Workshop, type: :model do
     end
   end
 
+  describe "workshopsgrouped by country, sorted by city" do
+    context "when no workshops exist" do
+      it "has no workshops" do
+        expect(Workshop.workshops_grouped_for_homepage).to be_empty
+      end
+    end
+
+    context "has a number of workshops in the same city" do
+      it "sorts workshops by city name" do
+        aberdeen = create_workshop country: "United Kingdom", city: "Aberdeen"
+        glasgow = create_workshop country: "United Kingdom", city: "Glasgow"
+        edinburgh = create_workshop country: "United Kingdom", city: "Edinburgh"
+
+        workshops = Workshop.all.workshops_grouped_for_homepage["Europe"]["United Kingdom"]
+        expect(workshops.length).to eql(3)
+        expect(workshops[0]).to eql(aberdeen)
+        expect(workshops[1]).to eql(edinburgh)
+        expect(workshops[2]).to eql(glasgow)
+      end
+    end
+
+    context "groups cities by country" do
+      it "sorts workshops by city name" do
+        new_york = create_workshop country: "United States", city: "New York"
+        glasgow = create_workshop country: "United Kingdom", city: "Glasgow"
+        boston = create_workshop country: "United States", city: "Boston"
+
+        expect(Workshop.all.group_by(&:country).length).to eql(2)
+        uk = Workshop.all.group_by(&:country)["United Kingdom"]
+        usa = Workshop.all.group_by(&:country)["United States"]
+
+        expect(uk).to eql([glasgow])
+        expect(usa).to eql([new_york, boston])
+      end
+    end
+
+    context "sorts cities grouped by country" do
+      it "sorts workshops by city name" do
+        new_york = create_workshop country: "United States", city: "New York"
+        glasgow = create_workshop country: "United Kingdom", city: "Glasgow"
+        boston = create_workshop country: "United States", city: "Boston"
+
+        result = Workshop.all.order(:city).group_by(&:country)
+
+        expect(result.length).to eql(2)
+        uk = result["United Kingdom"]
+        usa = result["United States"]
+
+        expect(uk).to eql([glasgow])
+        expect(usa).to eql([boston, new_york])
+      end
+    end
+
+    context "countries cities grouped by country and continent" do
+      it "sorts workshops by city name" do
+        new_york = create_workshop continent: "North America", country: "United States", city: "New York"
+        glasgow = create_workshop continent: "Europe", country: "United Kingdom", city: "Glasgow"
+        amsterdam = create_workshop continent: "Europe", country: "Holland", city: "Amsterdam"
+        boston = create_workshop continent: "North America", country: "United States", city: "Boston"
+        toronto = create_workshop continent: "North America", country: "Canada", city: "Toronto"
+
+        result = Workshop.workshops_grouped_for_homepage
+
+        expect(result.length).to eql(2)
+        europe = result["Europe"]
+        north_america = result["North America"]
+
+        expect(europe.length).to eql(2)
+        expect(europe["Holland"]).to eql([amsterdam])
+        expect(europe["United Kingdom"]).to eql([glasgow])
+
+        expect(north_america.length).to eql(2)
+        expect(north_america["Canada"]).to eql([toronto])
+        expect(north_america["United States"]).to eql([boston, new_york])
+      end
+    end
+
+
+  end
+
   def create_organiser(workshop)
     create_user email: "organiser@example.com", organiser: true, workshop: workshop
   end
@@ -267,10 +353,11 @@ RSpec.describe Workshop, type: :model do
     result
   end
 
-  def create_workshop
-    Workshop.create continent: "Europe",
-      country: "United Kingdom",
-      city: "Glasgow",
+  def create_workshop(workshop_attributes = {})
+    attributes = {continent: "Europe", country: "United Kingdom", city: "Glasgow" }.merge(workshop_attributes)
+    Workshop.create continent: attributes[:continent],
+      country: attributes[:country],
+      city: attributes[:city],
       venue_address: "City Centre",
       google_maps_url: "http://google.com",
       start_time: Time.now,

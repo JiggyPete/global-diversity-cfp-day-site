@@ -1,4 +1,7 @@
 class Workshop < ApplicationRecord
+
+  validates :continent, :country, :city, presence: true
+
   MANDATORY_FIELDS_FOR_APPROVAL = [
     "continent",
     "country",
