@@ -15,9 +15,12 @@
         <li class="workshop-list-item">
           <%= workshop.city %>
 
-          <a target="_blank" class="ticket-button btn btn-warning" href="<%= workshop.ticketing_url %>">
-            Get your ticket!
-          </a>
+          <div class="ticket-button">
+            <%= "PENDING" unless workshop.approved? %>
+            <a target="_blank" class=" btn btn-warning" href="<%= workshop.ticketing_url %>">
+              Get your FREE ticket!
+            </a>
+          </div>
         </li>
       <% end %>
       </ol>
