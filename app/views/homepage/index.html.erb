@@ -51,29 +51,33 @@
 <hr/>
 
 <div id="workshops">
-  <h2>Confirmed Workshop Locations</h2>
-  These locations have already confirmed participation. If you can't find a location near you, why not <a href="#organise">organise a workshop </a> yourself?
-  <ol>
-    <li>Atlanta</li>
-    <li>Berlin</li>
-    <li>Boston</li>
-    <li>Bristol</li>
-    <li>Dublin</li>
-    <li>Edinburgh</li>
-    <li>Glasgow</li>
-    <li>London</li>
-    <li>Melbourne</li>
-    <li>Munich</li>
-    <li>New York</li>
-    <li>Oslo</li>
-    <li>Paris</li>
-    <li>San Francisco</li>
-    <li>Seattle</li>
-    <li>Sheffield</li>
-    <li>Singapore</li>
-    <li>Sydney</li>
-  </ol>
+  <% if @workshops.empty? %>
+    Currently we have no confirmed workshops. Please sign up below to organise a workshop.
+  <% else %>
+
+    <h2>Confirmed Workshop Locations</h2>
+    These locations have already confirmed participation. If you can't find a location near you, why not <a href="#organise">organise a workshop </a> yourself?
+
+
+    <% @workshops.keys.each do |continent| %>
+      <br/><br/>
+      <h3><%= continent %></h3>
+      <% @workshops[continent].keys.each do |country| %>
+        <h4><%= country %></h4>
+        <ol class="workshop-list">
+        <% ["Glasgow", "Edinburgh"].each do |workshop| %>
+          <li class="workshop-list-item"><%= workshop %></li>
+        <% end %>
+        </ol>
+      <% end %>
+    <% end %>
+
+
+
+
+  <% end %>
 </div>
+
 
 <hr/>
 
