@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+<div class="grouping">
+  <h2>Where</h2>
   <div class="field">
     <%= form.label :continent %>
     <%= form.select :continent, continent_select_options %>
@@ -35,7 +37,10 @@
     <%= form.label :google_maps_url %>
     <%= form.text_field :google_maps_url, id: :workshop_google_maps_url %>
   </div>
+</div>
 
+<div class="grouping">
+  <h2>When</h2>
   <div class="field">
     <%= form.label :start_time %>
     <%= form.time_select :start_time, id: :workshop_start_time %>
@@ -50,19 +55,22 @@
     <%= form.label :time_zone %>
     <%= form.select :time_zone, timezone_codes, include_blank: true %>
   </div>
+</div>
 
+<div class="grouping">
+  <h2>How attendees sign up</h2>
   <div class="field">
     <%= form.label :ticketing_url %> (Why not try a ticketing service like
     <a href="https://ti.to/home" target="blank">Ti.to</a>)<br/>
     <%= form.text_field :ticketing_url, id: :workshop_ticketing_url %>
   </div>
-
-  <div class="field">
+</div>
+  <div class="field grouping">
     <%= form.label :notes %>
     <%= form.text_area :notes, id: :workshop_notes %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions pull-right">
+    <%= form.submit class: "btn btn-warning"%>
   </div>
 <% end %>

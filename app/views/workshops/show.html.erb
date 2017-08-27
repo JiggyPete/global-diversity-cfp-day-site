@@ -4,57 +4,66 @@
 
 <h1>Workshop Management</h1>
 
-<p>
-  <strong>Continent:</strong>
-  <%= @workshop.continent %>
-</p>
+<div class="grouping">
+  <h2>Where</h2>
+  <p>
+    <strong>Continent:</strong>
+    <%= @workshop.continent %>
+  </p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @workshop.country %>
-</p>
+  <p>
+    <strong>Country:</strong>
+    <%= @workshop.country %>
+  </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @workshop.city %>
-</p>
+  <p>
+    <strong>City:</strong>
+    <%= @workshop.city %>
+  </p>
 
-<p>
-  <strong>Venue address:</strong>
-  <%= @workshop.venue_address %>
-</p>
+  <p>
+    <strong>Venue address:</strong>
+    <%= @workshop.venue_address %>
+  </p>
 
-<p>
-  <strong>Google maps url:</strong>
-  <%= @workshop.google_maps_url %>
-</p>
-
-<p>
-  <strong>Start time:</strong>
-  <%= @workshop.start_time %>
-</p>
-
-<p>
-  <strong>End time:</strong>
-  <%= @workshop.end_time %>
-</p>
-
-<p>
-  <strong>Time zone:</strong>
-  <%= @workshop.time_zone %>
-</p>
-
-<p>
-  <strong>Ticketing url:</strong>
-  <%= @workshop.ticketing_url %>
-</p>
-
-<p>
-  <strong>Organiser:</strong>
-  <%= user_name @workshop.organiser %>
-</p>
+  <p>
+    <strong>Google maps url:</strong>
+    <%= @workshop.google_maps_url %>
+  </p>
+</div>
 
 <div class="grouping">
+  <h2>When</h2>
+  <p>
+    <strong>Start time:</strong>
+    <%= @workshop.start_time %>
+  </p>
+
+  <p>
+    <strong>End time:</strong>
+    <%= @workshop.end_time %>
+  </p>
+
+  <p>
+    <strong>Time zone:</strong>
+    <%= @workshop.time_zone %>
+  </p>
+</div>
+
+<div class="grouping">
+  <h2>How attendees sign up</h2>
+  <p>
+    <strong>Ticketing url:</strong>
+    <%= @workshop.ticketing_url %>
+  </p>
+</div>
+
+<div class="grouping">
+  <h2>Team</h2>
+  <p>
+    <strong>Organiser:</strong>
+    <%= user_name @workshop.organiser %>
+  </p>
   <p>
     <% if @workshop.facilitator.present? %>
       <%= render 'display_user', user: @workshop.facilitator, user_type: "Facilitator" %>
@@ -62,9 +71,6 @@
       <%= render 'invite_user', user_type: "Facilitator" %>
     <% end %>
   </p>
-</div>
-
-<div class="grouping">
   <p>
     <% @workshop.mentors.each do |mentor| %>
       <p>
@@ -76,10 +82,12 @@
   </p>
 </div>
 
-<p>
-  <strong>Notes:</strong>
-  <%= @workshop.notes %>
-</p>
+<div class="grouping">
+  <p>
+    <strong>Notes:</strong>
+    <%= @workshop.notes %>
+  </p>
+</div>
 
 <br/>
 <%= link_to 'Edit', edit_workshop_path(@workshop), class: 'btn btn-warning pull-right' %>
