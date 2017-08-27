@@ -50,10 +50,6 @@ class Workshop < ApplicationRecord
     ((number_of_mandatory_fields_complete.to_f/number_of_mandatory_fields)*100).round
   end
 
-  def approved?
-    true
-  end
-
   private
 
   def number_of_mandatory_fields
