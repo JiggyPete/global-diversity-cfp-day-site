@@ -145,6 +145,10 @@ footer
     background-color: $footer-background-color;
     text-decoration: none;
   }
+
+  &:visited {
+    color: $site-yellow--light;
+  }
 }
 
 .percentage-complete {
