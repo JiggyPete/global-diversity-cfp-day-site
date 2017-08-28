@@ -10,6 +10,10 @@
   <h2>
     Save the date - Saturday 3rd February 2018
   </h2>
+  <% if current_user.nil? %>
+    <%= link_to "Organise a workshop", new_user_registration_path, class: "ticket-button btn btn-warning" %>
+  <% end %>
+
 </div>
 <div>
   <p>
@@ -54,7 +58,7 @@
 <hr/>
 
 <div id="organise">
-  <h2>Get involved</h2>
+  <h2>Get involved and organise a workshop</h2>
   <p>
     Are you an meetup or conference organiser, speaker, speaker in the making or someone that feels this event is important and has to happen in your city?
   </p>
@@ -68,7 +72,7 @@
     What will you need to get this moving?
   </h3>
   <% if current_user.nil? %>
-    <%= link_to "Sign up now", new_user_registration_path, class: "ticket-button btn btn-warning" %>
+    <%= link_to "Organise a workshop", new_user_registration_path, class: "ticket-button btn btn-warning" %>
   <% end %>
   <ol>
     <li>Ensure you agree to our Code of Conduct as you will be in charge of enforcing it.</li>

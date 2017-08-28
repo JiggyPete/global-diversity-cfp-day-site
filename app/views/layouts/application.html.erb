@@ -28,8 +28,7 @@
               <%= link_to "Workshop |", workshop_landing_page_for(current_user), class: "navbar-brand" %>
               <%= link_to "Log out |", destroy_user_session_path, class: "navbar-brand", method: :delete %>&nbsp;
             <% else %>
-              <%= link_to "Sign up |", new_user_registration_path, class: "navbar-brand" %>
-              <%= link_to "Log in |", new_user_session_path, class: "navbar-brand" %>&nbsp;
+              <%= link_to "Organiser Log in |", new_user_session_path, class: "navbar-brand" %>&nbsp;
             <% end %>
 
               <a href="https://twitter.com/gdcfpday" target="_blank" class="navbar-brand twitter-wrapper">
