@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :workshops, only: [:new, :show, :create, :edit, :update, :destroy]
   resources :invite_team_members, only: :create
   match 'code-of-conduct', to: "code_of_conduct#index", via: :get
+  match 'organise', to: "organise#index", via: :get
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'homepage#index'
