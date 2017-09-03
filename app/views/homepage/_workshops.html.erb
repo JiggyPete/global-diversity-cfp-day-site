@@ -10,16 +10,8 @@
       <% workshops[continent][country].each do |workshop| %>
         <li class="workshop-list-item">
           <%= workshop.city %>
-
-          <div class="ticket-button">
-            <%= "PENDING" unless workshop.approved? %>
-            <a class=" btn btn-warning" href="mailto:<%= workshop.organiser.displayed_email %>?Subject=Global%20Diversity%20CFP%20Day%20Enquity">
-              Contact Organiser
-            </a>
-            <a target="_blank" class=" btn btn-warning" href="<%= workshop.ticketing_url %>">
-              Get your FREE ticket!
-            </a>
-          </div>
+          organised by
+          <%= workshop.organiser.full_name %>
         </li>
       <% end %>
       </ol>
