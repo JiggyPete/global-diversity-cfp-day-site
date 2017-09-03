@@ -2,11 +2,7 @@
 <% if workshops.empty? %>
   Currently we have no confirmed workshops. Please sign up below to organise a workshop.
 <% else %>
-
-  These locations have already confirmed participation. If you can't find a location near you, why not organise a workshop yourself?
-
   <% workshops.keys.each do |continent| %>
-    <br/><br/>
     <h3><%= continent %></h3>
     <% workshops[continent].keys.each do |country| %>
       <h4><%= country %></h4>
@@ -29,5 +25,4 @@
       </ol>
     <% end %>
   <% end %>
-
 <% end %>

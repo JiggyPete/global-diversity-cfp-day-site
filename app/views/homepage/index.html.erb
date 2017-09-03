@@ -33,31 +33,35 @@
   <div class="jumbotron background-<%= random_jumbo_pic_class %>"></div>
 
   <p>
-    <h2>What do you need to do next?</h2>
-    Sign up to a <a href="#cities">workshop at a location</a> near you and, if you have one, bring a laptop along to submit that proposal. If you have a spare laptop bring it along incase it can help someone else.
+    <h2>Subject Matter</h2>
+    These workshops have no specific language, framework or process as a focus. Even if your talk isn’t even related to tech we want to hear from you too! In short, if there is something that you want to shout to the world we're here to help you get there regardless of the boundaries of technology or communities.
   </p>
 
   <hr/>
 
+  <div id="workshops">
+    <%= render 'workshops', workshops: @workshops %>
+  </div>
+
+  <hr/>
+
   <p>
-    <h2>Subject Matter</h2>
-    These workshops have no specific language, framework or process as a focus. Even if your talk isn’t even related to tech we want to hear from you too! In short, if there is something that you want to shout to the world we're here to help you get there regardless of the boundaries of technology or communities.
+    <h2>What do you need to do next?</h2>
+
+    Currently we're looking for people excited about this idea to organise workshops in their city. Above you can see the locations already lined up!
   </p>
+  <p>
+    Once the workshops have all their details confirmed we'll be releasing tickets. If you'd like to be notified about this please sign up here.
+  </p>
+  <br/>
+  <%= link_to "Organise a workshop", organise_path, class: "btn btn-warning" %>
+  <%= link_to "Sign up to mailing list", mailing_list_sign_up_path, class: "ticket-button btn btn-warning" %>
 </div>
 
 <hr/>
 
-<div id="workshops">
-  <%= render 'workshops', workshops: @workshops %>
-</div>
-
-
-<hr/>
 
 <div id="organise">
-  <%= link_to "Organise a workshop", organise_path, class: "ticket-button btn btn-warning" %>
-  <h2>No workshop near you?</h2>
-
   <p>
     There have been many diversity outreach efforts in the past, and we are still on the long journey to achieve equality in tech. Please join us on Saturday 3rd February 2018 to take that first step to bring your unique voice to the stage.
   </p>
