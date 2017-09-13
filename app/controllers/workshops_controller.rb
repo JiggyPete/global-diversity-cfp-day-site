@@ -16,6 +16,10 @@ class WorkshopsController < ApplicationController
   end
 
   def create
+    if current_workshop.present?
+      redirect_to workshop_path(current_workshop)
+    end
+
     @workshop = Workshop.new(workshop_params)
     current_user.workshop = @workshop
 
