@@ -1,44 +1,4 @@
-<div class="field">
-  <%= f.label :full_name %>
-
-  <%= f.text_field :full_name %>
-</div>
-
-<div class="field">
-  <%= f.label :biography %>
-
-  <%= f.text_area :biography %>
-</div>
-
-<div class="field">
-  <%= f.label :picture_url %>
-
-  <%= f.text_field :picture_url %>
-</div>
-
-<div class="field">
-  <%= f.label :run_workshop_explaination %>
-
-  <%= f.text_area :run_workshop_explaination %>
-</div>
-
-<div class="field">
-  <%= f.label :displayed_email %>
-
-  <%= f.text_field :displayed_email %>
-</div>
-
-<div class="field">
-  <%= f.label :displayed_twitter %>
-
-  <%= f.text_field :displayed_twitter %>
-</div>
-
-<div class="field">
-  <%= f.label :displayed_github %>
-
-  <%= f.text_field :displayed_github %>
-</div>
+<%= render "devise/shared/user_form", f: f %>
 
 <div class="field">
   <%= f.label :password %>

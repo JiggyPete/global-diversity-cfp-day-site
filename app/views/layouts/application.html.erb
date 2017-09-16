@@ -26,7 +26,7 @@
             <%= link_to "Code of Conduct |", code_of_conduct_path, class: "navbar-brand" %>
             <% if user_signed_in? %>
               <%= link_to "Workshop |", workshop_landing_page_for(current_user), class: "navbar-brand" %>
-              <%= link_to "Log out |", destroy_user_session_path, class: "navbar-brand", method: :delete %>&nbsp;
+              <%= link_to "Account |", edit_account_path(current_user), class: "navbar-brand", method: :get %>&nbsp;
             <% else %>
               <%= link_to "Organiser Log in |", new_user_session_path, class: "navbar-brand" %>&nbsp;
             <% end %>
