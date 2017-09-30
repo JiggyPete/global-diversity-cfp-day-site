@@ -25,7 +25,10 @@ class WorkshopsController < ApplicationController
 
     respond_to do |format|
       if @current_user.save
-        format.html { redirect_to @workshop, notice: 'Workshop was successfully created.' }
+        format.html do
+          redirect_to @workshop, notice: 'Workshop was successfully created.'
+          AdminMailer.workshop_created(@workshop, current_user).deliver
+        end
         format.json { render :show, status: :created, location: @workshop }
       else
         format.html { render :new }
