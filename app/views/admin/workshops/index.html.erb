@@ -10,18 +10,20 @@
           <div><%= workshop.city %></div>
 
           <div> - organised by
-            <%= workshop.organiser.full_name %>
+            <%= user_name workshop.organiser %>
           </div>
 
           <% if workshop.facilitator.present? %>
             <div> - facilitated by
-              <%= workshop.facilitator.full_name %>
+              <%= user_name workshop.facilitator %>
+              <%= "Invited" if awaiting_invitation_acceptance? workshop.facilitator %>
             </div>
           <% end %>
 
           <% workshop.mentors.each do |mentor| %>
             <div> - mentored by
-              <%= mentor.full_name %>
+              <%= user_name mentor %>
+              <%= "Invited" if awaiting_invitation_acceptance? mentor %>
             </div>
           <% end %>
 

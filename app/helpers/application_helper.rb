@@ -9,6 +9,10 @@ module ApplicationHelper
     user.full_name? ? user.full_name : user.email
   end
 
+  def awaiting_invitation_acceptance?(user)
+    user.invitation_sent_at.present? && user.invitation_accepted_at.blank?
+  end
+
   def random_jumbo_pic_class
     [
       "chad",
