@@ -4,10 +4,8 @@ class AccountController < ApplicationController
 
   def update
     if current_user.update update_params
-      binding.pry
       redirect_to workshop_landing_page_for(current_user)
     else
-      binding.pry
       render :edit
     end
   end

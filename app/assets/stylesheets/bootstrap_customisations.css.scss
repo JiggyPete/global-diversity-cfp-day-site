@@ -199,6 +199,9 @@ footer
   margin-bottom: 1rem;
 }
 
+.navbar-icon-wrapper {
+  display: inline;
+}
 
 .twitter-wrapper.navbar-brand {
   display: inline;
@@ -215,4 +218,17 @@ i.twitter {
   height: 35px;
   position: absolute;
   top: 1rem;
+}
+
+.account-profile-picture--link {
+  display: inline;
+  position: relative;
+}
+.account-profile-picture {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
