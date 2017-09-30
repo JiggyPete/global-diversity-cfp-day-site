@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :workshops, only: [:new, :show, :create, :edit, :update, :destroy]
+  resources :schedule, only: :index
   resources :invite_team_members, only: :create
   resources :account, only: [:edit, :update]
 
