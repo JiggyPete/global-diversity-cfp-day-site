@@ -37,10 +37,16 @@ class WorkshopsController < ApplicationController
   def update
     respond_to do |format|
       if @workshop.update(workshop_params)
-        format.html { redirect_to @workshop, notice: 'Workshop was successfully updated.' }
+        format.html do
+          flash[:success] = 'Workshop was successfully updated.'
+          redirect_to @workshop
+        end
         format.json { render :show, status: :ok, location: @workshop }
       else
-        format.html { render :edit }
+        format.html do
+          flash[:notice] = 'Workshop failed to updated.'
+         render :edit
+        end
         format.json { render json: @workshop.errors, status: :unprocessable_entity }
       end
     end
