@@ -1,0 +1,32 @@
+<h1>Admin Workshops</h1>
+
+  <% @workshops.keys.each do |continent| %>
+    <h2><%= continent %></h2>
+    <% @workshops[continent].keys.each do |country| %>
+      <h3><%= country %></h3>
+      <ol class="workshop-list">
+      <% @workshops[continent][country].each do |workshop| %>
+        <li class="admin--workshop-list-item">
+          <div><%= workshop.city %></div>
+
+          <div> - organised by
+            <%= workshop.organiser.full_name %>
+          </div>
+
+          <% if workshop.facilitator.present? %>
+            <div> - facilitated by
+              <%= workshop.facilitator.full_name %>
+            </div>
+          <% end %>
+
+          <% workshop.mentors.each do |mentor| %>
+            <div> - mentored by
+              <%= mentor.full_name %>
+            </div>
+          <% end %>
+
+        </li>
+      <% end %>
+      </ol>
+    <% end %>
+  <% end %>
