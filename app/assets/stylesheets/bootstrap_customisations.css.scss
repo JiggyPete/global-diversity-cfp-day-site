@@ -79,6 +79,20 @@ h1, h2, h3, comfortaa {
   height: 600px;
 }
 
+.background-silvia {
+  background-image: image-url("silvia-on-stage.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+}
+
+.background-silvia-on-stage {
+  background-image: image-url("silvia.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+}
+
 .background-kim {
   background-image: image-url("people/kim.jpg");
   background-size: cover;
