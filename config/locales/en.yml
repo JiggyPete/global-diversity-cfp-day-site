@@ -23,4 +23,6 @@ en:
       - Europe
       - North America
       - South America
-
+  time:
+    formats:
+      default: "%H:%M %p"

@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <%= image_tag volunteer.picture_url, width: '150px', height: '150px' %>
+  <br/>
+  Name: <%= volunteer.full_name %>
+  <br/>
+  <% if volunteer.run_workshop_explaination.present? %>
+    Bio: <%= volunteer.biography %>
+  <% end %>
+  <br/>
+  <% if volunteer.run_workshop_explaination.present? %>
+    Involvement: <%= volunteer.run_workshop_explaination %>
+  <% end %>
+  <br/>
+  <% if volunteer.displayed_twitter.present? %>
+    Twitter: <%= link_to volunteer.displayed_twitter, twitter_url(volunteer), target: "_blank" %>
+  <% end %>
+  <br/>
+</div>

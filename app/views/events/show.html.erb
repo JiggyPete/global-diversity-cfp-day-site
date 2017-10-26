@@ -1,1 +1,33 @@
-<h1>Hello there</h1>
+<div id="intro" class="jumbotron">
+  <h1><%= @workshop.city %>, <%= @workshop.country %></h1>
+  <h2><%= l @workshop.start_time %> till <%= l @workshop.end_time %> <%= @workshop.time_zone %> February 3rd 2018</h2>
+  <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" %>
+</div>
+
+<%= @workshop.notes %>
+
+<h2>Organiser</h2>
+<%= render "volunteer", volunteer: @workshop.organiser %>
+
+<% if @workshop.facilitator.present? %>
+  <h2>Facilitator</h2>
+  <%= render "volunteer", volunteer: @workshop.facilitator %>
+<% end %>
+
+<% if @workshop.mentors.present? %>
+  <h2>Mentor</h2>
+  <% @workshop.mentors.each do |mentor| %>
+    <%= render "volunteer", volunteer: mentor %>
+  <% end %>
+<% end %>
+
+<h2>Message</h2>
+<h2>Location</h2>
+<%= @workshop.venue_address %>
+<%= @workshop.google_maps_url %>
+
+
+<h2>Info</h2>
+<h2>Access</h2>
+
+<%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" %>

@@ -23,4 +23,8 @@ module ApplicationHelper
       "sareh",
     ].sample
   end
+
+  def twitter_url(user)
+    "http://twitter.com/" + user.displayed_twitter
+  end
 end
