@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :events, only: :show
   resources :workshops, only: [:new, :show, :create, :edit, :update, :destroy]
   resources :schedule, only: :index
   resources :blog, only: :index

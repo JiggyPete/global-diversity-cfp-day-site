@@ -8,11 +8,21 @@
       <h4><%= country %></h4>
       <ol class="workshop-list">
       <% workshops[continent][country].each do |workshop| %>
-        <li class="workshop-list-item">
-          <%= workshop.city %>
-          organised by
-          <%= workshop.organiser.full_name %>
-        </li>
+        <% if current_user.present? %>
+          <%= link_to event_path(workshop) do %>
+            <li class="workshop-list-item">
+              <%= workshop.city %>
+              organised by
+              <%= workshop.organiser.full_name %>
+            </li>
+          <% end %>
+        <% else %>
+          <li class="workshop-list-item">
+            <%= workshop.city %>
+            organised by
+            <%= workshop.organiser.full_name %>
+          </li>
+        <% end %>
       <% end %>
       </ol>
     <% end %>
