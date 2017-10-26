@@ -1,6 +1,8 @@
 <div class="jumbotron">
-  <%= image_tag volunteer.picture_url, width: '150px', height: '150px' %>
-  <br/>
+  <% if volunteer.picture_url.present? %>
+    <%= image_tag volunteer.picture_url, width: '150px', height: '150px' %>
+    <br/>
+  <% end %>
   Name: <%= volunteer.full_name %>
   <br/>
   <% if volunteer.run_workshop_explaination.present? %>
