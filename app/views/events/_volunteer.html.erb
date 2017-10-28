@@ -1,20 +1,28 @@
-<div class="jumbotron">
-  <% if volunteer.picture_url.present? %>
-    <%= image_tag volunteer.picture_url, width: '150px', height: '150px' %>
-    <br/>
-  <% end %>
-  Name: <%= volunteer.full_name %>
-  <br/>
-  <% if volunteer.run_workshop_explaination.present? %>
-    Bio: <%= volunteer.biography %>
-  <% end %>
-  <br/>
-  <% if volunteer.run_workshop_explaination.present? %>
-    Involvement: <%= volunteer.run_workshop_explaination %>
-  <% end %>
-  <br/>
-  <% if volunteer.displayed_twitter.present? %>
-    Twitter: <%= link_to volunteer.displayed_twitter, twitter_url(volunteer), target: "_blank" %>
-  <% end %>
-  <br/>
+<div class="jumbotron volunteer-details">
+
+  <div class="container ">
+    <div class="row">
+      <div class="col col-sm-4">
+        <% if volunteer.picture_url.present? %>
+          <div class="col">
+            <%= image_tag volunteer.picture_url, class: 'volunteer--profile-picture' %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="col col-sm-6 justify-content-sm-center">
+        <h2 class="volunteer-info"><%= volunteer.full_name %></h2>
+        <br/>
+        <%= volunteer.run_workshop_explaination if volunteer.run_workshop_explaination.present? %>
+        <br/>
+        <br/>
+        Bio: <%= volunteer.biography if volunteer.run_workshop_explaination.present? %>
+      </div>
+
+      <div class="col col-sm-2">
+        <%= render 'shared/twitter', url: twitter_url(volunteer), name: volunteer.full_name %>
+      </div>
+    </div>
+  </div>
+
 </div>

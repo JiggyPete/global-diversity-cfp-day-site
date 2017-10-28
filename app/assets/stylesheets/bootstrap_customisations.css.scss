@@ -14,7 +14,7 @@ $footer-background-color: lighten(black, 25%);
   top: 0;
   left: 0;
   background-color: $site-yellow;
-
+  z-index: 100;
   width: 100%;
 
   label {
@@ -260,4 +260,20 @@ i.twitter {
 footer {
   height: auto;
   min-height: 4rem;
+}
+
+.volunteer--profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
+}
+
+.volunteer-details {
+}
+
+.volunteer-info {
+  margin-top: 0;
+}
+
+.col {
 }
