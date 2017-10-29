@@ -6,12 +6,19 @@
   <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" %>
 </div>
 
-<%= @workshop.notes %>
+<% if @workshop.notes.present? %>
+  <h2>Message</h2>
+  <%= @workshop.notes %>
+<% end %>
+
+<h2>Location</h2>
+<%= simple_format @workshop.venue_address %>
+<iframe src="<%= @workshop.google_maps_url %>" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <h2>Organiser</h2>
 <%= render "volunteer", volunteer: @workshop.organiser %>
 
-<% if @workshop.facilitator.present? %>
+<% if @workshop.facilitator.present? && @workshop.facilitator.accepted_or_not_invited? %>
   <h2>Facilitator</h2>
   <%= render "volunteer", volunteer: @workshop.facilitator %>
 <% end %>
@@ -19,17 +26,10 @@
 <% if @workshop.mentors.present? %>
   <h2>Mentor</h2>
   <% @workshop.mentors.each do |mentor| %>
-    <%= render "volunteer", volunteer: mentor %>
+    <%= render "volunteer", volunteer: mentor if mentor.accepted_or_not_invited? %>
   <% end %>
 <% end %>
 
-<h2>Message</h2>
-<h2>Location</h2>
-<%= @workshop.venue_address %>
-<%= @workshop.google_maps_url %>
-
-
-<h2>Info</h2>
 <h2>Access</h2>
 
 <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" %>
