@@ -11,9 +11,11 @@
   <%= @workshop.notes %>
 <% end %>
 
-<h2>Location</h2>
-<%= simple_format @workshop.venue_address %>
-<iframe src="<%= @workshop.google_maps_url %>" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+<%= if @workshop.google_maps_url.present? %>
+  <h2>Location</h2>
+  <%= simple_format @workshop.venue_address %>
+  <iframe src="<%= @workshop.google_maps_url %>" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+<% end %>
 
 <h2>Organiser</h2>
 <%= render "volunteer", volunteer: @workshop.organiser %>
