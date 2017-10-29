@@ -3,7 +3,7 @@
   <% if @workshop.start_time.present? && @workshop.end_time.present? %>
   <h2><%= l @workshop.start_time %> till <%= l @workshop.end_time %> <%= @workshop.time_zone %> February 3rd 2018</h2>
   <% end %>
-  <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" %>
+  <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" if @workshop.ticketing_url.present? %>
 </div>
 
 <% if @workshop.notes.present? %>
@@ -11,7 +11,7 @@
   <%= @workshop.notes %>
 <% end %>
 
-<%= if @workshop.google_maps_url.present? %>
+<% if @workshop.google_maps_url.present? %>
   <h2>Location</h2>
   <%= simple_format @workshop.venue_address %>
   <iframe src="<%= @workshop.google_maps_url %>" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -34,4 +34,4 @@
 
 <h2>Access</h2>
 
-<%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" %>
+<%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" if @workshop.ticketing_url.present? %>
