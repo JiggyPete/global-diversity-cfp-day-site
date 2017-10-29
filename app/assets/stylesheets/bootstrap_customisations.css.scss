@@ -9,6 +9,8 @@ $banner-text-color-hover: lighten($banner-text-color, 45%);
 
 $footer-background-color: lighten(black, 25%);
 
+$md: 768px;
+
 .app-navbar {
   position: fixed;
   top: 0;
@@ -241,13 +243,14 @@ i.twitter {
   width: 35px;
   height: 35px;
   position: absolute;
-  top: 1rem;
+
 }
 
 .account-profile-picture--link {
   display: inline;
   position: relative;
 }
+
 .account-profile-picture {
   width: 35px;
   height: 35px;
@@ -262,18 +265,45 @@ footer {
   min-height: 4rem;
 }
 
+.jumbotron.volunteer {
+  min-height: 45rem;
+  @media (min-width: $md) {
+    min-height: auto;
+  }
+}
+
 .volunteer--profile-picture {
   width: 200px;
   height: 200px;
   border-radius: 5%;
 }
 
-.volunteer-details {
+.volunteer--details {
+  margin-top: 2rem;
+
+  @media (min-width: $md) {
+    margin-top: 0;
+    padding-left: 50px;
+  }
 }
 
-.volunteer-info {
-  margin-top: 0;
+.volunteer-name {
+  font-family: 'Comfortaa', cursive;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.1;
 }
 
-.col {
+.navbar-brand .twitter {
+  top: 1rem;
+}
+
+.volunteer-twitter .twitter{
+  top: 2rem;
+  left: 10rem;
+  @media (min-width: $md) {
+    top: 0;
+    left: 0;
+  }
+
 }
