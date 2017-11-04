@@ -16,7 +16,7 @@
         <%= volunteer.run_workshop_explaination if volunteer.run_workshop_explaination.present? %>
         <br/>
         <br/>
-        Bio: <%= volunteer.biography if volunteer.run_workshop_explaination.present? %>
+        <b>About <%= volunteer.full_name.split(' ')[0] %></b>: <%= volunteer.biography if volunteer.biography.present? %>
       </div>
 
       <div class="col col-sm-1 volunteer-twitter">
