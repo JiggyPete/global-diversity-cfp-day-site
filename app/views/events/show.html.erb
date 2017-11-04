@@ -38,8 +38,8 @@
 
 <h2>Access</h2>
 
-  <% if @workshop.ticketing_url.present? %>
-    <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" %>
-  <% else %>
-    <button class="ticket-button btn btn-alert">Tickets Coming Soon</button>
-  <% end %>
+<% if @workshop.ticketing_url.present? %>
+  <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" %>
+<% else %>
+  <button class="ticket-button btn btn-alert">Tickets Coming Soon</button>
+<% end %>
