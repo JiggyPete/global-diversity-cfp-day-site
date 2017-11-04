@@ -30,7 +30,10 @@
             <% else %>
               <%= link_to "Log in |", new_user_session_path, class: "navbar-brand" %>&nbsp;
             <% end %>
-            <%= render 'shared/twitter', url: "https://twitter.com/gdcfpday", name: "Global Diversity CFP Day" %>
+              <a href="https://twitter.com/gdcfpday" target="_blank" class="navbar-brand twitter-nav-wrapper">
+                <i class="twitter-nav"></i>
+                <span class="sr-only">Follow Global Diversity CFP Day on Twitter</span>
+              </a>
           </div>
         </div>
 

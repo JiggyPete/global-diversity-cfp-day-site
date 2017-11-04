@@ -225,26 +225,60 @@ footer
   margin-bottom: 1rem;
 }
 
-.navbar-icon-wrapper {
-  display: inline;
-}
 
-.twitter-wrapper.navbar-brand {
-  display: inline;
-  width: 50px;
-  height: 50px;
-  position: relative;
-}
 
-i.twitter {
+@mixin twitter-icon {
   background-image: image-url("icons/twitter.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 35px;
   height: 35px;
-  position: absolute;
+}
+
+.twitter-nav-wrapper {
+  display: inline;
+  width: 50px;
+  height: 50px;
+  position: relative;
+
+  .twitter-nav {
+    @include twitter-icon;
+    position: absolute;
+    top: 1rem;
+  }
+}
+
+
+
+.volunteer-twitter {
+  display: inline;
+  width: 50px;
+  height: 50px;
+  position: relative;
+
+  .twitter {
+    @include twitter-icon;
+    position: absolute;
+    margin-left: 75px;
+    margin-top: 20px;
+
+    @media (min-width: $md) {
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+  }
 
 }
+
+.twitter-padding {
+  padding-bottom: 50px;
+  @media (min-width: $md) {
+  padding-bottom: 0;
+  }
+}
+
+
+
 
 .account-profile-picture--link {
   display: inline;
@@ -292,18 +326,4 @@ footer {
   font-size: 30px;
   font-weight: 500;
   line-height: 1.1;
-}
-
-.navbar-brand .twitter {
-  top: 1rem;
-}
-
-.volunteer-twitter .twitter{
-  top: 2rem;
-  left: 10rem;
-  @media (min-width: $md) {
-    top: 0;
-    left: 0;
-  }
-
 }

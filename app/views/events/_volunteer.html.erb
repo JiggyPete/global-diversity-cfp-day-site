@@ -1,7 +1,7 @@
 <div class="jumbotron volunteer">
 
   <div class="container ">
-    <div class="row">
+    <div class="row twitter-padding">
       <div class="col col-sm-4">
         <% if volunteer.picture_url.present? %>
           <div class="col">
@@ -19,11 +19,12 @@
         Bio: <%= volunteer.biography if volunteer.run_workshop_explaination.present? %>
       </div>
 
-      <div class="col col-sm-1 ">
-        <a href="<%= twitter_url(volunteer) %>" target="_blank" class="volunteer-twitter">
+      <div class="col col-sm-1 volunteer-twitter">
+        <a href="<%= twitter_url(volunteer) %>" target="_blank" class="">
           <i class="twitter"></i>
           <span class="sr-only">Follow <%= volunteer.full_name %> on Twitter</span>
         </a>
+        &nbsp;
       </div>
     </div>
   </div>
