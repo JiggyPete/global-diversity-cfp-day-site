@@ -36,8 +36,6 @@
   <% end %>
 <% end %>
 
-<h2>Access</h2>
-
 <% if @workshop.ticketing_url.present? %>
   <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" %>
 <% else %>
