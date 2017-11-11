@@ -11,63 +11,116 @@
     </div>
   <% end %>
 
-<div class="grouping">
-  <h2>Where</h2>
-  <div class="field">
-    <%= form.label :continent %>
-    <%= form.select :continent, continent_select_options %>
+  <div class="grouping">
+    <h2>Where</h2>
+    <div class="field">
+      <%= form.label :continent %>
+      <%= form.select :continent, continent_select_options %>
+    </div>
+
+    <div class="field">
+      <%= form.label :country %>
+      <%= form.select :country, ISO3166::Country.all.map(&:name).sort, include_blank: true %>
+    </div>
+
+    <%= workshop_text_field(form, :city, "") %>
+    <%= workshop_text_area(form, :venue_address, "") %>
+    <%= workshop_text_field(form, :google_maps_url, "") %>
+
   </div>
 
-  <div class="field">
-    <%= form.label :country %>
-    <%= form.select :country, ISO3166::Country.all.map(&:name).sort, include_blank: true %>
+  <div class="grouping">
+    <h2>When</h2>
+    <div class="field">
+      <%= form.label :start_time %>
+      <%= form.time_select :start_time, id: :workshop_start_time %>
+    </div>
+
+    <div class="field">
+      <%= form.label :end_time %>
+      <%= form.time_select :end_time, id: :workshop_end_time %>
+    </div>
+
+    <div class="field">
+      <%= form.label :time_zone %>
+      <%= form.select :time_zone, timezone_codes, include_blank: true %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city, id: :workshop_city %>
+  <div class="grouping">
+    <h2>How attendees sign up</h2>
+    <div class="field">
+      <%= form.label :ticketing_url %> (Why not try a ticketing service like
+      <a href="https://ti.to/home" target="blank">Ti.to</a>)<br/>
+      <%= form.text_field :ticketing_url, id: :workshop_ticketing_url %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :venue_address %>
-    <%= form.text_area :venue_address, id: :workshop_venue_address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :google_maps_url %>
-    <%= form.text_field :google_maps_url, id: :workshop_google_maps_url %>
-  </div>
-</div>
-
-<div class="grouping">
-  <h2>When</h2>
-  <div class="field">
-    <%= form.label :start_time %>
-    <%= form.time_select :start_time, id: :workshop_start_time %>
-  </div>
-
-  <div class="field">
-    <%= form.label :end_time %>
-    <%= form.time_select :end_time, id: :workshop_end_time %>
-  </div>
-
-  <div class="field">
-    <%= form.label :time_zone %>
-    <%= form.select :time_zone, timezone_codes, include_blank: true %>
-  </div>
-</div>
-
-<div class="grouping">
-  <h2>How attendees sign up</h2>
-  <div class="field">
-    <%= form.label :ticketing_url %> (Why not try a ticketing service like
-    <a href="https://ti.to/home" target="blank">Ti.to</a>)<br/>
-    <%= form.text_field :ticketing_url, id: :workshop_ticketing_url %>
-  </div>
-</div>
   <div class="field grouping">
-    <%= form.label :notes %>
+    <%= form.label :notes, "Workshop notes" %>
     <%= form.text_area :notes, id: :workshop_notes %>
+  </div>
+
+  <br/>
+  <br/>
+  <h2>Access Information</h2>
+  <p>This section is crucial to potential attendees. You are not expected to provide all of these facilities, however attendees need to know what to expect if they are to participate and if they should expect to have difficulties.</p>
+
+  <div class="field">
+    <%= form.label :access_information_prodivded, "Please check this box once you have completed the access fields below and are happy for them to be publicly presented on the event/workshop page" %>
+    <%= form.check_box :access_information_prodivded  %>
+  </div>
+  <br/>
+
+  <div class="grouping">
+    <h2>Getting to the venue</h2>
+
+    <h3>Public Transport</h3>
+    <%= workshop_check_box_with_notes_yml(form, :public_transport_near_venue) %>
+
+
+    <%= workshop_check_box_with_notes_yml(form, :public_transport_accessible_mobility_devices) %>
+    <%= workshop_check_box_with_notes_yml(form, :public_transport_accessible_service_animals) %>
+    <%= workshop_check_box_with_notes_yml(form, :public_transport_accessible_sight_impaired) %>
+    <%= workshop_check_box_with_notes_yml(form, :area_around_venue_safe) %>
+
+    <h3>Parking</h3>
+
+    <%= workshop_text_field(form, :how_far_parking) %>
+    <%= workshop_text_field(form, :cost_of_parking) %>
+
+    <%= workshop_check_box_with_notes_yml(form, :parking_well_lit) %>
+    <%= workshop_check_box_with_notes_yml(form, :parking_gated) %>
+    <%= workshop_check_box_with_notes_yml(form, :parking_gaurded) %>
+
+  </div>
+  <br/>
+
+  <div class="grouping">
+    <h2>Accessing the venue</h2>
+
+    <%= workshop_check_box(form, :venue_security, "Is there any building security? ") %>
+    <%= workshop_text_area(form, :venue_access_process) %>
+    <%= workshop_text_area(form, :steps) %>
+    <%= workshop_text_area(form, :ramps_or_elevators) %>
+    <%= workshop_text_area(form, :elevators_buttons) %>
+    <%= workshop_text_area(form, :childcare_nearby) %>
+  </div>
+
+  <div class="grouping">
+    <h2>The Venue</h2>
+
+    <%= workshop_check_box_with_notes_yml(form, :quiet_room) %>
+    <%= workshop_check_box_with_notes_yml(form, :nursing_room_for_new_mothers) %>
+    <%= workshop_check_box_with_notes_yml(form, :safe_for_small_children) %>
+    <%= workshop_check_box_with_notes_yml(form, :navigable_by_disabled) %>
+    <%= workshop_check_box_with_notes_yml(form, :chairs_arms) %>
+    <%= workshop_check_box_with_notes_yml(form, :drinks_allowed) %>
+
+    <%= workshop_text_field(form, :number_of_bathrooms) %>
+    <%= workshop_text_field(form, :number_of_handicap_stalls) %>
+    <%= workshop_text_field(form, :number_of_gender_neutral_stalls) %>
+
   </div>
 
   <div class="actions pull-right">

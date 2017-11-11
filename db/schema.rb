@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170827151521) do
+ActiveRecord::Schema.define(version: 20171111111117) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,47 @@ ActiveRecord::Schema.define(version: 20170827151521) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "approved", default: false
+    t.boolean "access_information_prodivded", default: false
+    t.boolean "public_transport_near_venue", default: false
+    t.text "public_transport_near_venue_notes", default: ""
+    t.boolean "public_transport_accessible_mobility_devices", default: false
+    t.text "public_transport_accessible_mobility_devices_notes", default: ""
+    t.boolean "public_transport_accessible_service_animals", default: false
+    t.text "public_transport_accessible_service_animals_notes", default: ""
+    t.boolean "public_transport_accessible_sight_impaired", default: false
+    t.text "public_transport_accessible_sight_impaired_notes", default: ""
+    t.boolean "area_around_venue_safe", default: false
+    t.text "area_around_venue_safe_notes", default: ""
+    t.string "how_far_parking", default: ""
+    t.string "cost_of_parking", default: ""
+    t.boolean "parking_well_lit", default: false
+    t.text "parking_well_lit_notes", default: ""
+    t.boolean "parking_gated", default: false
+    t.text "parking_gated_notes", default: ""
+    t.boolean "parking_gaurded", default: false
+    t.text "parking_gaurded_notes", default: ""
+    t.boolean "venue_security", default: false
+    t.text "venue_security_notes", default: ""
+    t.text "venue_access_process", default: ""
+    t.text "steps", default: ""
+    t.text "ramps_or_elevators", default: ""
+    t.text "elevators_buttons", default: ""
+    t.text "childcare_nearby", default: ""
+    t.boolean "quiet_room", default: false
+    t.text "quiet_room_notes", default: ""
+    t.boolean "nursing_room_for_new_mothers", default: false
+    t.text "nursing_room_for_new_mothers_notes", default: ""
+    t.boolean "safe_for_small_children", default: false
+    t.text "safe_for_small_children_notes", default: ""
+    t.boolean "navigable_by_disabled", default: false
+    t.text "navigable_by_disabled_notes", default: ""
+    t.boolean "chairs_arms", default: false
+    t.text "chairs_arms_notes", default: ""
+    t.integer "number_of_bathrooms", default: 0
+    t.integer "number_of_handicap_stalls", default: 0
+    t.integer "number_of_gender_neutral_stalls", default: 0
+    t.boolean "drinks_allowed", default: false
+    t.text "drinks_allowed_notes", default: ""
   end
 
 end

@@ -14,6 +14,61 @@ en:
         displayed_email: Which email address would you like displayed on the site? This will be used by attendees and potential volunteers to contact you.
         displayed_twitter: What is your twitter username? This will be displayed on the site (optional)
         displayed_github: What is your github username? This will be displayed on the site (optional)
+      workshop:
+        public_transport_near_venue: Is there a public transportation stop near the venue?
+        public_transport_near_venue_notes: Public transportation stop notes
+
+        public_transport_accessible_mobility_devices: Are public transportation stops accessible to people using mobility devices?
+        public_transport_accessible_mobility_devices_notes: Notes for people using mobility devices
+
+        public_transport_accessible_service_animals: Are public transportation stops accessible to people using service animals?
+        public_transport_accessible_service_animals_notes: Notes for people using service animals
+
+        public_transport_accessible_sight_impaired: Are public transportation stops accessible to people who are sight impaired?
+        public_transport_accessible_sight_impaired_notes: Notes for people who are sight impaird
+
+        area_around_venue_safe: Is the area around the venue safe and well-lit?
+        area_around_venue_safe_notes: Safety notes
+
+        parking_well_lit: Is the parking lot well-lit?
+        parking_well_lit_notes: Parking lighting notes
+
+        parking_gated: Is the parking lot gated?
+        parking_gated_notes: Parking gating notes
+
+        parking_gaurded: Is the parking lot gaurded?
+        parking_gaurded_notes: Parking gaurd notes
+
+        quiet_room: Is there a quiet room?
+        quiet_room_notes: Quiet room notes
+
+        nursing_room_for_new_mothers: Is there a nursing room for mothers with a newborn?
+        nursing_room_for_new_mothers_notes: Nursing room notes
+
+        safe_for_small_children: Is the venue safe for small children?
+        safe_for_small_children_notes: Small child safety notes
+
+        navigable_by_disabled: Is the space easily navigable for people using mobility devices or service animals?
+        navigable_by_disabled_notes: Venue navigation notes
+
+        chairs_arms: Do chairs in the venue have arms?
+        chairs_arms_notes: Chair notes
+
+        drinks_allowed: Are food and (non-alcoholic) drinks allowed in the space?
+        drinks_allowed_notes: Food and drink notes
+
+        how_far_parking: How close is parking to the venue?
+        cost_of_parking: Are there costs associated with parking?
+        venue_security: Is there any building security?
+        venue_access_process: What is the process for entering?
+        steps: Are there steps going into the building or space?
+        ramps_or_elevators: Are there ramps or elevators?
+        elevators_buttons: Are elevator buttons of an appropriate height for wheelchair users to reach?
+        childcare_nearby: Is there affordable childcare at or near the venue?
+
+        number_of_bathrooms: How many bathrooms (both single and multiple occupancy) are available?
+        number_of_handicap_stalls: How many handicap stalls or single-occupancy bathrooms are there?
+        number_of_gender_neutral_stalls: How many gender-neutral bathrooms are available? If none is it possible to make some gener-neutral?
   workshop:
     continents:
       - Africa

@@ -91,5 +91,56 @@
   </p>
 </div>
 
+<h2>Access Information</h2>
+
+<p>
+  <%= show_workshop_yes_no @workshop, :access_information_prodivded, "Display access information:" %>
+</p>
+
+<div class="grouping">
+  <h2>Getting to the venue</h2>
+  <h3>Public Transport</h3>
+  <%= show_workshop_attribute_and_notes @workshop, :public_transport_near_venue %>
+  <%= show_workshop_attribute_and_notes @workshop, :public_transport_accessible_mobility_devices %>
+  <%= show_workshop_attribute_and_notes @workshop, :public_transport_accessible_service_animals %>
+  <%= show_workshop_attribute_and_notes @workshop, :public_transport_accessible_sight_impaired %>
+  <%= show_workshop_attribute_and_notes @workshop, :area_around_venue_safe %>
+
+  <h3>Parking</h3>
+
+  <%= show_workshop_text_attribute @workshop, :how_far_parking %>
+  <%= show_workshop_text_attribute @workshop, :cost_of_parking %>
+
+  <%= show_workshop_attribute_and_notes @workshop, :parking_well_lit %>
+  <%= show_workshop_attribute_and_notes @workshop, :parking_gated %>
+  <%= show_workshop_attribute_and_notes @workshop, :parking_gaurded %>
+</div>
+
+<div class="grouping">
+  <h2>Accessing the venue</h2>
+
+  <%= show_workshop_yes_no @workshop, :venue_security %>
+  <%= show_workshop_text_attribute @workshop, :venue_access_process %>
+  <%= show_workshop_text_attribute @workshop, :steps %>
+  <%= show_workshop_text_attribute @workshop, :ramps_or_elevators %>
+  <%= show_workshop_text_attribute @workshop, :elevators_buttons %>
+  <%= show_workshop_text_attribute @workshop, :childcare_nearby %>
+</div>
+<div class="grouping">
+  <h2>The Venue</h2>
+
+  <%= show_workshop_attribute_and_notes @workshop, :quiet_room %>
+  <%= show_workshop_attribute_and_notes @workshop, :nursing_room_for_new_mothers %>
+  <%= show_workshop_attribute_and_notes @workshop, :safe_for_small_children %>
+  <%= show_workshop_attribute_and_notes @workshop, :navigable_by_disabled %>
+  <%= show_workshop_attribute_and_notes @workshop, :chairs_arms %>
+  <%= show_workshop_attribute_and_notes @workshop, :drinks_allowed %>
+
+  <%= show_workshop_text_attribute @workshop, :number_of_bathrooms %>
+  <%= show_workshop_text_attribute @workshop, :number_of_handicap_stalls %>
+  <%= show_workshop_text_attribute @workshop, :number_of_gender_neutral_stalls %>
+
+</div>
+
 <br/>
 <%= link_to 'Edit', edit_workshop_path(@workshop), class: 'btn btn-warning pull-right' %>

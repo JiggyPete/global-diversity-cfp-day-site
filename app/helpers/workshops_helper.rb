@@ -45,4 +45,91 @@ module WorkshopsHelper
      "WIB"
     ]
   end
+
+  def workshop_text_field(form, attribute, label_text=nil)
+    displayed_label_text = label_text.nil? ? form.object.class.human_attribute_name(attribute) : label_text
+    result = <<-HTML
+        <div class="field">
+          #{form.label attribute, label_text}
+          #{form.text_field attribute}
+        </div>
+    HTML
+
+    result.html_safe
+  end
+
+  def workshop_text_area(form, attribute, label_text=nil)
+    displayed_label_text = label_text.nil? ? form.object.class.human_attribute_name(attribute) : label_text
+    result = <<-HTML
+        <div class="field">
+          #{form.label attribute, displayed_label_text}
+          #{form.text_area attribute}
+        </div>
+        <br/>
+    HTML
+
+    result.html_safe
+  end
+
+  def workshop_check_box(form, field, label_text)
+    result = <<-HTML
+      <div class="field">
+        #{form.label field, label_text}
+        #{form.check_box field}
+      </div>
+    HTML
+
+    result.html_safe
+  end
+
+  def workshop_check_box_with_notes(form, field, checkbox_label_text, notes_label_text = "Notes")
+    checkbox = workshop_check_box(form, field, checkbox_label_text)
+    notes_text_area = workshop_text_area(form, "#{field}_notes", notes_label_text)
+
+    checkbox + notes_text_area
+  end
+
+  def workshop_check_box_with_notes_yml(form, attribute)
+    checkbox_label_text = form.object.class.human_attribute_name(attribute)
+    notes_label_text = form.object.class.human_attribute_name("#{attribute}_notes")
+
+    workshop_check_box_with_notes form, attribute, checkbox_label_text, notes_label_text
+  end
+
+  def show_workshop_yes_no(workshop, attribute, label=nil)
+    displayed_label_text = label.nil? ? workshop.class.human_attribute_name(attribute) : label
+    result = <<-HTML
+      <p>
+        <strong>#{displayed_label_text}</strong>
+        #{ yes_no_html workshop.send(:public_transport_near_venue) }
+      </p>
+    HTML
+
+    result.html_safe
+  end
+
+  def show_workshop_attribute_and_notes(workshop, attribute)
+    yes_no = show_workshop_yes_no workshop, attribute
+    notes = (workshop.send("#{attribute}_notes") + "<br/><br/>").html_safe
+
+    yes_no + notes
+  end
+
+  def show_workshop_text_attribute(workshop, attribute)
+    displayed_label_text = workshop.class.human_attribute_name(attribute)
+    value = workshop.send(attribute)
+
+    result = <<-HTML
+      <p>
+        <strong>#{displayed_label_text}</strong>
+        #{ value }
+      </p>
+    HTML
+
+    result.html_safe
+  end
+
+  def yes_no_html(value)
+    value == true ? "Yes" : "No"
+  end
 end
