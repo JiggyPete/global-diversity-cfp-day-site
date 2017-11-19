@@ -53,6 +53,7 @@ module WorkshopsHelper
           #{form.label attribute, label_text}
           #{form.text_field attribute}
         </div>
+        <br/>
     HTML
 
     result.html_safe
@@ -84,7 +85,7 @@ module WorkshopsHelper
 
   def workshop_check_box_with_notes(form, field, checkbox_label_text, notes_label_text = "Notes")
     checkbox = workshop_check_box(form, field, checkbox_label_text)
-    notes_text_area = workshop_text_area(form, "#{field}_notes", notes_label_text)
+    notes_text_area = show_workshop_text_attribute_notes(form.object, "#{field}_notes")
 
     checkbox + notes_text_area
   end
@@ -110,9 +111,13 @@ module WorkshopsHelper
 
   def show_workshop_attribute_and_notes(workshop, attribute)
     yes_no = show_workshop_yes_no workshop, attribute
-    notes = (workshop.send("#{attribute}_notes") + "<br/><br/>").html_safe
+    initial_notes_value = workshop.send("#{attribute}_notes")
 
-    yes_no + notes
+    if initial_notes_value.blank?
+      yes_no
+    else
+      yes_no + show_workshop_text_attribute_notes(workshop, "#{attribute}_notes")
+    end
   end
 
   def show_workshop_text_attribute(workshop, attribute)
@@ -122,8 +127,23 @@ module WorkshopsHelper
     result = <<-HTML
       <p>
         <strong>#{displayed_label_text}</strong>
-        #{ value }
+        #{ simple_format value.to_s }
       </p>
+    HTML
+
+    result.html_safe
+  end
+
+  def show_workshop_text_attribute_notes(workshop, attribute)
+    displayed_label_text = "Notes"
+    value = workshop.send(attribute)
+
+    result = <<-HTML
+      <p>
+        <strong>#{displayed_label_text}:</strong>
+        #{ simple_format value.to_s }
+      </p>
+      <br/>
     HTML
 
     result.html_safe

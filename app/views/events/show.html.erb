@@ -37,6 +37,10 @@
   <% end %>
 <% end %>
 
+<% if @workshop.access_information_prodivded %>
+  <%= render "event_access_information", workshop: @workshop %>
+<% end %>
+
 <% if @workshop.ticketing_url.present? %>
   <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" %>
 <% else %>

@@ -1,5 +1,8 @@
 <h1>Editing Workshop</h1>
 
+<%= link_to 'Back', @workshop, class: "btn btn-warning" %>
+<br/>
+<br/>
 <%= render 'percentage_complete', workshop: @workshop %>
 
 <%= render 'form', workshop: @workshop %>
