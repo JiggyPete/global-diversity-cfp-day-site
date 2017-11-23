@@ -85,7 +85,7 @@ module WorkshopsHelper
 
   def workshop_check_box_with_notes(form, field, checkbox_label_text, notes_label_text = "Notes")
     checkbox = workshop_check_box(form, field, checkbox_label_text)
-    notes_text_area = show_workshop_text_attribute_notes(form.object, "#{field}_notes")
+    notes_text_area = workshop_text_area(form, "#{field}_notes")
 
     checkbox + notes_text_area
   end
