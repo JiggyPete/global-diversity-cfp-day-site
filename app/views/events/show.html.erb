@@ -31,9 +31,11 @@
 <% end %>
 
 <% if @workshop.mentors.present? %>
-  <h2>Mentor</h2>
   <% @workshop.mentors.each do |mentor| %>
-    <%= render "volunteer", volunteer: mentor if mentor.accepted_or_not_invited? %>
+    <% if mentor.accepted_or_not_invited? %>
+      <h2>Mentor</h2>
+      <%= render "volunteer", volunteer: mentor  %>
+    <% end %>
   <% end %>
 <% end %>
 
