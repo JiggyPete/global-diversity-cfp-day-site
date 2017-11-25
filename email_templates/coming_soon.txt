@@ -1,6 +1,3 @@
-<!-- THIS EMAIL WAS BUILT AND TESTED WITH LITMUS http://litmus.com -->
-<!-- IT WAS RELEASED UNDER THE MIT LICENSE https://opensource.org/licenses/MIT -->
-<!-- QUESTIONS? TWEET US @LITMUSAPP -->
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -24,7 +21,7 @@
 
     <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
     <!--[if !mso]><!-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
     <!--<![endif]-->
 
     <!-- Web Font / @font-face : END -->
@@ -120,6 +117,15 @@
     <!-- Progressive Enhancements -->
     <style>
 
+        .header-title {
+            color: black;
+            font-family: "Comfortaa";
+            padding-top: 1em;
+            padding-bottom: 1em;
+            font-size: 2.5em;
+        }
+
+
         /* What it does: Hover styles for buttons */
         .button-td,
         .button-a {
@@ -128,6 +134,7 @@
         .button-td:hover,
         .button-a:hover {
             background: #555555 !important;
+            color: #1cccff;
             border-color: #555555 !important;
         }
 
@@ -173,6 +180,12 @@
                 font-size: 17px !important;
                 line-height: 22px !important;
             }
+
+            .header-title {
+                padding-top: 1em;
+                padding-bottom: 1em;
+                font-size: 1.3em;
+            }
         }
 
     </style>
@@ -215,11 +228,11 @@
 
                 <!-- HEADER : BEGIN -->
                 <tr>
-                    <td bgcolor="#333333">
+                    <td bgcolor="#ffff80">
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
-                                <td style="padding: 30px 40px 30px 40px; text-align: center;" align="center">
-                                    <img src="logo.png" width="57" height="13" alt="alt_text" border="0" style="height: auto; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                <td style="text-align: center;" align="center">
+                                    <div class="header-title">global diversity CFP day</div>
                                 </td>
                             </tr>
                         </table>
@@ -230,7 +243,7 @@
                 <!-- HERO : BEGIN -->
                 <tr>
                     <!-- Bulletproof Background Images c/o https://backgrounds.cm -->
-                    <td background="background.png" bgcolor="#aaaaaa" align="center" valign="top" style="text-align: center; background-position: center center !important; background-size: cover !important;">
+                    <td background="https://www.globaldiversitycfpday.com/assets/images/email/sareh.jpg" height="350px" bgcolor="#aaaaaa" align="center" valign="top" style="text-align: center; background-position: center center !important; background-size: cover !important;">
                         <!--[if gte mso 9]>
                         <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:680px; height:380px; background-position: center center !important;">
                         <v:fill type="tile" src="background.png" color="#222222" />
@@ -253,35 +266,13 @@
 
                                   <table>
                                      <tr>
-                                         <td valign="top" style="text-align: center; padding: 60px 0 10px 20px;">
-
-                                             <h1 style="margin: 0; font-family: 'Montserrat', sans-serif; font-size: 30px; line-height: 36px; color: #ffffff; font-weight: bold;">ANNOUNCEMENT</h1>
-                                         </td>
+                                         <td valign="top" style="text-align: center; padding: 60px 0 10px 20px;"></td>
                                      </tr>
                                      <tr>
-                                         <td valign="top" style="text-align: center; padding: 10px 20px 15px 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #757575;">
-                                             <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                             tempor incididunt ut labore.</p>
-                                         </td>
+                                         <td valign="top" style="text-align: center; padding: 60px 0 10px 20px;"></td>
                                      </tr>
                                      <tr>
-                                         <td valign="top" align="center" style="text-align: center; padding: 15px 0px 60px 0px;">
-
-                                             <!-- Button : BEGIN -->
-                                             <center>
-                                             <table role="presentation" align="center" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="text-align: center;">
-                                                 <tr>
-                                                     <td style="border-radius: 50px; background: #26a4d3; text-align: center;" class="button-td">
-                                                         <a href="http://www.google.com" style="background: #26a4d3; border: 15px solid #26a4d3; font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 50px; font-weight: bold;" class="button-a">
-                                                             <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;VIEW UPDATES&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                         </a>
-                                                     </td>
-                                                 </tr>
-                                             </table>
-                                             </center>
-                                             <!-- Button : END -->
-
-                                         </td>
+                                         <td valign="top" style="text-align: center; padding: 60px 0 10px 20px;"></td>
                                      </tr>
                                   </table>
 
@@ -313,28 +304,38 @@
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
                                 <td style="padding: 40px 40px 20px 40px; text-align: left;">
-                                    <h1 style="margin: 0; font-family: 'Montserrat', sans-serif; font-size: 20px; line-height: 26px; color: #333333; font-weight: bold;">WE'VE GOT QUITE ALOT TO TALK ABOUT THIS MONTH</h1>
+                                    <h1 style="margin: 0; font-family: 'Comfortaa', sans-serif; font-size: 20px; line-height: 26px; color: #333333; font-weight: bold;">Thank you for signing up to find out more about global diversity CFP day!</h1>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="padding: 0px 40px 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: left; font-weight:bold;">
-                                    <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.</p>
+                                    <p style="margin: 0;">The exciting news is that we are about to start releasing tickets for a number of the workshops soon!</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="padding: 0px 40px 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: left; font-weight:normal;">
-                                    <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.</p>
+                                    <p style="margin: 0;">Having signed up you'll be the first to know when tickets become available for each location!</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="padding: 0px 40px 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: left; font-weight:normal;">
-                                    <p style="margin: 0;">Yours sincerely,</p>
+                                    <p style="margin: 0;">Our goal is a simple one, to encourage and support people from underrepresented groups to apply to speak at any technology conference anywhere in the world!</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0px 40px 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: left; font-weight:normal;">
+                                    <p style="margin: 0;">Currently there are 33 workshops signed up in 12 countries across 5 continents!</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0px 40px 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: left; font-weight:normal;">
+                                    <p style="margin: 0;">We're very grateful for all the help and support we've had from people all around the world signing up to organise workshops in their home city.</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding: 0px 40px 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: left; font-weight:normal;">
+                                    <p style="margin: 0;">Thank you,</p>
                                 </td>
                             </tr>
 
@@ -344,19 +345,19 @@
                                     <table width="180" align="left">
                                         <tr>
                                           <td width="70">
-                                            <img src="http://glennsmith.me/email/litmus/images/profile-picture.png" width="62" height="62" style="margin:0; padding:0; border:none; display:block;" border="0" alt="">
+                                            <img src="https://pbs.twimg.com/profile_images/2179963251/jiggy_pete_400x400.jpg" width="62" height="62" style="margin:0; padding:0; border:none; display:block;" border="0" alt="">
                                           </td>
                                           <td width="110">
 
                                             <table width="" cellpadding="0" cellspacing="0" border="0">
                                               <tr>
                                                 <td align="left" style="font-family: sans-serif; font-size:14px; line-height:20px; color:#222222; font-weight:bold;" class="body-text">
-                                                  <p style="font-family: 'Montserrat', sans-serif; font-size:14px; line-height:20px; color:#222222; font-weight:bold; padding:0; margin:0;" class="body-text">Anna Bella</p>
+                                                  <p style="font-family: 'Comfortaa', sans-serif; font-size:14px; line-height:20px; color:#222222; font-weight:bold; padding:0; margin:0;" class="body-text">Peter Aitken</p>
                                                 </td>
                                               </tr>
                                               <tr>
                                                 <td align="left" style="font-family: sans-serif; font-size:14px; line-height:20px; color:#666666;" class="body-text">
-                                                  <p style="font-family: sans-serif; font-size:14px; line-height:20px; color:#666666; padding:0; margin:0;" class="body-text">CEO | Vision</p>
+                                                  <p style="font-family: sans-serif; font-size:14px; line-height:20px; color:#666666; padding:0; margin:0;" class="body-text">Organiser</p>
                                                 </td>
                                               </tr>
                                             </table>
@@ -375,121 +376,42 @@
 
                 <!-- BLOGROLL : BEGIN -->
                 <tr>
-                    <td bgcolor="#f7fafc">
+                    <td bgcolor="#e6e9eb">
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
                                 <td style="padding: 40px 40px 20px 40px; text-align: left;">
-                                    <h1 style="margin: 0; font-family: 'Montserrat', sans-serif; font-size: 20px; line-height: 26px; color: #333333; font-weight: bold;">LATEST NEWS</h1>
+                                    <h1 style="margin: 0; font-family: 'Comfortaa', sans-serif; font-size: 20px; line-height: 26px; color: #333333; font-weight: bold;">No workshop in your area?</h1>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="padding: 0px 40px 35px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: left; font-weight:normal;">
-                                    <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.</p>
+                                    <p style="margin: 0;">Sign up to organise a workshop in your area:</p>
                                 </td>
                             </tr>
                             <tr>
-                              <td align="center" valign="top" style="padding: 0px 40px 0px 40px;">
-                                <img src="http://placehold.it/600x250" width="600" height="" style="margin:0; padding:0; border:none; display:block;" border="0" class="fluid" alt="">
-                              </td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 0px 40px 20px 40px;">
+                                <td style="padding: 0px 40px 35px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: left; font-weight:normal;">
 
-                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="border:1px solid #dddddd;">
-                                        <tr>
-                                            <td align="" style="padding: 20px 20px 0px 20px; font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 20px; color: #555555; text-align: left; font-weight:normal;">
-                                                <h3 style="margin:0;">
-                                                    Blog 1).
-                                                </h3>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td align="" style="padding: 20px 20px 20px 20px; font-family: sans-serif; font-size: 14px; line-height: 20px; color: #555555; text-align: left; font-weight:normal;">
-                                                <p style="margin:0;">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                    consequat.
-                                                </p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" align="left" style="text-align: left; padding: 0px 20px 20px 20px;">
+
+
 
                                                 <!-- Button : BEGIN -->
-                                                <center>
-                                                <table role="presentation" align="left" cellspacing="0" cellpadding="0" border="0" style="text-align: left;">
-                                                    <tr>
-                                                        <td style="border-radius: 50px; background: #26a4d3; text-align: center;" class="button-td">
-                                                            <a href="http://www.google.com" style="background: #26a4d3; border: 15px solid #26a4d3; font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 50px; font-weight: bold;" class="button-a">
-                                                                <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;READ MORE&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                                </center>
-                                                <!-- Button : END -->
 
-                                            </td>
-                                        </tr>
-                                    </table>
+
+                                                    <table role="presentation" align="center" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow">
+                                                        <tr>
+                                                            <td style="border-radius: 50px; background: black; text-align: center; " class="button-td">
+                                                                <a href="https://www.globaldiversitycfpday.com/organise" style="background: black; border: 15px solid black; font-family: 'Comfortaa', sans-serif; font-size: 14px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 50px; font-weight: bold;" class="button-a">
+                                                                <span style="color: #ffff80;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;ORGANISE WORKSHOP&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                                </a>
+                                                            </td>
+
+                                                        </tr>
+                                                    </table>
+
+                                                <!-- Button : END -->
 
                                 </td>
                             </tr>
-                            <tr>
-                              <td align="center" valign="top" style="padding: 0px 40px 0px 40px;">
-                                <img src="http://placehold.it/600x250" width="600" height="" style="margin:0; padding:0; border:none; display:block;" border="0" class="fluid" alt="">
-                              </td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 0px 40px 40px 40px;">
-
-                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="border:1px solid #dddddd;">
-                                        <tr>
-                                            <td align="" style="padding: 20px 20px 0px 20px; font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 20px; color: #555555; text-align: left; font-weight:normal;">
-                                                <h3 style="margin:0;">
-                                                    Blog 2).
-                                                </h3>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td align="" style="padding: 20px 20px 20px 20px; font-family: sans-serif; font-size: 14px; line-height: 20px; color: #555555; text-align: left; font-weight:normal;">
-                                                <p style="margin:0;">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                    consequat.
-                                                </p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" align="left" style="text-align: left; padding: 0px 20px 20px 20px;">
-
-                                                <!-- Button : BEGIN -->
-                                                <center>
-                                                <table role="presentation" align="left" cellspacing="0" cellpadding="0" border="0" style="text-align: left;">
-                                                    <tr>
-                                                        <td style="border-radius: 50px; background: #26a4d3; text-align: center;" class="button-td">
-                                                            <a href="http://www.google.com" style="background: #26a4d3; border: 15px solid #26a4d3; font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 50px; font-weight: bold;" class="button-a">
-                                                                <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;READ MORE&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                                </center>
-                                                <!-- Button : END -->
-
-                                            </td>
-                                        </tr>
-                                    </table>
-
-                                </td>
-                            </tr>
-
-
 
                         </table>
                     </td>
@@ -498,29 +420,20 @@
 
                 <!-- CTA : BEGIN -->
                 <tr>
-                    <td bgcolor="#26a4d3">
+                    <td bgcolor="#ffff80">
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
-                                <td style="padding: 40px 40px 5px 40px; text-align: center;">
-                                    <h1 style="margin: 0; font-family: 'Montserrat', sans-serif; font-size: 20px; line-height: 24px; color: #ffffff; font-weight: bold;">YOUR FEEDBACK IS IMPORTANT</h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 0px 40px 20px 40px; font-family: sans-serif; font-size: 17px; line-height: 23px; color: #aad4ea; text-align: center; font-weight:normal;">
-                                    <p style="margin: 0;">Let us know what you think of our latest updates</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="middle" align="center" style="text-align: center; padding: 0px 20px 40px 20px;">
+                                 <td valign="middle" align="center" style="text-align: center; padding: 30px 20px 10px 20px;">
 
                                     <!-- Button : BEGIN -->
                                     <table role="presentation" align="center" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow">
                                         <tr>
-                                            <td style="border-radius: 50px; background: #ffffff; text-align: center;" class="button-td">
-                                                <a href="http://www.google.com" style="background: #ffffff; border: 15px solid #ffffff; font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 50px; font-weight: bold;" class="button-a">
-                                                    <span style="color:#26a4d3;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;GIVE FEEDBACK&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                            <td style="border-radius: 50px; background: black; text-align: center; " class="button-td">
+                                                <a href="https://www.globaldiversitycfpday.com" style="background: black; border: 15px solid black; font-family: 'Comfortaa', sans-serif; font-size: 14px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 50px; font-weight: bold;" class="button-a">
+                                                    <span style="color: #ffff80;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;WEBSITE&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                                 </a>
                                             </td>
+
                                         </tr>
                                     </table>
                                     <!-- Button : END -->
@@ -535,27 +448,17 @@
 
                 <!-- SOCIAL : BEGIN -->
                 <tr>
-                    <td bgcolor="#292828">
+                    <td bgcolor="#ffff80" color="green">
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
-                                <td style="padding: 30px 30px; text-align: center;">
+                                <td style="padding: 10px 0px; text-align: center;">
 
                                     <table align="center" style="text-align: center;">
                                         <tr>
                                             <td>
-                                                <img src="http://glennsmith.me/email/litmus/images/facebook.png" width="" height="" style="margin:0; padding:0; border:none; display:block;" border="0" alt="">
-                                            </td>
-                                            <td width="10">&nbsp;</td>
-                                            <td>
-                                                <img src="http://glennsmith.me/email/litmus/images/twitter.png" width="" height="" style="margin:0; padding:0; border:none; display:block;" border="0" alt="">
-                                            </td>
-                                            <td width="10">&nbsp;</td>
-                                            <td>
-                                                <img src="http://glennsmith.me/email/litmus/images/instagram.png" width="" height="" style="margin:0; padding:0; border:none; display:block;" border="0" alt="">
-                                            </td>
-                                            <td width="10">&nbsp;</td>
-                                            <td>
-                                                <img src="http://glennsmith.me/email/litmus/images/linkedin.png" width="" height="" style="margin:0; padding:0; border:none; display:block;" border="0" alt="">
+                                              <a href="http://twitter.com/gdcfpday">
+                                                  <img src="https://static1.squarespace.com/static/53dcd17be4b0b84c71f7d442/5477e327e4b097668b1fc7bd/5477e328e4b0ffc1351513de/1417143439182/icon-bw-twitter.png" width="70px" height="70px" style="margin:0; padding:0; border:none; display:block;" border="0" alt="">
+                                                </a>
                                             </td>
                                         </tr>
                                     </table>
@@ -573,23 +476,9 @@
                     <td bgcolor="#ffffff">
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
-                                <td style="padding: 40px 40px 10px 40px; font-family: sans-serif; font-size: 12px; line-height: 18px; color: #666666; text-align: center; font-weight:normal;">
-                                    <p style="margin: 0;">%%Company Address%%</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 0px 40px 10px 40px; font-family: sans-serif; font-size: 12px; line-height: 18px; color: #666666; text-align: center; font-weight:normal;">
-                                    <p style="margin: 0;">This email was sent to you from %%Company Email Address%%</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 0px 40px 10px 40px; font-family: sans-serif; font-size: 12px; line-height: 18px; color: #666666; text-align: center; font-weight:normal;">
-                                    <p style="margin: 0;">%%Preferences%% | %%Browser%% | %%Forward%% | %%Unsubscribe%%</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 0px 40px 40px 40px; font-family: sans-serif; font-size: 12px; line-height: 18px; color: #666666; text-align: center; font-weight:normal;">
-                                    <p style="margin: 0;">Copyright &copy; 2015-2017 <b>%%Company Name%%</b>, All Rights Reserved.</p>
+                                <td style="padding: 30px 40px 10px 40px; font-family: sans-serif; font-size: 12px; line-height: 18px; color: #666666; text-align: center; font-weight:normal;">
+                                    <p style="margin: 0;">%%Unsubscribe%%</p>
+                                    <p></p>
                                 </td>
                             </tr>
 
