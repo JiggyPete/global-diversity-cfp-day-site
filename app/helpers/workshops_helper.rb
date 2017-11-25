@@ -102,7 +102,7 @@ module WorkshopsHelper
     result = <<-HTML
       <p>
         <strong>#{displayed_label_text}</strong>
-        #{ yes_no_html workshop.send(:public_transport_near_venue) }
+        #{ yes_no_html workshop.send(attribute) }
       </p>
     HTML
 
