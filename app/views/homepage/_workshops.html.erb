@@ -9,24 +9,16 @@
       <ol class="workshop-list">
       <% workshops[continent][country].each do |workshop| %>
 
-        <% if current_user.present? %>
+        <% if workshop.ticketing_url.present? %>
           <%= link_to event_path(workshop) do %>
             <li class="workshop-list-item">
               <%= workshop.city %>
               organised by
               <%= workshop.organiser.full_name %>
-
-              <% if workshop.ticketing_url.present? %>
-                <button class="ticket-button btn btn-warning">Book your free ticket</button>
-              <% else %>
-                <button class="ticket-button btn btn-alert">Tickets Coming Soon</button>
-              <% end %>
-
+              <button class="ticket-button btn btn-warning">Book your free ticket</button>
             </li>
           <% end %>
-
         <% else %>
-
           <li class="workshop-list-item">
             <%= workshop.city %>
             organised by

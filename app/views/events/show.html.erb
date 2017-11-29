@@ -4,7 +4,7 @@
   <h2><%= l @workshop.start_time %> till <%= l @workshop.end_time %> <%= @workshop.time_zone %> February 3rd 2018</h2>
   <% end %>
   <% if @workshop.ticketing_url.present? %>
-    <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" %>
+    <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning", target: "blank" %>
   <% else %>
     <button class="ticket-button btn btn-alert">Tickets Coming Soon</button>
   <% end %>
@@ -44,7 +44,7 @@
 <% end %>
 
 <% if @workshop.ticketing_url.present? %>
-  <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning" %>
+  <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning", target: "blank" %>
 <% else %>
   <button class="ticket-button btn btn-alert">Tickets Coming Soon</button>
 <% end %>
