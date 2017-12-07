@@ -18,6 +18,15 @@
               <button class="ticket-button btn btn-warning">Book your free ticket</button>
             </li>
           <% end %>
+        <% elsif current_user.present? %>
+          <%= link_to event_path(workshop) do %>
+            <li class="workshop-list-item">
+              <%= workshop.city %>
+              organised by
+              <%= workshop.organiser.full_name %>
+              <button class="ticket-button btn btn-warning">View workshop</button>
+            </li>
+          <% end %>
         <% else %>
           <li class="workshop-list-item">
             <%= workshop.city %>

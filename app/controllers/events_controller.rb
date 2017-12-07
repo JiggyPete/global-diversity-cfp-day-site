@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   def show
     workshop = Workshop.find params[:id]
-    if workshop.ticketing_url.present?
+    if workshop.ticketing_url.present? || current_user.present?
       @workshop = workshop
     else
       raise Exception.new("User trying to access event when tickets are not available")
