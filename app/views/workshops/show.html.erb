@@ -40,12 +40,12 @@
   <h2>When</h2>
   <p>
     <strong>Start time:</strong>
-    <%= @workshop.start_time %>
+    <%= @workshop.start_time.strftime "%H:%M" %>
   </p>
 
   <p>
     <strong>End time:</strong>
-    <%= @workshop.end_time %>
+    <%= @workshop.end_time.strftime "%H:%M" %>
   </p>
 
   <p>
