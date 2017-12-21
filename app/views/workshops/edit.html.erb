@@ -1,10 +1,10 @@
 <h1>Editing Workshop</h1>
 
-<%= link_to 'Back', @workshop, class: "btn btn-warning" %>
+<%= workshop_link_button(label: 'Back to workshop') %>
 <br/>
 <br/>
 <%= render 'percentage_complete', workshop: @workshop %>
 
 <%= render 'form', workshop: @workshop %>
 
-<%= link_to 'Back', @workshop, class: "btn btn-warning" %>
+<%= workshop_link_button(label: 'Back to workshop') %>
