@@ -1,6 +1,6 @@
 <h1>Edit Account</h1>
 
-<%= link_to "Back", workshop_landing_page_for(current_user), class: "pull-right btn btn-warning" %>
+<%= workshop_link_button %>
 
 <%= form_for(current_user, url: account_path(current_user)) do |f| %>
   <%= render "devise/shared/user_form", f: f %>
@@ -9,3 +9,5 @@
     <%= f.submit "Update details", class: "btn btn-warning" %>
   </div>
 <% end %>
+
+<%= workshop_link_button %>

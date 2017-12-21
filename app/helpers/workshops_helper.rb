@@ -5,6 +5,11 @@ module WorkshopsHelper
     end
   end
 
+  def workshop_link_button(options={})
+    label = options[:label].present? ? options[:label] : 'Workshop'
+    link_to label, workshop_path(current_user.workshop), class: "btn btn-warning pull-right"
+  end
+
   def timezone_codes
     [
      "ACST",
