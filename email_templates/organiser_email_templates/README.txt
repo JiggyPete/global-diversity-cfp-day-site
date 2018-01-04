@@ -44,3 +44,12 @@ Aside from that there is the usual banner tweaking, and organiser name and pictu
 4-accessability.html
 This template allows you to share with your attendees the accessibility features of the building and workshop space. It contains the same information as the access information alreadu on your workshop page.
 Aside from that there is the usual banner tweaking, and organiser name and picture update.
+
+
+5-two-days-to-go.html
+This template is a reminder of how close the workshop is.
+Here you need to add in the
+Venue address
+Map url for of the venue location
+Workshop details url, to link to your workshop page on globaldiversitycfp.com site.
+and the usual banner tweaking, and organiser name and picture update.
