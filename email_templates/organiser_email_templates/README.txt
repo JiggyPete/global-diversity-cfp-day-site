@@ -22,3 +22,14 @@ Template parts that need filled in:
 You will also spot nearby to the organiser name the image url for the organiser.
 "https://pbs.twimg.com/profile_images/2179963251/jiggy_pete_400x400.jpg"
 Please update that to a publicly available image of your organiser.
+
+
+
+
+2-inspiration.html
+This is a template with the resources from our google doc. Books, blogs, podcasts and talks.
+
+What you need to update here is the:
+-- banner image if you choose
+-- &lt;city&gt; tag
+&lt;Workshop organiser name\&gt; and associated image
