@@ -39,3 +39,8 @@ What you need to update here is the:
 3-travel-tips.html
 This template needs details around transport, all of which will already be listed on your workshop page. This will take the most tweaking of the html source so far to add your custom information.
 Aside from that there is the usual banner tweaking, and organiser name and picture update.
+
+
+4-accessability.html
+This template allows you to share with your attendees the accessibility features of the building and workshop space. It contains the same information as the access information alreadu on your workshop page.
+Aside from that there is the usual banner tweaking, and organiser name and picture update.
