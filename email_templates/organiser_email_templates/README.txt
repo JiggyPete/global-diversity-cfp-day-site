@@ -33,3 +33,9 @@ What you need to update here is the:
 -- banner image if you choose
 -- &lt;city&gt; tag
 &lt;Workshop organiser name\&gt; and associated image
+
+
+
+3-travel-tips.html
+This template needs details around transport, all of which will already be listed on your workshop page. This will take the most tweaking of the html source so far to add your custom information.
+Aside from that there is the usual banner tweaking, and organiser name and picture update.
