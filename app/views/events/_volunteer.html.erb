@@ -9,11 +9,10 @@
           </div>
         <% end %>
       </div>
-
       <div class="col col-sm-7 justify-content-sm-center volunteer--details">
         <div class="volunteer-name"><%= volunteer.full_name %></div>
         <br/>
-        <%= volunteer.run_workshop_explaination if volunteer.run_workshop_explaination.present? %>
+        <b>Reason for being involved in workshop:</b> <%= volunteer.run_workshop_explaination if volunteer.run_workshop_explaination.present? %>
         <br/>
         <br/>
         <b>About <%= volunteer.full_name.split(' ')[0] %></b>: <%= volunteer.biography if volunteer.biography.present? %>
