@@ -10,15 +10,18 @@
   <% end %>
 </div>
 
-<% if false  %>
-  <h2>Message</h2>
-  <%= @workshop.notes %>
-<% end %>
 
 <% if @workshop.google_maps_url.present? %>
   <h2>Location</h2>
   <%= simple_format @workshop.venue_address %>
   <iframe src="<%= @workshop.google_maps_url %>" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+<% end %>
+
+<% if @workshop.notes.present?  %>
+  <h2>Workshop Information</h2>
+  <div id="intro" class="jumbotron">
+    <b><%= @workshop.notes %></b>
+  </div>
 <% end %>
 
 <h2>Organiser</h2>
