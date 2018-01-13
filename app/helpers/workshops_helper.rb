@@ -56,7 +56,7 @@ module WorkshopsHelper
     result = <<-HTML
         <div class="field">
           #{form.label attribute, label_text}
-          #{form.text_field attribute}
+          #{form.text_field attribute, class: 'form-control'}
         </div>
         <br/>
     HTML

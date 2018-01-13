@@ -1,0 +1,124 @@
+<%= link_to "Back", cfps_path, class: "btn btn-warning pull-right" %>
+
+  <%= form_with(model: cfp, local: true) do |form| %>
+    <% if cfp.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(cfp.errors.count, "error") %> prohibited this cfp from being saved:</h2>
+
+        <ul>
+        <% cfp.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= form.submit "Submit", class: "btn btn-warning" %>
+    </div>
+
+    <div class="grouping">
+      <h2>Conference</h2>
+      <div class="form-group">
+        <div class="field">
+          <%= form.label :conference_name %>
+          <%= form.text_field :conference_name, class: 'form-control' %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="field">
+          <%= form.label :website %>
+          <%= form.text_field :website, class: 'form-control'  %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="field">
+          <%= form.label :cfp_url %>
+          <%= form.text_field :cfp_url, class: 'form-control'  %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="field">
+          <%= form.label :twitter_handle %>
+          <%= form.text_field :twitter_handle, class: 'form-control'  %>
+        </div>
+      </div>
+    </div>
+
+    <div class="grouping">
+      <h2>Where</h2>
+      <div class="form-group">
+        <div class="field">
+          <%= form.label :continent %>
+          <%= form.select :continent, continent_select_options, {}, class: 'form-control'  %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :country %>
+        <%= form.select :country, ISO3166::Country.all.map(&:name).sort, {include_blank: true}, class: 'form-control' %>
+      </div>
+
+      <%= workshop_text_field(form, :city, "") %>
+    </div>
+
+    <div class="grouping">
+      <h2>When</h2>
+      <div class="field">
+        <%= form.label :cfp_open_date %>
+        <%= form.date_select :cfp_open_date, class: 'form-control' %>
+      </div>
+      <div class="field">
+        <%= form.label :cfp_close_date %>
+        <%= form.date_select :cfp_close_date %>
+      </div>
+
+      <div class="field">
+        <%= form.label :event_start_date %>
+        <%= form.date_select :event_start_date %>
+      </div>
+      <div class="field">
+        <%= form.label :event_close_date %>
+        <%= form.date_select :event_close_date %>
+      </div>
+    </div>
+
+    <div class="grouping">
+      <h2>Support</h2>
+      <div class="field">
+        <%= form.label :code_of_conduct %>
+        <%= form.check_box :code_of_conduct %>
+      </div>
+
+      <div class="field">
+        <%= form.label :free_childcare %>
+        <%= form.check_box :free_childcare %>
+      </div>
+      <div class="field">
+        <%= form.label :financial_support_for_speakers %>
+        <%= form.check_box :financial_support_for_speakers %>
+      </div>
+      <div class="field">
+        <%= form.label :financial_support_for_speakers_notes %>
+        <%= form.text_area :financial_support_for_speakers_notes %>
+      </div>
+
+      <div class="field">
+        <%= form.label :payment_for_speakers %>
+        <%= form.check_box :payment_for_speakers %>
+      </div>
+      <div class="field">
+        <%= form.label :payment_for_speakers_notes %>
+        <%= form.text_area :payment_for_speakers_notes %>
+      </div>
+
+    </div>
+
+
+    <div class="actions">
+      <%= form.submit "Submit", class: "btn btn-warning" %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Back", cfps_path, class: "btn btn-warning pull-right" %>

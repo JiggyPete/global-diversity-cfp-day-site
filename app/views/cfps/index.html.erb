@@ -1,0 +1,10 @@
+<h1>CFPs</h1>
+
+<%= link_to "New CFP", new_cfp_path, class: "btn btn-warning" %>
+<br/>
+<br/>
+<div>
+  All the funky CFPs will appear here
+</div>
+
+<%= render 'cfps', cfps: @cfps %>
