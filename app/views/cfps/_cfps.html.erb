@@ -1,0 +1,32 @@
+<h2>CFPs</h2>
+<% if cfps.empty? %>
+  Currently we have no CFPS.
+<% else %>
+  <% cfps.keys.each do |continent| %>
+    <h3><%= continent %></h3>
+    <% cfps[continent].keys.each do |country| %>
+      <h4><%= country %></h4>
+      <ol class="workshop-list">
+      <% cfps[continent][country].each do |cfp| %>
+
+          <li class="workshop-list-item">
+            <%= cfp.city %> -
+            <%= cfp.conference_name %> -
+            CFP Closes
+            <%= cfp.cfp_close_date.strftime("%B %d %Y") %>
+            <%= link_to cfp_path(cfp) do %>
+              <button class="btn btn-warning pull-right">Show</button>
+            <% end %>
+            <%= link_to edit_cfp_path(cfp) do %>
+              <button class="btn btn-warning pull-right">Edit</button>
+            <% end %>
+            <% if current_user.admin? %>
+              <%= button_to "Delete", {:controller => :cfps,
+                :action => 'destroy', :id => cfp.id }, method: :delete, class: "btn btn-warning pull-right" %>
+            <% end %>
+          </li>
+      <% end %>
+      </ol>
+    <% end %>
+  <% end %>
+<% end %>

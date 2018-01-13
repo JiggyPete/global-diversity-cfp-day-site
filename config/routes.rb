@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :events, only: :show
   resources :workshops, only: [:new, :show, :create, :edit, :update, :destroy]
+  resources :cfps
   resources :schedule, only: :index
   resources :email_templates, only: :index
   resources :preparation, only: :index

@@ -1,0 +1,57 @@
+<h1>CFP for <%= @cfp.conference_name %></h1>
+
+<%= link_to "Back", cfps_path, class: "btn btn-warning pull-right" %>
+
+<p>
+  Website: <%= link_to @cfp.website, @cfp.website, target: "blank" %>
+</p>
+<p>
+  CFP Page: <%= link_to @cfp.cfp_url, @cfp.cfp_url, target: "blank" %>
+</p>
+<p>
+  Twitter: <%= link_to @cfp.twitter_handle, @cfp.twitter_handle, target: "blank" %>
+</p>
+<p>
+  CFP Open: <%= @cfp.cfp_open_date %>
+</p>
+<p>
+  CFP Close: <%= @cfp.cfp_close_date %>
+</p>
+<p>
+  Event Start: <%= @cfp.event_start_date %>
+</p>
+<p>
+  Event End: <%= @cfp.event_end_date %>
+</p>
+<p>
+  Continent: <%= @cfp.continent %>
+</p>
+<p>
+  Country: <%= @cfp.country %>
+</p>
+<p>
+  City: <%= @cfp.city %>
+</p>
+<p>
+  Code of Conduct: <%= @cfp.code_of_conduct %>
+</p>
+<p>
+  Free childcare: <%= @cfp.free_childcare %>
+</p>
+<p>
+  Free childcare notes: <%= @cfp.free_childcare_notes %>
+</p>
+<p>
+  Financial Support for speakers: <%= @cfp.financial_support_for_speakers %>
+</p>
+<p>
+  Financial Support for speakers notes: <%= @cfp.financial_support_for_speakers_notes %>
+</p>
+<p>
+  Payment for speakers: <%= @cfp.payment_for_speakers %>
+</p>
+<p>
+  Payment for speakers notes: <%= @cfp.payment_for_speakers_notes %>
+</p>
+
+<%= link_to "Back", cfps_path, class: "btn btn-warning pull-right" %>
