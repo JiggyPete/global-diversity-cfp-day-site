@@ -1,24 +1,15 @@
-# README
+# Global Diversity CFP Day
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Access the live site from [here](https://www.globaldiversitycfpday.com/).
 
-Things you may want to cover:
+This site is built on Ruby on Rails, using Ruby 2.2.6 and Rails 5.1.1.
 
-* Ruby version
+To get this site running locally:
 
-* System dependencies
+`git clone git@github.com:JiggyPete/global-diversity-cfp-day-site.git`
 
-* Configuration
+Run `bundle install` to get all those lovely Gems on your machine.
 
-* Database creation
+Run `rake db:create db:migrate`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run `bundle exec rails server` and access `http://localhost:3000` on your browser of choice.
