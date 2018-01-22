@@ -84,14 +84,28 @@ h1, h2, h3, comfortaa {
 .background-silvia {
   background-image: image-url("silvia-on-stage.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: left;
   height: 600px;
 }
 
 .background-silvia-on-stage {
   background-image: image-url("silvia.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: right;
+  height: 600px;
+}
+
+.background-cat {
+  background-image: image-url("cat.jpg");
+  background-size: cover;
+  background-position: left;
+  height: 600px;
+}
+
+.background-cat-on-stage {
+  background-image: image-url("cat-on-stage.jpg");
+  background-size: cover;
+  background-position: right;
   height: 600px;
 }
 
