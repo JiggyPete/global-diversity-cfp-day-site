@@ -44,7 +44,7 @@ This template needs details around transport, all of which will already be liste
 Aside from that there is the usual banner tweaking, and organiser name and picture update.
 
 
-4-accessability.html
+4-accessibility.html
 Send out: Sat Jan 27th
 This template allows you to share with your attendees the accessibility features of the building and workshop space. It contains the same information as the access information alreadu on your workshop page.
 Aside from that there is the usual banner tweaking, and organiser name and picture update.
