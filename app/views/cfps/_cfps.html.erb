@@ -14,14 +14,17 @@
             CFP Closes
             <%= cfp.cfp_close_date.strftime("%B %d %Y") %>
             <%= link_to cfp_path(cfp) do %>
-              <button class="btn btn-warning pull-right">Show</button>
+              <button class="btn btn-warning pull-right">View</button>
             <% end %>
-            <%= link_to edit_cfp_path(cfp) do %>
-              <button class="btn btn-warning pull-right">Edit</button>
-            <% end %>
-            <% if current_user.admin? %>
-              <%= button_to "Delete", {:controller => :cfps,
-                :action => 'destroy', :id => cfp.id }, method: :delete, class: "btn btn-warning pull-right" %>
+
+            <% if current_user.present? %>
+              <%= link_to edit_cfp_path(cfp) do %>
+                <button class="btn btn-warning pull-right">Edit</button>
+              <% end %>
+              <% if current_user.admin? %>
+                <%= button_to "Delete", {:controller => :cfps,
+                  :action => 'destroy', :id => cfp.id }, method: :delete, class: "btn btn-warning pull-right" %>
+              <% end %>
             <% end %>
           </li>
       <% end %>
