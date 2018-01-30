@@ -1,25 +1,36 @@
-<%= workshop_link_button %>
-<h1>Draft Schedule</h1>
+<h1>Schedule</h1>
 
 <div class="jumbotron">
-  <h4>This is a draft schedule which is aimed at being a starting point for our worldwide workshops.</h4>
+  <% if current_user.present? %>
+    <h4>This schedule is aimed at being a starting point for our worldwide workshops.</h4>
+    <br/>
+    <h4>All suggestions and contributions are welcome, feel free to deviate from this in your workshop. </h4>
+    <br/>
+    <h4>Please use your own judgement about when to move on with each item. If attendees are engrossed in proposal writing let them continue, if they are struggling for focus bring in the next video/activity.</h4>
+    <br/>
+  <% end %>
+
+  <h2>Slides</h2>
+  <a href="slides/global-diversity-cfp-day.key">Keynote</a> |
+  <a href="slides/global-diversity-cfp-day.pptx">Power Point</a> |
+  <a href="slides/global-diversity-cfp-day.pdf">PDF</a>
   <br/>
-  <h4>All suggestions and contributions are welcome, feel free to deviate from this (or the final schedule) in your workshop. </h4>
+  <h3>Font</h3>
+  <a href="font/Comfortaa.zip">Comfortaa</a>
   <br/>
-  <h4>Please use your own judgement about when to move on with each item. If attendees are engrossed in proposal writing let them continue, if they are struggling for focus bring in the next video/activity.</h4>
   <br/>
-  <br/>
+
   <table class="table">
     <tr>
       <td>10am</td>
       <td>Arrival</td>
-      <td>Try and always have a member of the team available at the entrance to give attendees a warm, friendly welcome.</td>
+      <td><%= "Try and always have a member of the team available at the entrance to give attendees a warm, friendly welcome." if current_user.present? %></td>
     </tr>
     <tr>
       <td>10:15am</td>
       <td>Welcome (Slides to follow)</td>
-      <td>Introduce the team and why are they here</td>
-      <td>Explain format of workshop</td>
+      <td>Introduce the team and Code of Conduct</td>
+      <td><%= "Explain format of workshop" if current_user.present? %></td>
     </tr>
     <tr>
       <td>10:30am</td>
@@ -84,10 +95,32 @@
 
     <tr>
       <td>1:15pm</td>
-      <td>Inclusive Language Activity: <a href="https://docs.google.com/spreadsheets/d/1mJhLOdjTGGe-LUOcbiET9_oZn95xl2gpgLO1cAmyFHc/edit#gid=0" target="blank">Google Doc</a></td>
-      <td></td>
-      <td></td>
+      <td>Caring for your audience</td>
+      <td><%= "Part 1" if current_user.present? %></td>
+      <td>
+        <% if current_user.present? %>
+          Split attendees into groups and provide them with post-it's and pens
+          <br/>
+          <br/>
+          Ask them to write down examples of exclusionary language and behaviour and post them on the wall.
+          <br/>
+          <br/>
+          Next, get the group to discuss "Why" each item is exclusionary and what is a more inclusive thing to say or do.
+        <% end %>
+      </td>
     </tr>
+
+    <tr>
+      <td></td>
+      <td></td>
+      <td><%= "Part 2" if current_user.present? %></td>
+      <td>
+        <% if current_user.present? %>
+          Go over Content Warnings slide
+        <% end %>
+      </td>
+    </tr>
+
     <tr>
       <td>1:45pm</td>
       <td>Advice video #2: Your perfect tech talk from Saron Yitbarek (Section 2.11 to 18.30, don't need to go beyond 18.30)</td>
@@ -145,11 +178,11 @@
     </tr>
     <tr>
       <td>3:45pm</td>
-      <td>End of Day: Say Goodbye and thank all the people  </td>
+      <td>Family Photo and Close</td>
       <td></td>
       <td></td>
     </tr>
   </table>
 
 </div>
-<%= workshop_link_button %>
+
