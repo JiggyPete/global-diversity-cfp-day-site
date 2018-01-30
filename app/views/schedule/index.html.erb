@@ -95,10 +95,32 @@
 
     <tr>
       <td>1:15pm</td>
-      <td>Inclusive Language Activity: <a href="https://docs.google.com/spreadsheets/d/1mJhLOdjTGGe-LUOcbiET9_oZn95xl2gpgLO1cAmyFHc/edit#gid=0" target="blank">Google Doc</a></td>
-      <td></td>
-      <td></td>
+      <td>Caring for your audience</td>
+      <td><%= "Part 1" if current_user.present? %></td>
+      <td>
+        <% if current_user.present? %>
+          Split attendees into groups and provide them with post-it's and pens
+          <br/>
+          <br/>
+          Ask them to write down examples of exclusionary language and behaviour and post them on the wall.
+          <br/>
+          <br/>
+          Next, get the group to discuss "Why" each item is exclusionary and what is a more inclusive thing to say or do.
+        <% end %>
+      </td>
     </tr>
+
+    <tr>
+      <td></td>
+      <td></td>
+      <td><%= "Part 2" if current_user.present? %></td>
+      <td>
+        <% if current_user.present? %>
+          Go over Content Warnings slide
+        <% end %>
+      </td>
+    </tr>
+
     <tr>
       <td>1:45pm</td>
       <td>Advice video #2: Your perfect tech talk from Saron Yitbarek (Section 2.11 to 18.30, don't need to go beyond 18.30)</td>
