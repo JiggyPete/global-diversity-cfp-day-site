@@ -19,7 +19,7 @@
 
 <% if @workshop.notes.present?  %>
   <h2>Workshop Information</h2>
-  <div id="intro" class="jumbotron">
+  <div id="intro" class="jumbotron workshop-notes">
     <b><%= simple_format @workshop.notes %></b>
   </div>
 <% end %>
