@@ -1,0 +1,49 @@
+<h1>Incidents</h1>
+
+<%= link_to "New Incident", new_incident_path, class: "btn btn-warning pull-right" %>
+<br/>
+<br/>
+<br/>
+
+<table class="table">
+  <tr>
+    <th scope="col">Country</th>
+    <th scope="col">City</th>
+    <th scope="col">Reported by team at</th>
+    <th scope="col">Team Member</th>
+    <th scope="col">Name of person reporting incident</th>
+    <th scope="col">Approximate time of incident</th>
+    <th scope="col"></th>
+  </tr>
+
+  <% @incidents.each do |i| %>
+    <tr scope="row">
+      <td>
+        <%= i.user.workshop.country %>
+      </td>
+      <td>
+        <%= i.user.workshop.city %>
+      </td>
+      <td>
+        <%= i.created_at %>
+      </td>
+      <td>
+        <%= i.user.full_name %>
+      </td>
+      <td>
+        <%= i.person_reporting %>
+      </td>
+      <td>
+        <%= i.approximate_time_of_incident %>
+      </td>
+      <td>
+        <%= link_to incident_path(i) do %>
+          <button class="btn btn-warning pull-right">Show</button>
+        <% end %>
+
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "New Incident", new_incident_path, class: "btn btn-warning pull-right" %>

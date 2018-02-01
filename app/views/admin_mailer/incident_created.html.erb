@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>TEAM REPORTING Incident in <%= @incident.user.workshop.country %>, <%= @incident.user.workshop.city %></h1>
+    <p>
+      <%= @incident.user.full_name %> has reported an
+      <%= link_to "Incident", @link %>
+    </p>
+  </body>
+</html>

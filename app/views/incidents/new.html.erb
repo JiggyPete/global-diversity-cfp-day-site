@@ -1,0 +1,86 @@
+<h1>New Incident</h1>
+
+<%= link_to "Back", incidents_path, class: "btn btn-warning pull-right" %>
+
+<%= form_with(model: @incident, local: true) do |form| %>
+  <% if @incident.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@incident.errors.count, "error") %> prohibited this incident from being saved:</h2>
+
+      <ul>
+      <% @incident.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit "Submit", class: "btn btn-warning" %>
+  </div>
+
+  <div class="grouping">
+    <h2>Conference</h2>
+    <div class="form-group">
+      <div class="field">
+        <%= form.label :person_reporting, "Name of person reporting incident" %>
+        <%= form.text_field :person_reporting, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="field">
+        <%= form.label :contact_details_of_person_reporting, "Contact details of person reporting incident" %>
+        <%= form.text_field :contact_details_of_person_reporting, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="field">
+        <%= form.label :approximate_time_of_incident %>
+        <%= form.time_select :approximate_time_of_incident %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="field">
+        <%= form.label :info_about_offender, "Information about offender" %>
+        <%= form.text_area :info_about_offender, class: 'form-control'  %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="field">
+        <%= form.label :contact_details_about_offender, "Contact details of offender" %>
+        <%= form.text_area :contact_details_about_offender, class: 'form-control'  %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="field">
+        <%= form.label :violation, "Information about Code of Conduct violation" %>
+        <%= form.text_area :violation, class: 'form-control'  %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="field">
+        <%= form.label :circumstances, "Information about surrounding circumstances" %>
+        <%= form.text_area :circumstances, class: 'form-control'  %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="field">
+        <%= form.label :other_people_involved, "Who else was involved?" %>
+        <%= form.text_area :other_people_involved, class: 'form-control'  %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="field">
+        <%= form.label :team_members_present, "Which team members were involved?" %>
+        <%= form.text_area :team_members_present, class: 'form-control'  %>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Submit", class: "btn btn-warning" %>
+  </div>
+<% end %>
+
+<%= link_to "Back", incidents_path, class: "btn btn-warning pull-right" %>
+

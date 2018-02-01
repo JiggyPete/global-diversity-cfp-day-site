@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180113103402) do
+ActiveRecord::Schema.define(version: 20180201174706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,22 @@ ActiveRecord::Schema.define(version: 20180113103402) do
     t.boolean "payment_for_speakers"
     t.text "payment_for_speakers_notes"
     t.string "cfp_url"
+  end
+
+  create_table "incidents", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "person_reporting"
+    t.string "contact_details_of_person_reporting"
+    t.time "approximate_time_of_incident"
+    t.string "info_about_offender"
+    t.string "contact_details_about_offender"
+    t.text "violation"
+    t.text "circumstances"
+    t.text "other_people_involved"
+    t.text "team_members_present"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_incidents_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

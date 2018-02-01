@@ -1,0 +1,56 @@
+<h1>Incident in <%= @incident.user.workshop.country %>, <%= @incident.user.workshop.city %></h1>
+
+<%= link_to "Back", incidents_path, class: "btn btn-warning pull-right" %>
+
+<br/>
+<br/>
+
+<div class="grouping">
+  <p>
+    <strong>Submitted at:</strong>
+    <%= @incident.created_at %>
+  </p>
+  <p>
+    <strong>Team Member submitting:</strong>
+    <%= @incident.user.full_name %>
+  </p>
+  <p>
+    <strong>Attendee reporting:</strong>
+    <%= @incident.person_reporting %>
+  </p>
+  <p>
+    <strong>Attendee contact details:</strong>
+    <%= @incident.contact_details_of_person_reporting %>
+  </p>
+  <p>
+    <strong>Approx time of incident:</strong>
+    <%= @incident.approximate_time_of_incident %>
+  </p>
+  <p>
+    <strong>Offender details:</strong>
+    <%= simple_format @incident.info_about_offender %>
+  </p>
+  <p>
+    <strong>Offender details:</strong>
+    <%= simple_format @incident.contact_details_about_offender %>
+  </p>
+
+  <p>
+    <strong>Violation details:</strong>
+    <%= simple_format @incident.violation %>
+  </p>
+  <p>
+    <strong>Circumstances:</strong>
+    <%= simple_format @incident.circumstances %>
+  </p>
+  <p>
+    <strong>Other people involved:</strong>
+    <%= simple_format @incident.other_people_involved %>
+  </p>
+  <p>
+    <strong>Team members present:</strong>
+    <%= simple_format @incident.team_members_present %>
+  </p>
+</div>
+
+<%= link_to "Back", incidents_path, class: "btn btn-warning pull-right" %>

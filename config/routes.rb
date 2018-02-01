@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :events, only: :show
   resources :workshops, only: [:new, :show, :create, :edit, :update, :destroy]
   resources :cfps
+  resources :incidents
   resources :schedule, only: :index
   resources :email_templates, only: :index
   resources :preparation, only: :index
