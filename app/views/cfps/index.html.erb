@@ -1,5 +1,6 @@
 <h1>CFPs</h1>
 
+  <%= link_to "Schedule", schedule_index_path, class: "ticket-button btn btn-warning" %>
 <% if current_user.present? %>
   <%= link_to "New CFP", new_cfp_path, class: "btn btn-warning" %>
   <br/>
@@ -10,3 +11,6 @@
 <% end %>
 
 <%= render 'cfps', cfps: @cfps %>
+
+<br/>
+<%= link_to "Schedule", schedule_index_path, class: "ticket-button btn btn-warning" %>
