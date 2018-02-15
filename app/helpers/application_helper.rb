@@ -27,4 +27,8 @@ module ApplicationHelper
   def twitter_url(user)
     "http://twitter.com/" + user.displayed_twitter
   end
+
+  def twitter_link(twitter_handle, text)
+    link_to text, "https://twitter.com/#{twitter_handle}", target: "_blank"    
+  end
 end

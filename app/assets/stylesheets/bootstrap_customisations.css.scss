@@ -102,6 +102,79 @@ h1, h2, h3, comfortaa {
   height: 600px;
 }
 
+.blog--venue-ready {
+  background-image: image-url("blog/venue-ready.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+
+.blog--sydney-arrivals {
+  background-image: image-url("blog/sydney-arrivals.jpg");
+  background-size: cover;
+  background-position: right;
+  height: 600px;
+}
+
+.blog--sydney-starting {
+  background-image: image-url("blog/sydney-starting.jpg");
+  background-size: cover;
+  background-position: right;
+  height: 600px;
+}
+
+.blog--sydeny-family-photo {
+  background-image: image-url("blog/sydney-family-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+
+.blog--coimbinatore-family-photo {
+  background-image: image-url("blog/coimbinatore-family-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+.blog--san-diego-family-photo {
+  background-image: image-url("blog/san-diego-family-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+.blog--la-family-photo {
+  background-image: image-url("blog/la-family-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+.blog--we-rise {
+  background-image: image-url("blog/we-rise.png");
+  background-size: cover;
+  background-position: right;
+  height: 600px;
+}
+.blog--attendee-feedback {
+  background-image: image-url("blog/attendee-feedback.png");
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  border: 1px solid grey;
+  width: 600px;
+  height: 240px;
+}
+
+.image-description {
+  font-style: italic;
+}
+
+.blog--melbourne-starting {
+  background-image: image-url("blog/melbourne-starting.jpg");
+  background-size: cover;
+  background-position: right;
+  height: 600px;
+}
+
 .background-cat-on-stage {
   background-image: image-url("cat-on-stage.jpg");
   background-size: cover;
@@ -346,4 +419,10 @@ footer {
 
 .workshop-notes p {
   line-height: 1.5em;
+}
+
+.gdcfpday-post {
+  a {
+    font-weight: 600;
+  }
 }
