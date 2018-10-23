@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180201174706) do
+ActiveRecord::Schema.define(version: 20181023074756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -155,6 +155,7 @@ ActiveRecord::Schema.define(version: 20180201174706) do
     t.integer "number_of_gender_neutral_stalls", default: 0
     t.boolean "drinks_allowed", default: false
     t.text "drinks_allowed_notes", default: ""
+    t.integer "year"
   end
 
 end

@@ -8,6 +8,18 @@ RSpec.describe Workshop, type: :model do
     it { should validate_presence_of(:city) }
   end
 
+  describe "default scope" do
+    it "provides workshops with no :year set" do
+      no_year  = create_workshop year: nil
+      year_2018  = create_workshop year: 2018
+
+      expect(Workshop.all).not_to include(year_2018)
+      expect(Workshop.unscoped.all).to include(year_2018)
+
+      expect(Workshop.all).to include(no_year)
+    end
+  end
+
   describe "#organiser" do
     let!(:workshop) { Workshop.create }
     let!(:organiser) { create_user(organiser: true, workshop: workshop) }
@@ -354,16 +366,20 @@ RSpec.describe Workshop, type: :model do
   end
 
   def create_workshop(workshop_attributes = {})
-    attributes = {continent: "Europe", country: "United Kingdom", city: "Glasgow" }.merge(workshop_attributes)
-    Workshop.create continent: attributes[:continent],
-      country: attributes[:country],
-      city: attributes[:city],
+    default_attributes = {
+      continent: "Europe",
+      country: "United Kingdom",
+      city: "Glasgow" ,
       venue_address: "City Centre",
       google_maps_url: "http://google.com",
       start_time: Time.now,
       end_time: Time.now,
       time_zone: 'GMT',
       ticketing_url: "http://google.com"
+    }
+
+    attributes = default_attributes.merge(workshop_attributes)
+    Workshop.create attributes
   end
 end
 

@@ -1,4 +1,5 @@
 class Workshop < ApplicationRecord
+  default_scope { where(year: nil) }
 
   validates :continent, :country, :city, presence: true
 
