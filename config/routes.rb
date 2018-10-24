@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :events, only: :show
+
+  post "/workshop/duplicate" => "workshops#duplicate"
   resources :workshops, only: [:new, :show, :create, :edit, :update, :destroy]
+
   resources :cfps
   resources :incidents
   resources :schedule, only: :index

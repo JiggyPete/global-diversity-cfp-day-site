@@ -1,153 +1,168 @@
-
-<%= render 'percentage_complete', workshop: @workshop %>
-
-<h1>Workshop Management</h1>
-<%= link_to 'Edit Workshop', edit_workshop_path(@workshop), class: 'btn btn-warning' %>
-<%= link_to 'Edit Account', edit_account_path(@workshop), class: 'btn btn-warning' %>
-<%= link_to "Preparation", preparation_index_path, class: "btn btn-info" %>
-<%= link_to "Schedule", schedule_index_path, class: "btn btn-info" %>
-<%= link_to "CFPs", cfps_path, class: "btn btn-info" %>
-<%= link_to "Log Incidents", incidents_path, class: "btn btn-danger" %>
-
-
-<br/>
-<br/>
-
-<div class="grouping">
-  <h2>Where</h2>
+<% if @workshop.nil? && current_user.workshop_id.present? %>
   <p>
-    <strong>Continent:</strong>
-    <%= @workshop.continent %>
+    Having been involved in Global Diversity CFP Day 2018, we want to make the setup of your 2019 workshop as easy as possible. If you intend hosting in the same venue as 2018 we'd recommend you...
+  </p>
+  <%= link_to 'Duplicate 2018 Workshop', workshop_duplicate_path, class: 'btn btn-warning pull-left', method: :post %>
+  <br/>
+  <br/>
+  <br/>
+  <p>
+    otherwise you can create a fresh new workshop here
+  </p>
+  <%= link_to 'New 2019 Workshop', new_workshop_path, class: 'btn btn-warning pull-left' %>
+<% end %>
+
+<% if @workshop.present? %>
+  <%= render 'percentage_complete', workshop: @workshop %>
+
+  <h1>Workshop Management</h1>
+  <%= link_to 'Edit Workshop', edit_workshop_path(@workshop), class: 'btn btn-warning' %>
+  <%= link_to 'Edit Account', edit_account_path(@workshop), class: 'btn btn-warning' %>
+  <%= link_to "Preparation", preparation_index_path, class: "btn btn-info" %>
+  <%= link_to "Schedule", schedule_index_path, class: "btn btn-info" %>
+  <%= link_to "CFPs", cfps_path, class: "btn btn-info" %>
+  <%= link_to "Log Incidents", incidents_path, class: "btn btn-danger" %>
+
+
+  <br/>
+  <br/>
+
+  <div class="grouping">
+    <h2>Where</h2>
+    <p>
+      <strong>Continent:</strong>
+      <%= @workshop.continent %>
+    </p>
+
+    <p>
+      <strong>Country:</strong>
+      <%= @workshop.country %>
+    </p>
+
+    <p>
+      <strong>City:</strong>
+      <%= @workshop.city %>
+    </p>
+
+    <p>
+      <strong>Venue address:</strong>
+      <%= @workshop.venue_address %>
+    </p>
+
+    <p>
+      <strong>Google maps url:</strong>
+      <%= @workshop.google_maps_url %>
+    </p>
+  </div>
+
+  <div class="grouping">
+    <h2>When</h2>
+    <p>
+      <strong>Start time:</strong>
+      <%= @workshop.start_time.strftime "%H:%M" %>
+    </p>
+
+    <p>
+      <strong>End time:</strong>
+      <%= @workshop.end_time.strftime "%H:%M" %>
+    </p>
+
+    <p>
+      <strong>Time zone:</strong>
+      <%= @workshop.time_zone %>
+    </p>
+  </div>
+
+  <div class="grouping">
+    <h2>How attendees sign up</h2>
+    <p>
+      <strong>Ticketing url:</strong>
+      <%= @workshop.ticketing_url %>
+    </p>
+  </div>
+
+  <div class="grouping">
+    <h2>Team</h2>
+    <p>
+      <strong>Organiser:</strong>
+      <%= user_name @workshop.organiser %>
+    </p>
+    <p>
+      <% if @workshop.facilitator.present? %>
+        <%= render 'display_user', user: @workshop.facilitator, user_type: "Facilitator" %>
+      <% else %>
+        <%= render 'invite_user', user_type: "Facilitator" %>
+      <% end %>
+    </p>
+    <p>
+      <% @workshop.mentors.each do |mentor| %>
+        <p>
+          <%= render 'display_user', user: mentor, user_type: "Mentor" %>
+        </p>
+      <% end %>
+
+      <%= render 'invite_user', user_type: "Mentor" %>
+    </p>
+  </div>
+
+  <div class="grouping">
+    <p>
+      <strong>Notes:</strong>
+      <%= simple_format @workshop.notes %>
+    </p>
+  </div>
+
+  <h2>Access Information</h2>
+
+  <p>
+    <%= show_workshop_yes_no @workshop, :access_information_prodivded, "Display access information:" %>
   </p>
 
-  <p>
-    <strong>Country:</strong>
-    <%= @workshop.country %>
-  </p>
+  <div class="grouping">
+    <h2>Getting to the venue</h2>
+    <h3>Public Transport</h3>
+    <%= show_workshop_attribute_and_notes @workshop, :public_transport_near_venue %>
+    <%= show_workshop_attribute_and_notes @workshop, :public_transport_accessible_mobility_devices %>
+    <%= show_workshop_attribute_and_notes @workshop, :public_transport_accessible_service_animals %>
+    <%= show_workshop_attribute_and_notes @workshop, :public_transport_accessible_sight_impaired %>
+    <%= show_workshop_attribute_and_notes @workshop, :area_around_venue_safe %>
 
-  <p>
-    <strong>City:</strong>
-    <%= @workshop.city %>
-  </p>
+    <h3>Parking</h3>
 
-  <p>
-    <strong>Venue address:</strong>
-    <%= @workshop.venue_address %>
-  </p>
+    <%= show_workshop_text_attribute @workshop, :how_far_parking %>
+    <%= show_workshop_text_attribute @workshop, :cost_of_parking %>
 
-  <p>
-    <strong>Google maps url:</strong>
-    <%= @workshop.google_maps_url %>
-  </p>
-</div>
+    <%= show_workshop_attribute_and_notes @workshop, :parking_well_lit %>
+    <%= show_workshop_attribute_and_notes @workshop, :parking_gated %>
+    <%= show_workshop_attribute_and_notes @workshop, :parking_gaurded %>
+  </div>
 
-<div class="grouping">
-  <h2>When</h2>
-  <p>
-    <strong>Start time:</strong>
-    <%= @workshop.start_time.strftime "%H:%M" %>
-  </p>
+  <div class="grouping">
+    <h2>Accessing the venue</h2>
 
-  <p>
-    <strong>End time:</strong>
-    <%= @workshop.end_time.strftime "%H:%M" %>
-  </p>
+    <%= show_workshop_yes_no @workshop, :venue_security %>
+    <%= show_workshop_text_attribute @workshop, :venue_access_process %>
+    <%= show_workshop_text_attribute @workshop, :steps %>
+    <%= show_workshop_text_attribute @workshop, :ramps_or_elevators %>
+    <%= show_workshop_text_attribute @workshop, :elevators_buttons %>
+    <%= show_workshop_text_attribute @workshop, :childcare_nearby %>
+  </div>
+  <div class="grouping">
+    <h2>The Venue</h2>
 
-  <p>
-    <strong>Time zone:</strong>
-    <%= @workshop.time_zone %>
-  </p>
-</div>
+    <%= show_workshop_attribute_and_notes @workshop, :quiet_room %>
+    <%= show_workshop_attribute_and_notes @workshop, :nursing_room_for_new_mothers %>
+    <%= show_workshop_attribute_and_notes @workshop, :safe_for_small_children %>
+    <%= show_workshop_attribute_and_notes @workshop, :navigable_by_disabled %>
+    <%= show_workshop_attribute_and_notes @workshop, :chairs_arms %>
+    <%= show_workshop_attribute_and_notes @workshop, :drinks_allowed %>
 
-<div class="grouping">
-  <h2>How attendees sign up</h2>
-  <p>
-    <strong>Ticketing url:</strong>
-    <%= @workshop.ticketing_url %>
-  </p>
-</div>
+    <%= show_workshop_text_attribute @workshop, :number_of_bathrooms %>
+    <%= show_workshop_text_attribute @workshop, :number_of_handicap_stalls %>
+    <%= show_workshop_text_attribute @workshop, :number_of_gender_neutral_stalls %>
 
-<div class="grouping">
-  <h2>Team</h2>
-  <p>
-    <strong>Organiser:</strong>
-    <%= user_name @workshop.organiser %>
-  </p>
-  <p>
-    <% if @workshop.facilitator.present? %>
-      <%= render 'display_user', user: @workshop.facilitator, user_type: "Facilitator" %>
-    <% else %>
-      <%= render 'invite_user', user_type: "Facilitator" %>
-    <% end %>
-  </p>
-  <p>
-    <% @workshop.mentors.each do |mentor| %>
-      <p>
-        <%= render 'display_user', user: mentor, user_type: "Mentor" %>
-      </p>
-    <% end %>
+  </div>
 
-    <%= render 'invite_user', user_type: "Mentor" %>
-  </p>
-</div>
-
-<div class="grouping">
-  <p>
-    <strong>Notes:</strong>
-    <%= simple_format @workshop.notes %>
-  </p>
-</div>
-
-<h2>Access Information</h2>
-
-<p>
-  <%= show_workshop_yes_no @workshop, :access_information_prodivded, "Display access information:" %>
-</p>
-
-<div class="grouping">
-  <h2>Getting to the venue</h2>
-  <h3>Public Transport</h3>
-  <%= show_workshop_attribute_and_notes @workshop, :public_transport_near_venue %>
-  <%= show_workshop_attribute_and_notes @workshop, :public_transport_accessible_mobility_devices %>
-  <%= show_workshop_attribute_and_notes @workshop, :public_transport_accessible_service_animals %>
-  <%= show_workshop_attribute_and_notes @workshop, :public_transport_accessible_sight_impaired %>
-  <%= show_workshop_attribute_and_notes @workshop, :area_around_venue_safe %>
-
-  <h3>Parking</h3>
-
-  <%= show_workshop_text_attribute @workshop, :how_far_parking %>
-  <%= show_workshop_text_attribute @workshop, :cost_of_parking %>
-
-  <%= show_workshop_attribute_and_notes @workshop, :parking_well_lit %>
-  <%= show_workshop_attribute_and_notes @workshop, :parking_gated %>
-  <%= show_workshop_attribute_and_notes @workshop, :parking_gaurded %>
-</div>
-
-<div class="grouping">
-  <h2>Accessing the venue</h2>
-
-  <%= show_workshop_yes_no @workshop, :venue_security %>
-  <%= show_workshop_text_attribute @workshop, :venue_access_process %>
-  <%= show_workshop_text_attribute @workshop, :steps %>
-  <%= show_workshop_text_attribute @workshop, :ramps_or_elevators %>
-  <%= show_workshop_text_attribute @workshop, :elevators_buttons %>
-  <%= show_workshop_text_attribute @workshop, :childcare_nearby %>
-</div>
-<div class="grouping">
-  <h2>The Venue</h2>
-
-  <%= show_workshop_attribute_and_notes @workshop, :quiet_room %>
-  <%= show_workshop_attribute_and_notes @workshop, :nursing_room_for_new_mothers %>
-  <%= show_workshop_attribute_and_notes @workshop, :safe_for_small_children %>
-  <%= show_workshop_attribute_and_notes @workshop, :navigable_by_disabled %>
-  <%= show_workshop_attribute_and_notes @workshop, :chairs_arms %>
-  <%= show_workshop_attribute_and_notes @workshop, :drinks_allowed %>
-
-  <%= show_workshop_text_attribute @workshop, :number_of_bathrooms %>
-  <%= show_workshop_text_attribute @workshop, :number_of_handicap_stalls %>
-  <%= show_workshop_text_attribute @workshop, :number_of_gender_neutral_stalls %>
-
-</div>
-
-<br/>
-<%= link_to 'Edit', edit_workshop_path(@workshop), class: 'btn btn-warning pull-right' %>
+  <br/>
+  <%= link_to 'Edit', edit_workshop_path(@workshop), class: 'btn btn-warning pull-right' %>
+<% end %>

@@ -28,6 +28,21 @@ class Workshop < ApplicationRecord
     result
   end
 
+  def duplicate_for_2019
+    result = self.dup
+    result.year = nil
+    result.save!
+
+    organiser.update workshop: result if organiser.present?
+    facilitator.update workshop: result if facilitator.present?
+
+    mentors.each do |mentor|
+      mentor.update workshop: result
+    end
+
+    result
+  end
+
   def organiser
     @organiser ||= User.where(workshop_id: id, organiser: true).first
   end

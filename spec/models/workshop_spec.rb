@@ -20,8 +20,86 @@ RSpec.describe Workshop, type: :model do
     end
   end
 
+  describe "#duplicate_for_2019" do
+    let(:original_workshop) { create_workshop year: 2018 }
+    let!(:organiser) { create_user(organiser: true, workshop: original_workshop) }
+    let!(:facilitator) { create_user(facilitator: true, workshop: original_workshop) }
+    let!(:mentor_1) { create_user(mentor: true, workshop: original_workshop) }
+    let!(:mentor_2) { create_user(mentor: true, workshop: original_workshop) }
+    let!(:mentor_3) { create_user(mentor: true, workshop: original_workshop) }
+
+    it "creates and returns a duplicate workshop" do
+      new_workshop = original_workshop.duplicate_for_2019
+
+      expect(new_workshop.id).not_to eql(original_workshop.id)
+      expect(new_workshop.year).to be_nil
+    end
+
+    it "handle previous organiser being nil" do
+      organiser.destroy
+      new_workshop = original_workshop.duplicate_for_2019
+      expect(new_workshop.organiser).to be_nil
+    end
+
+    it "previous organiser is migrated to new workshop" do
+      new_workshop = original_workshop.duplicate_for_2019
+
+      organiser.reload
+      expect(organiser.workshop).to eql(new_workshop)
+
+      new_workshop.reload
+      expect(new_workshop.organiser).to eql(organiser)
+
+      reloaded_original_workshop = Workshop.unscoped.find(original_workshop.id)
+      expect(reloaded_original_workshop.organiser).to be_nil
+    end
+
+    it "handle previous facilitator being nil" do
+      facilitator.destroy
+      new_workshop = original_workshop.duplicate_for_2019
+      expect(new_workshop.facilitator).to be_nil
+    end
+
+    it "previous facilitator is migrated to new workshop" do
+      new_workshop = original_workshop.duplicate_for_2019
+
+      facilitator.reload
+      expect(facilitator.workshop).to eql(new_workshop)
+
+      new_workshop.reload
+      expect(new_workshop.facilitator).to eql(facilitator)
+
+      reloaded_original_workshop = Workshop.unscoped.find(original_workshop.id)
+      expect(reloaded_original_workshop.facilitator).to be_nil
+    end
+
+    it "handle previous workshop with no mentors" do
+      mentor_1.destroy
+      mentor_2.destroy
+      mentor_3.destroy
+
+      new_workshop = original_workshop.duplicate_for_2019
+      expect(new_workshop.mentors).to be_empty
+    end
+
+    it "previous mentors are migrated to new workshop" do
+      new_workshop = original_workshop.duplicate_for_2019
+
+      [mentor_1, mentor_2, mentor_3].each do |mentor|
+        mentor.reload
+        expect(mentor.workshop).to eql(new_workshop)
+      end
+
+      new_workshop.reload
+      expect(new_workshop.mentors).to include(mentor_1, mentor_2, mentor_3)
+
+      reloaded_original_workshop = Workshop.unscoped.find(original_workshop.id)
+      expect(reloaded_original_workshop.mentors).to be_empty
+    end
+  end
+
   describe "#organiser" do
-    let!(:workshop) { Workshop.create }
+    let(:workshop) { Workshop.create }
     let!(:organiser) { create_user(organiser: true, workshop: workshop) }
 
     it "provides the organiser" do
@@ -356,7 +434,7 @@ RSpec.describe Workshop, type: :model do
   end
 
   def create_user(attrs)
-    default_attrs = {email: 'user@example.com', full_name: 'The user', biography: "Hello", picture_url: "http://google.com", run_workshop_explaination: "❤️", password: "password", password_confirmation: "password"}
+    default_attrs = {email: "user#{rand(99999)}@example.com", full_name: 'The user', biography: "Hello", picture_url: "http://google.com", run_workshop_explaination: "❤️", password: "password", password_confirmation: "password"}
 
     result = User.new(default_attrs.merge(attrs))
     result.skip_confirmation!

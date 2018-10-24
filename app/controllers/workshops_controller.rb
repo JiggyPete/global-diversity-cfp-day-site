@@ -1,5 +1,10 @@
 class WorkshopsController < ApplicationController
-  before_action :set_workshop, only: [:show, :edit, :update, :destroy]
+  before_action :set_workshop, only: [:show, :edit, :update, :destroy, :duplicate]
+
+  def duplicate
+    new_workshop = Workshop.unscoped.find( current_user.workshop_id ).duplicate_for_2019
+    redirect_to workshop_path(new_workshop)
+  end
 
   def show
   end
