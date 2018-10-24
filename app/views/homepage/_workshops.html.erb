@@ -12,8 +12,6 @@
         <%= link_to event_path(workshop) do %>
           <li class="workshop-list-item">
             <%= workshop.city %>
-            organised by
-            <%= workshop.organiser.full_name %>
             <button class="ticket-button btn btn-warning"><%= link_text %></button>
           </li>
         <% end %>
