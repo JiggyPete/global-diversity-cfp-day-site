@@ -2,7 +2,8 @@ class WorkshopsController < ApplicationController
   before_action :set_workshop, only: [:show, :edit, :update, :destroy, :duplicate]
 
   def duplicate
-    new_workshop = Workshop.unscoped.find( current_user.workshop_id ).duplicate_for_2019
+    previous_workshop = Workshop.unscoped.find( current_user.workshop_id )
+    new_workshop = previous_workshop.duplicate_for_2019(current_user)
     flash[:success] = "Successfully duplicated your teams 2018 workshop. All you need now is a ticketing url."
     redirect_to workshop_path(new_workshop)
   end
@@ -27,10 +28,17 @@ class WorkshopsController < ApplicationController
     end
 
     @workshop = Workshop.new(workshop_params)
+
+    previous_workshop = Workshop.previous_workshop_for current_user
+    if previous_workshop.present?
+      previous_workshop.migrate_team_to! @workshop
+      previous_workshop.update_team_roles!(current_user)
+    end
+
     current_user.workshop = @workshop
 
     respond_to do |format|
-      if @current_user.save
+      if @current_user.save &&
         format.html do
           redirect_to @workshop, notice: 'Workshop was successfully created.'
           AdminMailer.workshop_created(@workshop, current_user).deliver

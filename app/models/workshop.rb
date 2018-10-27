@@ -18,6 +18,10 @@ class Workshop < ApplicationRecord
     "mentors"
   ]
 
+  def self.previous_workshop_for(user)
+    Workshop.unscoped.find_by(id: user.workshop_id, year: 2018)
+  end
+
   def self.workshops_grouped_for_homepage
     result = Workshop.all.order(:continent, :country, :city).group_by(&:continent)
 
@@ -28,20 +32,33 @@ class Workshop < ApplicationRecord
     result
   end
 
-  def duplicate_for_2019
-    result = self.dup
-    result.year = nil
-    result.ticketing_url = nil
-    result.save!
+  def duplicate_for_2019(duplicated_by_user)
+    workshop_for_2019 = duplicate_2018_workshop
+    migrate_team_to! workshop_for_2019
+    update_team_roles!(duplicated_by_user)
 
-    organiser.update workshop: result if organiser.present?
-    facilitator.update workshop: result if facilitator.present?
+    workshop_for_2019
+  end
+
+  def migrate_team_to!(workshop_for_2019)
+    organiser.update workshop: workshop_for_2019 if organiser.present?
+    facilitator.update workshop: workshop_for_2019 if facilitator.present?
 
     mentors.each do |mentor|
-      mentor.update workshop: result
+      mentor.update workshop: workshop_for_2019
+    end
+  end
+
+  def update_team_roles!(duplicated_by_user)
+    if duplicated_by_user.facilitator?
+      convert_orgraniser_to_mentor
+      convert_facilitator_to_orgraniser(duplicated_by_user)
     end
 
-    result
+    if duplicated_by_user.mentor?
+      convert_orgraniser_to_mentor
+      convert_mentor_to_orgraniser(duplicated_by_user)
+    end
   end
 
   def organiser
@@ -84,5 +101,36 @@ class Workshop < ApplicationRecord
   def mandatory_values
     MANDATORY_FIELDS_FOR_APPROVAL.map {|attr| send(attr) }
   end
+
+  def duplicate_2018_workshop
+    result = self.dup
+    result.year = nil
+    result.ticketing_url = nil
+    result.save!
+
+    result
+  end
+
+  def convert_facilitator_to_orgraniser(duplicated_by_user)
+    duplicated_by_user.update_attributes(
+      organiser: true,
+      facilitator: false
+    )
+  end
+
+  def convert_mentor_to_orgraniser(duplicated_by_user)
+    duplicated_by_user.update_attributes(
+      organiser: true,
+      mentor: false
+    )
+  end
+
+  def convert_orgraniser_to_mentor
+    organiser.update_attributes(
+      organiser: false,
+      mentor: true
+    )
+  end
+
 end
 
