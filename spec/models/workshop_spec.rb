@@ -96,6 +96,13 @@ RSpec.describe Workshop, type: :model do
       reloaded_original_workshop = Workshop.unscoped.find(original_workshop.id)
       expect(reloaded_original_workshop.mentors).to be_empty
     end
+
+    it "does not duplicate previous ticketing_url" do
+      expect(original_workshop.ticketing_url).not_to be_nil
+      new_workshop = original_workshop.duplicate_for_2019
+      expect(new_workshop.ticketing_url).to be_nil
+    end
+
   end
 
   describe "#organiser" do

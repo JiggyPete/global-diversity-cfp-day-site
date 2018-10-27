@@ -31,6 +31,7 @@ class Workshop < ApplicationRecord
   def duplicate_for_2019
     result = self.dup
     result.year = nil
+    result.ticketing_url = nil
     result.save!
 
     organiser.update workshop: result if organiser.present?
