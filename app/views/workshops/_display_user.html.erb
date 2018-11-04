@@ -5,3 +5,4 @@
   <%= user_type %>:
 </strong>
 <%= user_name user %>
+<%= link_to 'Delete', user_path(user), method: :delete, class: 'btn btn-warning', data: { confirm: 'Are you sure?' } %>

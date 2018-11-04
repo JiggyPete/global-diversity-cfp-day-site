@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   post "/workshop/duplicate" => "workshops#duplicate"
   resources :workshops, only: [:new, :show, :create, :edit, :update, :destroy]
+  resources :users, only: [:destroy]
 
   resources :cfps
   resources :incidents
