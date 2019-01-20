@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :blog, only: :index
   resources :invite_team_members, only: :create
   resources :account, only: [:edit, :update]
+  resources :proposals, only: [:index, :show]
 
   namespace :admin do
     resources :workshops, only: :index
