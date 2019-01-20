@@ -1,0 +1,38 @@
+<%= link_to "Back to Proposals", proposals_path, class: "btn btn-warning pull-right" %>
+<br/>
+<br/>
+<br/>
+
+<%= render "what-tamagotchis-can-teach-you-about-es6-generators--header" %>
+
+<h2>Abstract</h2>
+<p>
+  This talk is based on my experience building a Tamagotchi game in HTML5 Canvas and what I learned about promises, generators and coroutines in the process.
+</p>
+<p>
+  I’ll show the downside to promises (then-able hell) and why generators are the key to synchronous-looking async code.
+</p>
+
+<h2>Description</h2>
+<p>
+  What do Tamagotchis — everyone’s favorite digital pets from the 90s — and ES6 generators — pausible functions for async tasks — have in common?
+</p>
+<p>
+  Both are really fun to play with.
+</p>
+<p>
+  As a recent side project, I built a web-version of a Tamagotchi. But I struggled with one key element: how to handle a series of animations. What do you do when animations need to know that other animations are complete? What do you do when you’ve queued animations but a user event needs to be handle instead?
+  </p>
+<p>
+  This talk explores where I went wrong (hint: promises) and what worked (hint: generators). You’ll leave this talk with a solid grasp of how to combine promises, generators, and coroutines for async work — whether it’s for a Tamagotchi or your day-to-day work.
+</p>
+
+<h2>Talk</h2>
+<div class="videoWrapper">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/GTzwCqoVOPc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+<%= link_to "Back to Proposals", proposals_path, class: "btn btn-warning pull-right" %>
+<br/>
+
