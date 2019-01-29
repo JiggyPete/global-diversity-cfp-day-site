@@ -81,6 +81,20 @@ h1, h2, h3, comfortaa {
   height: 600px;
 }
 
+.background-ana {
+  background-image: image-url("people/ana.jpg");
+  background-size: cover;
+  background-position: left;
+  height: 600px;
+}
+
+.background-london-2018 {
+  background-image: image-url("blog/london-2018.jpg");
+  background-size: cover;
+  background-position: left;
+  height: 600px;
+}
+
 .background-silvia {
   background-image: image-url("silvia-on-stage.jpg");
   background-size: cover;
