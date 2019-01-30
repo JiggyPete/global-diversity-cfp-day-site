@@ -3,6 +3,17 @@
   Currently we have no confirmed workshops. Please sign up below to organise a workshop.
 <% else %>
   <% workshops.keys.each do |continent| %>
+      <ol class="workshop-list">
+        <%= link_to parents_path do %>
+          <li class="workshop-list-item">
+            Primary Parents Online Workshop
+            <button class="ticket-button btn btn-warning">Book your free ticket</button>
+          </li>
+          <% end %>
+      </ol>
+
+    <br/>
+    <br/>
     <h3><%= continent %></h3>
     <% workshops[continent].keys.each do |country| %>
       <h4><%= country %></h4>
