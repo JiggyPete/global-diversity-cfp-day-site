@@ -1,7 +1,7 @@
 <div id="intro" class="jumbotron">
   <h1><%= @workshop.city %>, <%= @workshop.country %></h1>
   <% if @workshop.start_time.present? && @workshop.end_time.present? %>
-  <h2><%= l @workshop.start_time %> till <%= l @workshop.end_time %> March 2nd 2019</h2>
+  <h2><%= l @workshop.start_time %> till <%= l @workshop.end_time %> <% if !@workshop.alternative_date.nil?  %><%= @workshop.alternative_date %> <% else %>March 2nd 2019<% end %></h2>
   <% end %>
   <% if @workshop.ticketing_url.present? %>
     <%= link_to "Book your free ticket", @workshop.ticketing_url, class: "ticket-button btn btn-warning", target: "blank" %>

@@ -107,6 +107,7 @@ ActiveRecord::Schema.define(version: 20181023074756) do
     t.text "venue_address"
     t.string "google_maps_url"
     t.time "start_time"
+    t.string "alternative_date"
     t.time "end_time"
     t.string "time_zone"
     t.string "ticketing_url"
