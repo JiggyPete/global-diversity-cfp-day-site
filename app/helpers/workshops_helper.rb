@@ -6,6 +6,9 @@ module WorkshopsHelper
   end
 
   def workshop_link_button(options={})
+    return nil if current_user.nil?
+    return nil if current_user.workshop.nil?
+
     label = options[:label].present? ? options[:label] : 'Back to Workshop'
     link_to label, workshop_path(current_user.workshop), class: "btn btn-warning pull-right"
   end
