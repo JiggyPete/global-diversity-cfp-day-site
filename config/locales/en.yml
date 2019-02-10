@@ -68,7 +68,7 @@ en:
 
         number_of_bathrooms: How many bathrooms (both single and multiple occupancy) are available?
         number_of_handicap_stalls: How many handicap stalls or single-occupancy bathrooms are there?
-        number_of_gender_neutral_stalls: How many gender-neutral bathrooms are available? If none is it possible to make some gender-neutral?
+        number_of_gender_neutral_stalls: "How many gender-neutral bathrooms are available?"
   workshop:
     continents:
       - Africa
