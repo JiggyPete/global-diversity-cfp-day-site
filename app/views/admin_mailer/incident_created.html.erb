@@ -4,10 +4,36 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>TEAM REPORTING Incident in <%= @incident.user.workshop.country %>, <%= @incident.user.workshop.city %></h1>
+    <h1>TEAM REPORTING Incident in <%= @incident.user.workshop.city %>, <%= @incident.user.workshop.country %></h1>
     <p>
-      <%= @incident.user.full_name %> has reported an
+      At <%= @incident.created_at %>m <%= @incident.user.full_name %> logged an
       <%= link_to "Incident", @link %>
+    </p>
+    <hr>
+    <p>
+      Complainant: <%= @incident.person_reporting %>, who can be contacted at <%= @incident.contact_details_of_person_reporting %>
+    </p>
+    <p>
+      Time of incident: <%= @incident.approximate_time_of_incident %>
+    </p>
+    <p>
+      Offender: <%= @incident.info_about_offender %>
+    </p>
+    <p>
+      Offender Contact Details: <%= @incident.contact_details_about_offender %>
+    </p>
+    <p>
+      Violation Details: <%= @incident.violation %>
+    </p>
+    <p>
+      Surrounding Circumstances: <%= @incident.circumstances %>
+    </p>
+    <p>
+      Other people involved: <%= @incident.other_people_involved %>
+    </p>
+    <p>
+      Team members involved: <%= @incident.team_members_present %>
+
     </p>
   </body>
 </html>

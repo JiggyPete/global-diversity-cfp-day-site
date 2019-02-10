@@ -14,8 +14,8 @@ class IncidentsController < ApplicationController
     respond_to do |format|
       if @incident.save
         format.html do
-          redirect_to incidents_path, notice: 'Incident was successfully created.'
           AdminMailer.incident_created(@incident).deliver
+          redirect_to incidents_path, notice: 'Incident was successfully created.'
         end
       else
         format.html { render :new }
