@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181023074756) do
+ActiveRecord::Schema.define(version: 20190213131929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,9 @@ ActiveRecord::Schema.define(version: 20181023074756) do
     t.string "invited_by_type"
     t.bigint "invited_by_id"
     t.integer "invitations_count", default: 0
+    t.boolean "call_downloaded", default: false
+    t.boolean "coc_training_downloaded", default: false
+    t.boolean "coc_training_complete", default: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
@@ -107,7 +110,6 @@ ActiveRecord::Schema.define(version: 20181023074756) do
     t.text "venue_address"
     t.string "google_maps_url"
     t.time "start_time"
-    t.string "alternative_date"
     t.time "end_time"
     t.string "time_zone"
     t.string "ticketing_url"
@@ -157,6 +159,7 @@ ActiveRecord::Schema.define(version: 20181023074756) do
     t.boolean "drinks_allowed", default: false
     t.text "drinks_allowed_notes", default: ""
     t.integer "year"
+    t.string "alternative_date"
   end
 
 end

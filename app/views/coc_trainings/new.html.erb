@@ -1,0 +1,42 @@
+<%= workshop_link_button %>
+<h1>Code of Conduct Training</h1>
+
+<br/>
+<p>
+  This is a mandatory requirement for all workshop team members.
+</p>
+<p>
+  For the safety of all participants, all workshop team members must have listened to the Code of Conduct audio training. This is so that you know how to best respond to any issues or violations raised by attendees.
+</p>
+<p>
+  This will take 20 minutes, thereafter please confirm that you have completed the training by clicking the green button.
+</p>
+<p>
+  If a team is unable to do this then unfortauntely they cannot be in the position of responsibility of looking after attendees comfort and safety.
+</p>
+<p>
+  If you have any questions feel free to reach out to peter@globaldiversitycfpday.com or @peter in Discord.
+</p>
+
+<br/>
+<br/>
+
+<%= button_to "Download Audio: Training (20 mins, 9M)", { action: "create", coc_training_downloaded: true }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
+
+<%= button_to "Confirm Training Complete", { action: "create", coc_training_complete: true }, remote: true, class: 'ticket-button btn btn-success pull-right', form: { "data-type" => "json" } %>
+
+<br/>
+<br/>
+<hr>
+
+<br/>
+<br/>
+
+<h1>Workshop Advice Video</h1>
+<br/>
+<br/>
+
+<%= button_to "Download Video: Workshop advice (1 hour, 3G)", { action: "create", call_downloaded: true }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
+<br/>
+<br/>
+<%= workshop_link_button %>

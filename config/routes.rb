@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :cfps
   resources :incidents
+  resources :coc_trainings, only: [:new, :create]
   resources :schedule, only: :index
   resources :email_templates, only: :index
   resources :preparation, only: :index
