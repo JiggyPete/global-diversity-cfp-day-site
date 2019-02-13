@@ -5,4 +5,5 @@
   <%= user_type %>:
 </strong>
 <%= user_name user %>
+<strong>CoC Training: </strong> <%= user.coc_training_complete? ? "✅" : "🚫" %>
 <%= link_to 'Delete', user_path(user), method: :delete, class: 'btn btn-warning', data: { confirm: 'Are you sure?' } %>

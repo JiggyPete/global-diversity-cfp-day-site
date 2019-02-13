@@ -95,6 +95,7 @@
     <p>
       <strong>Organiser:</strong>
       <%= user_name @workshop.organiser %>
+      <strong>CoC Training: </strong> <%= @workshop.organiser.coc_training_complete? ? "✅" : "🚫" %>
     </p>
     <p>
       <% if @workshop.facilitator.present? %>
