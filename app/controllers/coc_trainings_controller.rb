@@ -12,6 +12,8 @@ class CocTrainingsController < ApplicationController
       redirect_to new_coc_training_path
     elsif params[:call_downloaded]
       current_user.update call_downloaded: true
+      redirect_to "https://www.dropbox.com/s/em65115ic721p95/gdcfpday%20prep.mp4?dl=0"
+    else
       redirect_to workshop_path(current_workshop)
     end
     # :call_downloaded
