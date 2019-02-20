@@ -20,10 +20,10 @@
   <% @incidents.each do |i| %>
     <tr scope="row">
       <td>
-        <%= i.user.workshop.country %>
+        <%= i.user.workshop.try(:country) %>
       </td>
       <td>
-        <%= i.user.workshop.city %>
+        <%= i.user.workshop.try(:city) %>
       </td>
       <td>
         <%= i.created_at %>
