@@ -14,7 +14,7 @@ class AdminMailer < ApplicationMailer
     @incident = incident
     @link = incident_url(@incident)
     mail(
-      to: "coc@globaldiversitycfpday.com",
+      to: ENV["GLOBAL_COC_TEAM_EMAIL"],
       subject: "TEAM REPORTING Incident"
     )
   end
