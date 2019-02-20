@@ -4,9 +4,9 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>TEAM REPORTING Incident in <%= @incident.user.workshop.city %>, <%= @incident.user.workshop.country %></h1>
+    <h1>TEAM REPORTING Incident in <%= @incident.user.try(:workshop).try(:city) %>, <%= @incident.user.try(:workshop).try(:ountry) %></h1>
     <p>
-      At <%= @incident.created_at %>m <%= @incident.user.full_name %> logged an
+      At <%= @incident.created_at %>m <%= @incident.user.try(:full_name) %> logged an
       <%= link_to "Incident", @link %>
     </p>
     <hr>
