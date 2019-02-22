@@ -32,6 +32,21 @@ class Workshop < ApplicationRecord
     result
   end
 
+  def awaiting_invitation_acceptance?(user)
+    user.invitation_sent_at.present? && user.invitation_accepted_at.blank?
+  end
+
+  def signed_up_team
+    result = []
+    result << organiser unless organiser.nil? || awaiting_invitation_acceptance?(organiser)
+    result << facilitator unless facilitator.nil? || awaiting_invitation_acceptance?(facilitator)
+    mentors.each do |mentor|
+      result << mentor unless mentor.nil? || awaiting_invitation_acceptance?(mentor)
+    end
+
+    result
+  end
+
   def duplicate_for_2019(duplicated_by_user)
     workshop_for_2019 = duplicate_2018_workshop
     migrate_team_to! workshop_for_2019

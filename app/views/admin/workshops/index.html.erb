@@ -34,6 +34,10 @@
             <% end %>
           <% end %>
 
+          <br/>
+
+          <%= workshop.signed_up_team.map(&:email).join(", ") %>
+
         </li>
       <% end %>
       </ol>
