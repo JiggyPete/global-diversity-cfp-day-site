@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :parents, only: :index
   resources :users, only: [:destroy]
 
+  resources :celebrate, only: :index
   resources :cfps
   resources :incidents
   resources :coc_trainings, only: [:new, :create]
