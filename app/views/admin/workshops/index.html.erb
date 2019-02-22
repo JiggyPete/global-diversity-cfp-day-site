@@ -11,11 +11,13 @@
 
           <div> - organised by
             <%= user_name workshop.organiser %>
+            <%= coc_completed workshop.organiser %>
           </div>
 
           <% if workshop.facilitator.present? %>
             <div> - facilitated by
               <%= user_name workshop.facilitator %>
+              <%= coc_completed workshop.facilitator %>
               <%= "Invited" if awaiting_invitation_acceptance? workshop.facilitator %>
             </div>
           <% end %>
@@ -23,6 +25,7 @@
           <% workshop.mentors.each do |mentor| %>
             <div> - mentored by
               <%= user_name mentor %>
+              <%= coc_completed mentor %>
               <%= "Invited" if awaiting_invitation_acceptance? mentor %>
             </div>
           <% end %>

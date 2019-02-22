@@ -29,6 +29,10 @@ module ApplicationHelper
   end
 
   def twitter_link(twitter_handle, text)
-    link_to text, "https://twitter.com/#{twitter_handle}", target: "_blank"    
+    link_to text, "https://twitter.com/#{twitter_handle}", target: "_blank"
+  end
+
+  def coc_completed(user)
+    user.coc_training_complete? ? "✅" : "🚨"
   end
 end
