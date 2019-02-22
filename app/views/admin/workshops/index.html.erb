@@ -15,19 +15,23 @@
           </div>
 
           <% if workshop.facilitator.present? %>
-            <div> - facilitated by
-              <%= user_name workshop.facilitator %>
-              <%= coc_completed workshop.facilitator %>
-              <%= "Invited" if awaiting_invitation_acceptance? workshop.facilitator %>
-            </div>
+            <% unless awaiting_invitation_acceptance? workshop.facilitator %>
+              <div> - facilitated by
+                <%= user_name workshop.facilitator %>
+                <%= coc_completed workshop.facilitator %>
+                <%= "Invited" if awaiting_invitation_acceptance? workshop.facilitator %>
+              </div>
+            <% end %>
           <% end %>
 
           <% workshop.mentors.each do |mentor| %>
-            <div> - mentored by
-              <%= user_name mentor %>
-              <%= coc_completed mentor %>
-              <%= "Invited" if awaiting_invitation_acceptance? mentor %>
-            </div>
+            <% unless awaiting_invitation_acceptance? mentor %>
+              <div> - mentored by
+                <%= user_name mentor %>
+                <%= coc_completed mentor %>
+                <%= "Invited" if awaiting_invitation_acceptance? mentor %>
+              </div>
+            <% end %>
           <% end %>
 
         </li>
