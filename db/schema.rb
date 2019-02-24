@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190213131929) do
+ActiveRecord::Schema.define(version: 20190224113103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -160,6 +160,8 @@ ActiveRecord::Schema.define(version: 20190213131929) do
     t.text "drinks_allowed_notes", default: ""
     t.integer "year"
     t.string "alternative_date"
+    t.integer "number_of_sign_ups", default: 0
+    t.integer "number_of_attendees", default: 0
   end
 
 end
