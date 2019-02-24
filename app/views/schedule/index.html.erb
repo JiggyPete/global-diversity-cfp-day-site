@@ -33,7 +33,7 @@
       <li>Quiet room</li>
       <li>Gender neutral bathroom</li>
     </ul>
-    Signage for all, apart from the CoC room, would be great!
+    Signage for all, apart from the CoC room, would be brilliant!
   <% end %>
 
   <h2>Slides</h2>
@@ -58,8 +58,8 @@
     </tr>
     <tr>
       <td>10:15am</td>
-      <td>Welcome (Slides to follow)</td>
-      <td>Introduce the team and Code of Conduct</td>
+      <td>Welcome</td>
+      <td><%= "Introduce the team and Code of Conduct" if current_user.present? %></td>
       <td><%= "Explain format of workshop" if current_user.present? %></td>
     </tr>
     <tr>
@@ -77,9 +77,9 @@
     </tr>
     <tr>
       <td>10:50am</td>
-      <td>Mentors work with groups of attendees to help figure out what they want to speak about</td>
-      <td></td>
-      <td></td>
+      <td>What should I speak about?</td>
+      <td><%= "Split attendees into groups to work with a mentor" if current_user.present? %></td>
+      <td><%= "What is each attendee interested in? Excited about? Really annoyed about?" if current_user.present? %></td>
     </tr>
     <tr>
       <td>11:10am</td>
@@ -97,21 +97,14 @@
     </tr>
     <tr>
       <td></td>
-      <td><iframe width="560" height="315" src="https://www.youtube.com/embed/GPPnvXlVj7w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
+      <td><iframe width="560" height="315" src="https://www.youtube.com/embed/GPPnvXlVj7w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></td>
       <td>
-        We're hoping this will be a collabrative activity.
-        <br/>
-        People don't like writing about themselves. Ask attendees to pair up and interview each other, then put together a bio for your pair.
-        <br/>
-        Once that is done, if folks are comfortable, attendees can present/introduce their pair to the group with their new bio!
+        <% if current_user.present? %>
+          People don't like writing wonderful things about themselves. Ask attendees to pair up and interview each other using the questions in the video and slide deck, then attendees put together a bio for their partner.
+          <br/>
+          Once that is done, if folks are comfortable, attendees can present/introduce their pair to the group with their new bio!
+        <% end %>
       </td>
-      <td></td>
       <td></td>
     </tr>
 
@@ -126,34 +119,67 @@
     <tr>
       <td>1:15pm</td>
       <td>Caring for your audience</td>
-      <td><%= "Part 1" if current_user.present? %></td>
+      <td></td>
       <td>
-        <% if current_user.present? %>
-          Split attendees into groups and provide them with post-it's and pens
-          <br/>
-          <br/>
-          Ask them to write down examples of exclusionary language and behaviour and post them on the wall.
-          <br/>
-          <br/>
-          Next, get the group to discuss "Why" each item is exclusionary and what is a more inclusive thing to say or do.
-        <% end %>
       </td>
     </tr>
 
-    <tr>
-      <td></td>
-      <td></td>
-      <td><%= "Part 2" if current_user.present? %></td>
-      <td>
-        <% if current_user.present? %>
-          Go over Content Warnings slide
-        <% end %>
-      </td>
-    </tr>
+
+    <% if current_user.present? %>
+      <tr>
+        <td></td>
+        <td>
+          Part 1
+          <br/>
+          <br/>
+            Split attendees into groups and provide them with post-it's and pens
+            <br/>
+            <br/>
+            Ask them to write down examples of exclusionary language and behaviour and post them on the wall.
+            <br/>
+            <br/>
+            Next, get the group to discuss "Why" each item is exclusionary and what is a more inclusive thing to say or do.
+            <br/>
+            <br/>
+            With your attendees being a very diverse group this is a great opportunity to learn from everyones lived experience.
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+      </tr>
+    <% end %>
+
+
+    <% if current_user.present? %>
+      <tr>
+        <td></td>
+        <td>
+          Part 2
+          <br/>
+          <br/>
+            Here you can either ask the attendees in their groups to identify aspects of a talk that should have a content warning.
+            <br/>
+            <br/>
+
+            Ask them to write down examples of sitations whare content warnings are appropriate and post them on the wall.
+            <br/>
+            <br/>
+              Next, get the group to discuss "Why".
+            <br/>
+            <br/>
+            There are some examples in the slide deck as this may be a little trickier than the previous excercise.
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+      </tr>
+    <% end %>
 
     <tr>
       <td>1:45pm</td>
-      <td>Advice video #2: Your perfect tech talk from Saron Yitbarek (Section 2.11 to 18.30, don't need to go beyond 18.30)</td>
+      <td>Advice video #2: Your perfect tech talk from Saron Yitbarek <%= "(Section 2.11 to 18.30, don't need to go beyond 18.30)" if current_user.present? %></td>
       <td></td>
       <td></td>
     </tr>
