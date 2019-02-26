@@ -24,8 +24,11 @@
   </div>
 <% end %>
 
-<h2>Organiser</h2>
-<%= render "volunteer", volunteer: @workshop.organiser %>
+<% if @workshop.organiser.present? %>
+  <h2>Organiser</h2>
+  <%= render "volunteer", volunteer: @workshop.organiser %>
+<% end %>
+
 
 <% if @workshop.facilitator.present? && @workshop.facilitator.accepted_or_not_invited? %>
   <h2>Facilitator</h2>
