@@ -39,6 +39,9 @@
           <br/>
 
           <%= workshop.signed_up_team.map(&:email).join(", ") %>
+          <br/>
+          <br/>
+          <%= workshop.signed_up_team.map(&:displayed_twitter).map{|twitter| twitter[0] == "@" ? twitter : "@#{twitter}"}.join(", ") %>
 
         </li>
       <% end %>
