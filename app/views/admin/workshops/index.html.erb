@@ -9,10 +9,12 @@
         <li class="admin--workshop-list-item">
           <div><%= workshop.city %></div>
 
-          <div> - organised by
-            <%= user_name workshop.organiser %>
-            <%= coc_completed workshop.organiser %>
-          </div>
+          <% if workshop.organiser.present? %>
+            <div> - organised by
+              <%= user_name workshop.organiser %>
+              <%= coc_completed workshop.organiser %>
+            </div>
+          <% end %>
 
           <% if workshop.facilitator.present? %>
             <% unless awaiting_invitation_acceptance? workshop.facilitator %>
