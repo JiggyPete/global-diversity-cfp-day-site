@@ -24,6 +24,7 @@ class IncidentsController < ApplicationController
   end
 
   def show
+    redirect_to incidents_path unless current_user.admin?
     @incident = Incident.find(params[:id])
   end
 

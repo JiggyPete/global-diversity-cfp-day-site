@@ -37,12 +37,13 @@
       <td>
         <%= i.approximate_time_of_incident %>
       </td>
-      <td>
-        <%= link_to incident_path(i) do %>
-          <button class="btn btn-warning pull-right">Show</button>
-        <% end %>
-
-      </td>
+      <% if current_user.admin? %>
+        <td>
+          <%= link_to incident_path(i) do %>
+            <button class="btn btn-warning pull-right">Show</button>
+          <% end %>
+        </td>
+      <% end %>
     </tr>
   <% end %>
 </table>
