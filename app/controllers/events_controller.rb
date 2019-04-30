@@ -4,4 +4,7 @@ class EventsController < ApplicationController
   def show
     @workshop = Workshop.find params[:id]
   end
+
+  def berlin
+  end
 end
