@@ -12,4 +12,8 @@ class SuccessStory < ApplicationRecord
 
   validates :profile_picture_url, :url => true
 
+  def self.upcoming
+    where("event_start_date >= ?", Date.today).order(:event_start_date).first(3)
+  end
+
 end
