@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  match "events/berlin", to: "events#berlin" ,via: :get
   resources :events, only: :show
 
   post "/workshop/duplicate" => "workshops#duplicate"
