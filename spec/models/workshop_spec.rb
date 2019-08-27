@@ -6,6 +6,26 @@ RSpec.describe Workshop, type: :model do
     it { should validate_presence_of(:continent) }
     it { should validate_presence_of(:country) }
     it { should validate_presence_of(:city) }
+
+    describe "city" do
+      context "one workshop per city per year" do
+        it "is valid with more than one workshop per city when years are different" do
+          first = create_workshop(city: "Edinburgh", year: 2018)
+          second = create_workshop(city: "Edinburgh", year: 2019)
+          third = create_workshop(city: "Edinburgh", year: nil)
+
+          expect(Workshop.unscoped.count).to eql(3)
+        end
+
+        it "invalid to have more than one workshop per city per year" do
+          first = create_workshop(city: "Edinburgh", year: nil)
+          second = create_workshop(city: "Edinburgh", year: nil)
+
+          expect(first).to be_valid
+          expect(second).not_to be_valid
+        end
+      end
+    end
   end
 
   describe "default scope" do
@@ -502,7 +522,7 @@ RSpec.describe Workshop, type: :model do
     default_attributes = {
       continent: "Europe",
       country: "United Kingdom",
-      city: "Glasgow" ,
+      city: "Glasgow#{rand(999)}" ,
       venue_address: "City Centre",
       google_maps_url: "http://google.com",
       start_time: Time.now,

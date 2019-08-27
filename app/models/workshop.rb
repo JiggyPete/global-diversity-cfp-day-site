@@ -2,6 +2,7 @@ class Workshop < ApplicationRecord
   default_scope { where(year: nil) }
 
   validates :continent, :country, :city, presence: true
+  validates_uniqueness_of :city, scope: :year
 
   MANDATORY_FIELDS_FOR_APPROVAL = [
     "continent",
