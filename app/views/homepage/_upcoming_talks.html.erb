@@ -1,0 +1,38 @@
+<% success_stories = SuccessStory.upcoming %>
+
+<% if success_stories.present? %>
+  <h2>Upcoming Talks from Attendees</h2>
+
+  <div class="row success-story">
+    <ul class="list">
+      <% success_stories.each do |participant| %>
+        <li class="story">
+          <%= image_tag participant.profile_picture_url, class: 'profile-picture center-block' %>
+          <div class="details">
+            <div class="detail name"><%= participant.full_name %></div>
+            <div class="detail"><%= participant.talk_title %></div>
+            <div class="detail"><%= participant.event_name %></div>
+            <div class="detail"><%= participant.event_start_date.strftime("%d %B %Y") %></div>
+            <div class="detail">
+              <% if participant.event_end_date.present? && participant.event_end_date != participant.event_start_date %>
+                  <%= participant.event_end_date.strftime("%d %B %Y") %>
+              <% else %>
+                &nbsp;
+              <% end %>
+            </div>
+
+            <div class="col col-sm-1 story-twitter center-block">
+              <a href="<%= 'http://twitter.com/' + participant.twitter %>" target="_blank">
+                <i class="twitter"></i>
+                <span class="sr-only">Follow <%= participant.full_name %> on Twitter</span>
+              </a>
+              &nbsp;
+            </div>
+
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+<% end %>
