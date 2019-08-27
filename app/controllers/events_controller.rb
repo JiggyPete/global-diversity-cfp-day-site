@@ -5,6 +5,4 @@ class EventsController < ApplicationController
     @workshop = Workshop.find params[:id]
   end
 
-  def berlin
-  end
 end
