@@ -20,7 +20,7 @@ class Workshop < ApplicationRecord
   ]
 
   def self.previous_workshop_for(user)
-    Workshop.unscoped.find_by(id: user.workshop_id, year: 2018)
+    Workshop.unscoped.find_by(id: user.workshop_id, year: 2019)
   end
 
   def self.workshops_grouped_for_homepage
@@ -48,20 +48,20 @@ class Workshop < ApplicationRecord
     result
   end
 
-  def duplicate_for_2019(duplicated_by_user)
-    workshop_for_2019 = duplicate_2018_workshop
-    migrate_team_to! workshop_for_2019
+  def duplicate_for_2020(duplicated_by_user)
+    workshop_for_2020 = duplicate_2019_workshop
+    migrate_team_to! workshop_for_2020
     update_team_roles!(duplicated_by_user)
 
-    workshop_for_2019
+    workshop_for_2020
   end
 
-  def migrate_team_to!(workshop_for_2019)
-    organiser.update workshop: workshop_for_2019 if organiser.present?
-    facilitator.update workshop: workshop_for_2019 if facilitator.present?
+  def migrate_team_to!(workshop_for_2020)
+    organiser.update workshop: workshop_for_2020 if organiser.present?
+    facilitator.update workshop: workshop_for_2020 if facilitator.present?
 
     mentors.each do |mentor|
-      mentor.update workshop: workshop_for_2019
+      mentor.update workshop: workshop_for_2020
     end
   end
 
@@ -118,7 +118,7 @@ class Workshop < ApplicationRecord
     MANDATORY_FIELDS_FOR_APPROVAL.map {|attr| send(attr) }
   end
 
-  def duplicate_2018_workshop
+  def duplicate_2019_workshop
     result = self.dup
     result.year = nil
     result.ticketing_url = nil
