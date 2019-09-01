@@ -15,6 +15,17 @@ $md: 768px;
   margin-right: 1em;
 }
 
+.btn-warning {
+  color: $site-yellow;
+  background-color: $banner-text-color;
+  border-color: $banner-text-color;
+
+  &:hover {
+    color: $site-yellow;
+    background-color: $banner-text-color-hover;
+  }
+}
+
 .app-navbar {
   position: fixed;
   top: 0;
