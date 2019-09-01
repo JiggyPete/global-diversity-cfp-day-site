@@ -3,8 +3,8 @@ class WorkshopsController < ApplicationController
 
   def duplicate
     previous_workshop = Workshop.unscoped.find( current_user.workshop_id )
-    new_workshop = previous_workshop.duplicate_for_2019(current_user)
-    flash[:success] = "Successfully duplicated your teams 2018 workshop. All you need now is a ticketing url."
+    new_workshop = previous_workshop.duplicate_for_2020(current_user)
+    flash[:success] = "Successfully duplicated your teams 2019 workshop. All you need now is a ticketing url."
     redirect_to workshop_path(new_workshop)
   end
 
