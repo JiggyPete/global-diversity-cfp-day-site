@@ -1,17 +1,3 @@
-<% if @workshop.nil? && current_user.workshop_id.present? %>
-  <p>
-    Having been involved in Global Diversity CFP Day 2018, we want to make the setup of your 2019 workshop as easy as possible. If you intend hosting in the same venue as 2018 we'd recommend you...
-  </p>
-  <%= link_to 'Duplicate 2018 Workshop', workshop_duplicate_path, class: 'btn btn-warning pull-left', method: :post %>
-  <br/>
-  <br/>
-  <br/>
-  <p>
-    otherwise you can create a fresh new workshop here
-  </p>
-  <%= link_to 'New 2019 Workshop', new_workshop_path, class: 'btn btn-warning pull-left' %>
-<% end %>
-
 <% if @workshop.present? %>
   <h1>Workshop Management</h1>
   <p>
