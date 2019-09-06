@@ -25,6 +25,12 @@ Run `bundle install` to get all those lovely Gems on your machine.
 
 Run `rake db:create db:migrate`
 
-### Running
+### Running the application
 
 Run `bundle exec rails server` and access `http://localhost:3000` on your browser of choice.
+
+### Running the tests
+
+Tests are found in `./spec` and can be run with `bundle exec rspec ./spec`.
+
+To run an individual test file `bundle exec rspac ./spec/path/to/file`
