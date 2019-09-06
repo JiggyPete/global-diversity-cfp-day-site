@@ -23,7 +23,7 @@ To get this site running locally:
 
 Run `bundle install` to get all those lovely Gems on your machine.
 
-Run `rake db:create db:migrate`
+Run `rake db:setup` to create the database and seed some sample data.
 
 ### Running the application
 
@@ -34,3 +34,8 @@ Run `bundle exec rails server` and access `http://localhost:3000` on your browse
 Tests are found in `./spec` and can be run with `bundle exec rspec ./spec`.
 
 To run an individual test file `bundle exec rspac ./spec/path/to/file`
+
+### Seeding the database
+
+To add sample data to the database, run `rake db:seed`. This is slightly different to the setup step as it does not clear and recreate the tables first.
+To create a fresh release of the database, run `rake db:setup`.
