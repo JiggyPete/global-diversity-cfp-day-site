@@ -1,0 +1,16 @@
+<% new_workshops = Workshop.all.order(created_at: :desc).limit(5) %>
+
+<% if new_workshops.any? %>
+  <h2>Newly Registered Workshops</h2>
+  <div class="row">
+    <ul class="list">
+      <% new_workshops.each do |workshop| %>
+        <li>
+          <a href="<%= '/workshops/%d' % [workshop.id] %>"><%= workshop.city %>, <%= workshop.country %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<br />
+<br />
+<% end %>
