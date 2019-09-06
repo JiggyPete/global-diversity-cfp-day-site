@@ -1,0 +1,14 @@
+// Place all the styles related to the Code of Conduct controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.CodeOfConduct {
+  &__Issue {
+    margin-top: 5rem;
+  }
+  
+  &__Section {
+    margin-bottom: 5rem;
+  }
+}
