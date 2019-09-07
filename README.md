@@ -33,7 +33,7 @@ Run `bundle exec rails server` and access `http://localhost:3000` on your browse
 
 Tests are found in `./spec` and can be run with `bundle exec rspec ./spec`.
 
-To run an individual test file `bundle exec rspac ./spec/path/to/file`
+To run an individual test file `bundle exec rspec ./spec/path/to/file`
 
 ### Seeding the database
 
