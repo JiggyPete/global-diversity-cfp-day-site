@@ -9,23 +9,39 @@
         <li class="admin--workshop-list-item">
           <div><%= workshop.city %></div>
 
-          <div> - organised by
-            <%= user_name workshop.organiser %>
-          </div>
+          <% if workshop.organiser.present? %>
+            <div> - organised by
+              <%= user_name workshop.organiser %>
+              <%= coc_completed workshop.organiser %>
+            </div>
+          <% end %>
 
           <% if workshop.facilitator.present? %>
-            <div> - facilitated by
-              <%= user_name workshop.facilitator %>
-              <%= "Invited" if awaiting_invitation_acceptance? workshop.facilitator %>
-            </div>
+            <% unless awaiting_invitation_acceptance? workshop.facilitator %>
+              <div> - facilitated by
+                <%= user_name workshop.facilitator %>
+                <%= coc_completed workshop.facilitator %>
+                <%= "Invited" if awaiting_invitation_acceptance? workshop.facilitator %>
+              </div>
+            <% end %>
           <% end %>
 
           <% workshop.mentors.each do |mentor| %>
-            <div> - mentored by
-              <%= user_name mentor %>
-              <%= "Invited" if awaiting_invitation_acceptance? mentor %>
-            </div>
+            <% unless awaiting_invitation_acceptance? mentor %>
+              <div> - mentored by
+                <%= user_name mentor %>
+                <%= coc_completed mentor %>
+                <%= "Invited" if awaiting_invitation_acceptance? mentor %>
+              </div>
+            <% end %>
           <% end %>
+
+          <br/>
+
+          <%= workshop.signed_up_team.map(&:email).join(", ") %>
+          <br/>
+          <br/>
+          <%= workshop.signed_up_team.map(&:displayed_twitter).map{|twitter| twitter[0] == "@" ? twitter : "@#{twitter}"}.join(", ") %>
 
         </li>
       <% end %>

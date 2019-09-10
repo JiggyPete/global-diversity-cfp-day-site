@@ -2,6 +2,7 @@ class Workshop < ApplicationRecord
   default_scope { where(year: nil) }
 
   validates :continent, :country, :city, presence: true
+  validates_uniqueness_of :city, scope: :year
 
   MANDATORY_FIELDS_FOR_APPROVAL = [
     "continent",
@@ -19,7 +20,7 @@ class Workshop < ApplicationRecord
   ]
 
   def self.previous_workshop_for(user)
-    Workshop.unscoped.find_by(id: user.workshop_id, year: 2018)
+    Workshop.unscoped.find_by(id: user.workshop_id, year: 2019)
   end
 
   def self.workshops_grouped_for_homepage
@@ -32,20 +33,35 @@ class Workshop < ApplicationRecord
     result
   end
 
-  def duplicate_for_2019(duplicated_by_user)
-    workshop_for_2019 = duplicate_2018_workshop
-    migrate_team_to! workshop_for_2019
-    update_team_roles!(duplicated_by_user)
-
-    workshop_for_2019
+  def awaiting_invitation_acceptance?(user)
+    user.invitation_sent_at.present? && user.invitation_accepted_at.blank?
   end
 
-  def migrate_team_to!(workshop_for_2019)
-    organiser.update workshop: workshop_for_2019 if organiser.present?
-    facilitator.update workshop: workshop_for_2019 if facilitator.present?
+  def signed_up_team
+    result = []
+    result << organiser unless organiser.nil? || awaiting_invitation_acceptance?(organiser)
+    result << facilitator unless facilitator.nil? || awaiting_invitation_acceptance?(facilitator)
+    mentors.each do |mentor|
+      result << mentor unless mentor.nil? || awaiting_invitation_acceptance?(mentor)
+    end
+
+    result
+  end
+
+  def duplicate_for_2020(duplicated_by_user)
+    workshop_for_2020 = duplicate_2019_workshop
+    migrate_team_to! workshop_for_2020
+    update_team_roles!(duplicated_by_user)
+
+    workshop_for_2020
+  end
+
+  def migrate_team_to!(workshop_for_2020)
+    organiser.update workshop: workshop_for_2020 if organiser.present?
+    facilitator.update workshop: workshop_for_2020 if facilitator.present?
 
     mentors.each do |mentor|
-      mentor.update workshop: workshop_for_2019
+      mentor.update workshop: workshop_for_2020
     end
   end
 
@@ -102,7 +118,7 @@ class Workshop < ApplicationRecord
     MANDATORY_FIELDS_FOR_APPROVAL.map {|attr| send(attr) }
   end
 
-  def duplicate_2018_workshop
+  def duplicate_2019_workshop
     result = self.dup
     result.year = nil
     result.ticketing_url = nil

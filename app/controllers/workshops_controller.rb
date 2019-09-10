@@ -2,9 +2,9 @@ class WorkshopsController < ApplicationController
   before_action :set_workshop, only: [:show, :edit, :update, :destroy, :duplicate]
 
   def duplicate
-    previous_workshop = Workshop.unscoped.find( current_user.workshop_id )
-    new_workshop = previous_workshop.duplicate_for_2019(current_user)
-    flash[:success] = "Successfully duplicated your teams 2018 workshop. All you need now is a ticketing url."
+    previous_workshop = Workshop.previous_workshop_for( current_user )
+    new_workshop = previous_workshop.duplicate_for_2020(current_user)
+    flash[:success] = "Successfully duplicated your teams 2019 workshop. All you need now is a ticketing url."
     redirect_to workshop_path(new_workshop)
   end
 
@@ -17,6 +17,9 @@ class WorkshopsController < ApplicationController
     end
 
     @workshop = Workshop.new
+  end
+
+  def new_duplicate
   end
 
   def edit
@@ -119,8 +122,10 @@ class WorkshopsController < ApplicationController
     :navigable_by_disabled,
     :chairs_arms,
     :drinks_allowed,
+    :number_of_attendees,
     :number_of_bathrooms,
     :number_of_handicap_stalls,
+    :number_of_sign_ups,
     :number_of_gender_neutral_stalls,
     :public_transport_near_venue_notes,
     :public_transport_accessible_mobility_devices_notes,

@@ -15,6 +15,14 @@
     <%= form.submit class: "btn btn-warning"%>
   </div>
 
+<!--   <div class="grouping">
+    <h2>Attendees</h2>
+
+    <%= workshop_text_field(form, :number_of_sign_ups, "") %>
+    <%= workshop_text_field(form, :number_of_attendees, "") %>
+
+  </div>
+ -->
   <div class="grouping">
     <h2>Where</h2>
     <div class="field">
@@ -49,7 +57,7 @@
       <%= form.label :time_zone %>
       <%= form.select :time_zone, timezone_codes, include_blank: true %>
     </div>
-    
+
     <div class="field">
       <%= form.label :alternative_date, "If your event will happen in a different date, add it here. Format: Month day year, i.e March 15th 2019" %>
       <%= workshop_text_field(form, :alternative_date, "") %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190213131929) do
+ActiveRecord::Schema.define(version: 20190823081633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,20 @@ ActiveRecord::Schema.define(version: 20190213131929) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_incidents_on_user_id"
+  end
+
+  create_table "success_stories", force: :cascade do |t|
+    t.string "full_name"
+    t.string "twitter"
+    t.string "profile_picture_url"
+    t.string "email_address"
+    t.string "talk_title"
+    t.string "event_name"
+    t.string "events_twitter"
+    t.date "event_start_date"
+    t.date "event_end_date"
+    t.boolean "premission_for_public_use", default: false
+    t.boolean "approved", default: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -160,6 +174,8 @@ ActiveRecord::Schema.define(version: 20190213131929) do
     t.text "drinks_allowed_notes", default: ""
     t.integer "year"
     t.string "alternative_date"
+    t.integer "number_of_sign_ups", default: 0
+    t.integer "number_of_attendees", default: 0
   end
 
 end

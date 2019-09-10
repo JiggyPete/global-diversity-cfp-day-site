@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
+
   resources :events, only: :show
 
   post "/workshop/duplicate" => "workshops#duplicate"
+  get "/workshop/new_duplicate" => "workshops#new_duplicate"
   resources :workshops, only: [:new, :show, :create, :edit, :update, :destroy]
   resources :parents, only: :index
   resources :users, only: [:destroy]
 
+  resources :celebrate, only: :index
   resources :cfps
   resources :incidents
   resources :coc_trainings, only: [:new, :create]
