@@ -98,7 +98,7 @@ RSpec.describe Workshop, type: :model do
     it "handle previous facilitator being nil" do
       facilitator.destroy
       new_workshop = original_workshop.duplicate_for_2020(organiser)
-      expect(new_workshop.facilitator).to be_nil
+      expect(new_workshop.facilitators).to be_empty
     end
 
     it "previous facilitator is migrated to new workshop" do
@@ -108,10 +108,10 @@ RSpec.describe Workshop, type: :model do
       expect(facilitator.workshop).to eql(new_workshop)
 
       new_workshop.reload
-      expect(new_workshop.facilitator).to eql(facilitator)
+      expect(new_workshop.facilitators).to include(facilitator)
 
       reloaded_original_workshop = Workshop.unscoped.find(original_workshop.id)
-      expect(reloaded_original_workshop.facilitator).to be_nil
+      expect(reloaded_original_workshop.facilitators).to be_empty
     end
 
     it "handle previous workshop with no mentors" do
@@ -193,23 +193,24 @@ RSpec.describe Workshop, type: :model do
     end
   end
 
-  describe "#facilitator" do
-    let!(:workshop) { Workshop.create }
+  describe "#facilitators" do
+    let!(:workshop) { create_workshop(city: "Edinburgh", year: nil) }
     let!(:facilitator) { create_user(facilitator: true, workshop: workshop) }
 
     it "provides the facilitator" do
-      expect(workshop.facilitator).to eql(facilitator)
+      expect(workshop.facilitators).to include(facilitator)
     end
 
     it "ignores unlreated facilitators" do
       other_facilitator = create_user(facilitator: true, email: 'other_facilitator@example.com')
-      expect(workshop.facilitator).to eql(facilitator)
+      expect(workshop.facilitators).not_to include(other_facilitator)
     end
 
     it "ignores different kinds of team members" do
       organiser = create_user(organiser: true, email: 'organiser@example.com')
       mentor = create_user(mentor: true, email: 'mentor@example.com')
-      expect(workshop.facilitator).to eql(facilitator)
+      expect(workshop.facilitators).to include(facilitator)
+      expect(workshop.facilitators.length).to eql(1)
     end
   end
 
