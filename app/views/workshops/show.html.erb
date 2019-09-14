@@ -18,6 +18,31 @@
   <br/>
 
   <div class="grouping">
+    <h2>Team</h2>
+    <p>
+      <strong>Organiser:</strong>
+      <%= user_name @workshop.organiser %>
+      <strong>CoC Training: </strong> <%= @workshop.organiser.coc_training_complete? ? "✅" : "🚫" %>
+    </p>
+    <p>
+      <% @workshop.facilitators.each do |facilitator| %>
+        <%= render 'display_user', user: facilitator, user_type: "Facilitator" %>
+        <br>
+      <% end %>
+      <%= render 'invite_user', user_type: "Facilitator" %>
+    </p>
+    <p>
+      <% @workshop.mentors.each do |mentor| %>
+        <p>
+          <%= render 'display_user', user: mentor, user_type: "Mentor" %>
+        </p>
+      <% end %>
+
+      <%= render 'invite_user', user_type: "Mentor" %>
+    </p>
+  </div>
+
+  <div class="grouping">
     <h2>Attendees</h2>
     <p>
       <strong>Number of sign ups:</strong>
@@ -87,31 +112,6 @@
     <p>
       <strong>Ticketing url:</strong>
       <%= @workshop.ticketing_url %>
-    </p>
-  </div>
-
-  <div class="grouping">
-    <h2>Team</h2>
-    <p>
-      <strong>Organiser:</strong>
-      <%= user_name @workshop.organiser %>
-      <strong>CoC Training: </strong> <%= @workshop.organiser.coc_training_complete? ? "✅" : "🚫" %>
-    </p>
-    <p>
-      <% if @workshop.facilitator.present? %>
-        <%= render 'display_user', user: @workshop.facilitator, user_type: "Facilitator" %>
-      <% else %>
-        <%= render 'invite_user', user_type: "Facilitator" %>
-      <% end %>
-    </p>
-    <p>
-      <% @workshop.mentors.each do |mentor| %>
-        <p>
-          <%= render 'display_user', user: mentor, user_type: "Mentor" %>
-        </p>
-      <% end %>
-
-      <%= render 'invite_user', user_type: "Mentor" %>
     </p>
   </div>
 

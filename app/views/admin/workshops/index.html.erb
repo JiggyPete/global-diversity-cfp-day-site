@@ -16,12 +16,12 @@
             </div>
           <% end %>
 
-          <% if workshop.facilitator.present? %>
+          <% if workshop.facilitators.each do |facilitator| %>
             <% unless awaiting_invitation_acceptance? workshop.facilitator %>
               <div> - facilitated by
-                <%= user_name workshop.facilitator %>
-                <%= coc_completed workshop.facilitator %>
-                <%= "Invited" if awaiting_invitation_acceptance? workshop.facilitator %>
+                <%= user_name facilitator %>
+                <%= coc_completed facilitator %>
+                <%= "Invited" if awaiting_invitation_acceptance? facilitator %>
               </div>
             <% end %>
           <% end %>
