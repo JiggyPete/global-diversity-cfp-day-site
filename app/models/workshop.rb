@@ -85,6 +85,10 @@ class Workshop < ApplicationRecord
     @facilitator ||= User.where(workshop_id: id, facilitator: true).first
   end
 
+  def facilitators
+    [facilitator]
+  end
+
   def mentors
     @mentors ||= User.where(workshop_id: id, mentor: true)
   end

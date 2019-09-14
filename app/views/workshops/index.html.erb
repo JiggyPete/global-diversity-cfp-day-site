@@ -15,7 +15,7 @@
       <th>Time zone</th>
       <th>Ticketing url</th>
       <th>Organiser</th>
-      <th>Facilitator</th>
+      <th>Facilitators</th>
       <th>Mentors</th>
       <th>Notes</th>
       <th colspan="3"></th>
@@ -35,7 +35,11 @@
         <td><%= workshop.time_zone %></td>
         <td><%= workshop.ticketing_url %></td>
         <td><%= user_name workshop.organiser %></td>
-        <td><%= user_name workshop.facilitator %></td>
+        <td>
+          <% workshop.facilitators.each do |facilitator| %>
+            <%= user_name facilitator %>
+          <% end %>
+        </td>
         <td>
           <% workshop.mentors.each do |mentor| %>
             <p><%= user_name mentor %></p>

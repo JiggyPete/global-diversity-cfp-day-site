@@ -30,9 +30,13 @@
 <% end %>
 
 
-<% if @workshop.facilitator.present? && @workshop.facilitator.accepted_or_not_invited? %>
-  <h2>Facilitator</h2>
-  <%= render "volunteer", volunteer: @workshop.facilitator %>
+<% if @workshop.facilitators.present? %>
+  <% @workshop.facilitators.each do |facilitator| %>
+    <% if facilitator.accepted_or_not_invited? %>
+      <h2>Facilitator</h2>
+      <%= render "volunteer", volunteer: facilitator %>
+    <% end %>
+  <% end %>
 <% end %>
 
 <% if @workshop.mentors.present? %>

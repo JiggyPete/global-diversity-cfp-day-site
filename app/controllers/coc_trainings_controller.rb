@@ -26,6 +26,6 @@ class CocTrainingsController < ApplicationController
   private
 
   def user_params
-    params.permit(:email, :facilitator, :mentor)
+    params.permit(:email, :organiser, :facilitator, :mentor)
   end
 end
