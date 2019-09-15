@@ -13,6 +13,6 @@ class UsersController < ApplicationController
 
   def user_belongs_to_workshop?
     @user = User.find(params[:id])
-    ([current_workshop.organiser] + current_workshop.facilitators + current_workshop.mentors).include? @user
+    (current_workshop.organisers + current_workshop.facilitators + current_workshop.mentors).include? @user
   end
 end

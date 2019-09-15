@@ -96,7 +96,6 @@ class WorkshopsController < ApplicationController
     :time_zone,
     :alternative_date,
     :ticketing_url,
-    :organiser_id,
     :notes,
     :access_information_prodivded,
     :public_transport_near_venue,
