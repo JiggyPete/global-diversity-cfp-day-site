@@ -14,7 +14,7 @@ class Workshop < ApplicationRecord
     "end_time",
     "time_zone",
     "ticketing_url",
-    "organiser",
+    "organisers",
     "facilitators",
     "mentors"
   ]
@@ -39,7 +39,9 @@ class Workshop < ApplicationRecord
 
   def signed_up_team
     result = []
-    result << organiser unless organiser.nil? || awaiting_invitation_acceptance?(organiser)
+    organisers.each do |organiser|
+      result << organiser unless organiser.nil? || awaiting_invitation_acceptance?(organiser)
+    end
 
     facilitators.each do |facilitator|
       result << facilitator unless facilitator.nil? || awaiting_invitation_acceptance?(facilitator)
@@ -61,7 +63,9 @@ class Workshop < ApplicationRecord
   end
 
   def migrate_team_to!(workshop_for_2020)
-    organiser.update workshop: workshop_for_2020 if organiser.present?
+    organisers.each do |organiser|
+      organiser.update workshop: workshop_for_2020 if organiser.present?
+    end
 
     facilitators.each do |facilitator|
       facilitator.update workshop: workshop_for_2020
@@ -74,12 +78,10 @@ class Workshop < ApplicationRecord
 
   def update_team_roles!(duplicated_by_user)
     if duplicated_by_user.facilitator?
-      convert_orgraniser_to_mentor
       convert_facilitator_to_orgraniser(duplicated_by_user)
     end
 
     if duplicated_by_user.mentor?
-      convert_orgraniser_to_mentor
       convert_mentor_to_orgraniser(duplicated_by_user)
     end
   end
@@ -89,7 +91,7 @@ class Workshop < ApplicationRecord
   end
 
   def organisers
-    [organiser]
+    User.where(workshop_id: id, organiser: true)
   end
 
   def facilitators
@@ -151,13 +153,5 @@ class Workshop < ApplicationRecord
       mentor: false
     )
   end
-
-  def convert_orgraniser_to_mentor
-    organiser.update_attributes(
-      organiser: false,
-      mentor: true
-    )
-  end
-
 end
 

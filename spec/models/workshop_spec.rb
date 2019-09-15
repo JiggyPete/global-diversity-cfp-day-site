@@ -148,13 +148,7 @@ RSpec.describe Workshop, type: :model do
       it "makes the original facilitator the organiser" do
         new_workshop = original_workshop.duplicate_for_2020(facilitator)
         facilitator.reload
-        expect(new_workshop.organiser).to eql(facilitator)
-      end
-
-      it "makes the original organiser a mentor" do
-        new_workshop = original_workshop.duplicate_for_2020(facilitator)
-        organiser.reload
-        expect(new_workshop.mentors).to include(organiser)
+        expect(new_workshop.organisers).to include(facilitator)
       end
     end
 
@@ -162,13 +156,7 @@ RSpec.describe Workshop, type: :model do
       it "makes the original mentor the organiser" do
         new_workshop = original_workshop.duplicate_for_2020(mentor_1)
         mentor_1.reload
-        expect(new_workshop.organiser).to eql(mentor_1)
-      end
-
-      it "makes the original organiser a mentor" do
-        new_workshop = original_workshop.duplicate_for_2020(mentor_1)
-        organiser.reload
-        expect(new_workshop.mentors).to include(organiser)
+        expect(new_workshop.organisers).to include(mentor_1)
       end
     end
   end
@@ -417,7 +405,7 @@ RSpec.describe Workshop, type: :model do
     end
   end
 
-  describe "workshopsgrouped by country, sorted by city" do
+  describe "workshops grouped by country, sorted by city" do
     context "when no workshops exist" do
       it "has no workshops" do
         expect(Workshop.workshops_grouped_for_homepage).to be_empty
@@ -449,7 +437,8 @@ RSpec.describe Workshop, type: :model do
         usa = Workshop.all.group_by(&:country)["United States"]
 
         expect(uk).to eql([glasgow])
-        expect(usa).to eql([new_york, boston])
+        expect(usa[0]).to eql(new_york)
+        expect(usa[1]).to eql(boston)
       end
     end
 
