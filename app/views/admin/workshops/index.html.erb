@@ -9,15 +9,15 @@
         <li class="admin--workshop-list-item">
           <div><%= workshop.city %></div>
 
-          <% if workshop.organiser.present? %>
+          <% workshop.organisers.each do |organiser| %>
             <div> - organised by
-              <%= user_name workshop.organiser %>
-              <%= coc_completed workshop.organiser %>
+              <%= user_name organiser %>
+              <%= coc_completed organiser %>
             </div>
           <% end %>
 
-          <% if workshop.facilitators.each do |facilitator| %>
-            <% unless awaiting_invitation_acceptance? workshop.facilitator %>
+          <% workshop.facilitators.each do |facilitator| %>
+            <% unless awaiting_invitation_acceptance? facilitator %>
               <div> - facilitated by
                 <%= user_name facilitator %>
                 <%= coc_completed facilitator %>

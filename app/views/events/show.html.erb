@@ -24,11 +24,10 @@
   </div>
 <% end %>
 
-<% if @workshop.organiser.present? %>
+<% @workshop.organisers.each do |organiser| %>
   <h2>Organiser</h2>
-  <%= render "volunteer", volunteer: @workshop.organiser %>
+  <%= render "volunteer", volunteer: organiser %>
 <% end %>
-
 
 <% if @workshop.facilitators.present? %>
   <% @workshop.facilitators.each do |facilitator| %>
