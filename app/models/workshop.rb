@@ -88,6 +88,10 @@ class Workshop < ApplicationRecord
     @organiser ||= User.where(workshop_id: id, organiser: true).first
   end
 
+  def organisers
+    [organiser]
+  end
+
   def facilitators
     @facilitators ||= User.where(workshop_id: id, facilitator: true)
   end
