@@ -1,0 +1,6 @@
+<h2>Workshops</h2>
+<% if workshops.empty? %>
+  Currently we have no confirmed workshops. Please sign up below to organise a workshop.
+<% else %>
+  <%= render  partial: "workshops",  :locals => {:workshops => @workshops} %>
+<% end %>
