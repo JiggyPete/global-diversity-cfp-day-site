@@ -23,14 +23,22 @@ class Workshop < ApplicationRecord
     Workshop.unscoped.find_by(id: user.workshop_id, year: 2019)
   end
 
-  def self.workshops_grouped_for_homepage
-    result = Workshop.all.order(:continent, :country, :city).group_by(&:continent)
+  def self.group_by_continent_and_country(workshops)
+    result = workshops.reorder(:continent, :country, :city).group_by(&:continent)
 
     result.keys.each do |continent|
       result[continent] = result[continent].group_by(&:country)
     end
 
     result
+  end
+
+  def self.newest_workshops_by_continent
+    Workshop.group_by_continent_and_country(Workshop.all.order(created_at: :desc).limit(5))
+  end
+
+  def self.workshops_grouped_for_homepage
+    Workshop.group_by_continent_and_country(Workshop.all)
   end
 
   def awaiting_invitation_acceptance?(user)

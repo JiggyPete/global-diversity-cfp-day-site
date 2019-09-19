@@ -485,6 +485,68 @@ RSpec.describe Workshop, type: :model do
 
 
   end
+  describe "newest_workshops_by_continent groups by country, sorted by city" do
+    context "when no workshops exist" do
+      it "has no workshops" do
+        expect(Workshop.newest_workshops_by_continent).to be_empty
+      end
+    end
+
+    context "has a number of workshops in the same city" do
+      it "sorts workshops by city name" do
+        aberdeen = create_workshop country: "United Kingdom", city: "Aberdeen"
+        glasgow = create_workshop country: "United Kingdom", city: "Glasgow"
+        edinburgh = create_workshop country: "United Kingdom", city: "Edinburgh"
+
+        workshops = Workshop.newest_workshops_by_continent["Europe"]["United Kingdom"]
+        expect(workshops.length).to eql(3)
+        expect(workshops).to eql([aberdeen, edinburgh, glasgow])
+      end
+    end
+
+    context "sorts cities grouped by country" do
+      it "sorts workshops by city name" do
+        new_york = create_workshop country: "United States", city: "New York"
+        glasgow = create_workshop country: "United Kingdom", city: "Glasgow"
+        boston = create_workshop country: "United States", city: "Boston"
+
+        result = Workshop.all.order(:city).group_by(&:country)
+
+        expect(result.length).to eql(2)
+        uk = result["United Kingdom"]
+        usa = result["United States"]
+
+        expect(uk).to eql([glasgow])
+        expect(usa).to eql([boston, new_york])
+      end
+    end
+
+    context "countries cities grouped by country and continent" do
+      it "sorts workshops by city name" do
+        new_york = create_workshop continent: "North America", country: "United States", city: "New York"
+        glasgow = create_workshop continent: "Europe", country: "United Kingdom", city: "Glasgow"
+        amsterdam = create_workshop continent: "Europe", country: "Holland", city: "Amsterdam"
+        boston = create_workshop continent: "North America", country: "United States", city: "Boston"
+        toronto = create_workshop continent: "North America", country: "Canada", city: "Toronto"
+
+        result = Workshop.newest_workshops_by_continent
+
+        expect(result.length).to eql(2)
+        europe = result["Europe"]
+        north_america = result["North America"]
+
+        expect(europe.length).to eql(2)
+        expect(europe["Holland"]).to eql([amsterdam])
+        expect(europe["United Kingdom"]).to eql([glasgow])
+
+        expect(north_america.length).to eql(2)
+        expect(north_america["Canada"]).to eql([toronto])
+        expect(north_america["United States"]).to eql([boston, new_york])
+      end
+    end
+
+
+  end
 
   def create_organiser(workshop)
     create_user email: "organiser@example.com", organiser: true, workshop: workshop

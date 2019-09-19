@@ -1,22 +1,17 @@
-<h2>Workshops</h2>
-<% if workshops.empty? %>
-  Currently we have no confirmed workshops. Please sign up below to organise a workshop.
-<% else %>
-  <% workshops.keys.each do |continent| %>
-    <h3><%= continent %></h3>
-    <% workshops[continent].keys.each do |country| %>
-      <h4><%= country %></h4>
-      <ol class="workshop-list">
-      <% workshops[continent][country].each do |workshop| %>
-        <% link_text = workshop.ticketing_url.present? ? "Book your free ticket" : "View details" %>
-        <%= link_to event_path(workshop) do %>
-          <li class="workshop-list-item">
-            <%= workshop.city %>
-            <button class="ticket-button btn btn-warning"><%= link_text %></button>
-          </li>
-        <% end %>
+<% workshops.keys.each do |continent| %>
+  <h3><%= continent %></h3>
+  <% workshops[continent].keys.each do |country| %>
+    <h4><%= country %></h4>
+    <ol class="workshop-list">
+    <% workshops[continent][country].each do |workshop| %>
+      <% link_text = workshop.ticketing_url.present? ? "Book your free ticket" : "View details" %>
+      <%= link_to event_path(workshop) do %>
+        <li class="workshop-list-item">
+          <%= workshop.city %>
+          <button class="ticket-button btn btn-warning"><%= link_text %></button>
+        </li>
       <% end %>
-      </ol>
     <% end %>
+    </ol>
   <% end %>
 <% end %>
