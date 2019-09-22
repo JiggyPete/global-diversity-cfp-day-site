@@ -19,11 +19,13 @@
 
   <div class="grouping">
     <h2>Team</h2>
-    <p>
-      <strong>Organiser:</strong>
-      <%= user_name @workshop.organiser %>
-      <strong>CoC Training: </strong> <%= @workshop.organiser.coc_training_complete? ? "✅" : "🚫" %>
-    </p>
+      <% @workshop.organisers.each do |organiser| %>
+        <p>
+          <%= render 'display_user', user: organiser, user_type: "Organiser" %>
+        </p>
+      <% end %>
+        </p>
+        <%= render 'invite_user', user_type: "Organiser" %>
     <p>
       <% @workshop.facilitators.each do |facilitator| %>
         <%= render 'display_user', user: facilitator, user_type: "Facilitator" %>
