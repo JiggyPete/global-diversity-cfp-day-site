@@ -10,4 +10,11 @@ class User < ApplicationRecord
                         :run_workshop_explaination
 
   validates :picture_url, :url => true
+
+  def awaiting_invite_acceptance?
+    direct_signup = !invitation_created_at? && !invitation_accepted_at?
+    return false if direct_signup
+
+    invitation_created_at? && !invitation_accepted_at?
+  end
 end
