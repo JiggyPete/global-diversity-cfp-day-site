@@ -25,6 +25,12 @@ $md: 768px;
     background-color: $banner-text-color-hover;
     border-color: $banner-text-color;
   }
+
+  &:focus {
+    color: $site-yellow;
+    background-color: $banner-text-color-hover;
+    border-color: $banner-text-color;
+  }
 }
 
 .app-navbar {
@@ -354,7 +360,7 @@ h1, h2, h3, comfortaa {
 
 .ticket-button {
   float: right;
-  margin: 0.5em;
+  margin-right: 0.5em;
 }
 
 footer
