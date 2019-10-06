@@ -70,7 +70,11 @@
     These workshops have no specific language, framework or process as a focus. Even if your talk isn’t even related to tech we want to hear from you too! In short, if there is something that you want to shout to the world we're here to help you get there regardless of the boundaries of technology or communities.
   </p>
   <hr/>
-  <%= render 'workshops', workshops: Workshop.workshops_grouped_for_homepage %>
+
+  <div id="all-workshops">
+    <%= render 'workshops', workshops: Workshop.workshops_grouped_for_homepage
+    %>
+  </div>
 
  <p>
     <h2>What do you need to do next?</h2>

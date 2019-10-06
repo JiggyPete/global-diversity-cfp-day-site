@@ -1,5 +1,8 @@
 <% if workshops.any? %>
   <h2>Newly Registered Workshops</h2>
+  <a class="ticket-button btn btn-warning" href="#all-workshops">
+    View All Workshops
+  </a>
   <%= render  partial: "workshops",  :locals => {:workshops => @workshops} %>
 <br />
 <br />
