@@ -24,10 +24,13 @@ class Workshop < ApplicationRecord
   end
 
   def self.group_by_continent_and_country(workshops)
-    result = workshops.reorder(:continent, :country, :city).group_by(&:continent)
+    result = workshops.order(:continent, :country, :city).group_by(&:continent)
 
     result.keys.each do |continent|
       result[continent] = result[continent].group_by(&:country)
+      result[continent].keys.each do |country|
+        result[continent][country] = result[continent][country].sort { |a, b| a.city <=> b.city }
+      end
     end
 
     result

@@ -545,6 +545,27 @@ RSpec.describe Workshop, type: :model do
       end
     end
 
+    it "only returns the most recent 5 workshops" do
+      new_york = create_workshop continent: "North America", country: "United States", city: "New York", created_at: 1.day.ago
+      seattle = create_workshop continent: "North America", country: "United States", city: "Seattle", created_at: 2.days.ago
+      atlanta = create_workshop continent: "North America", country: "United States", city: "Atlanta", created_at: 3.days.ago
+      los_angeles = create_workshop continent: "North America", country: "United States", city: "Los Angeles", created_at: 4.days.ago
+      portland = create_workshop continent: "North America", country: "United States", city: "Portland", created_at: 5.days.ago
+
+      old_city = create_workshop continent: "North America", country: "United States", city: "Memphis", created_at: 1.week.ago
+      old_country = create_workshop continent: "North America", country: "Canada", city: "Toronto", created_at: 2.weeks.ago
+      old_continent = create_workshop continent: "Europe", country: "Holland", city: "Amsterdam", created_at: 3.weeks.ago
+
+      result = Workshop.newest_workshops_by_continent
+
+      expect(result["Europe"]).to be_nil
+
+      north_america = result["North America"]
+      expect(north_america["Canada"]).to be_nil
+      expect(north_america["United States"]).to eql([
+        atlanta, los_angeles, new_york, portland, seattle
+      ])
+    end
 
   end
 
