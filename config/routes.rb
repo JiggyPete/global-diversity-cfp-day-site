@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :workshops, only: :index
+    resources :users, only: [:index, :edit, :update, :destroy]
   end
 
   match 'code-of-conduct', to: "code_of_conduct#index", via: :get
