@@ -6,7 +6,7 @@ RSpec.describe ApplicationHelper, type: :helper do
     context "admin user signs in" do
       it "supplies the admin workshops path" do
         admin = User.new(admin: true)
-        expect(helper.workshop_landing_page_for(admin)).to eql(admin_workshops_path)
+        expect(helper.workshop_landing_page_for(admin)).to eql(admin_users_path)
       end
     end
 

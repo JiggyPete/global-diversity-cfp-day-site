@@ -1,0 +1,12 @@
+<h1>Edit User</h1>
+
+<%= form_for(@user, url: admin_user_path(@user, method: :put)) do |f| %>
+  <%= render "devise/shared/user_form", f: f %>
+
+  <div class="actions">
+    <%= f.submit "Update details", class: "btn btn-warning" %>
+  </div>
+<% end %>
+
+
+

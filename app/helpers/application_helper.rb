@@ -1,6 +1,6 @@
 module ApplicationHelper
   def workshop_landing_page_for(user)
-    return admin_workshops_path if user.admin?
+    return admin_users_path if user.admin?
 
     return workshop_path(user.workshop) if user.workshop.present?
     return workshop_new_duplicate_path(user.workshop_id) if Workshop.previous_workshop_for( user ).present?

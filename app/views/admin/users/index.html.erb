@@ -1,0 +1,44 @@
+<h1>User Management</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">
+        Name
+      </th>
+      <th scope="col">
+        Workshop
+      </th>
+      <th scope="col">
+        Twitter
+      </th>
+      <th scope="col">
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td>
+          <%= user.full_name %>
+        </td>
+        <td>
+          <% if user.workshop.present? %>
+            <% workshop = user.workshop %>
+            <% location = "#{workshop.continent}, #{workshop.country}, #{workshop.city}" %>
+            <%= link_to location, event_path(workshop) %>
+          <% end %>
+        </td>
+        <td>
+          <%= user.displayed_twitter %>
+        </td>
+        <td>
+          <%= link_to "Edit", edit_admin_user_path(user) %>
+          |
+          <%= link_to 'Delete', admin_user_path(user), method: :delete, class: 'btn btn-warning', data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
