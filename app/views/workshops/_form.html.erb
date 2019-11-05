@@ -32,7 +32,7 @@
 
     <div class="field">
       <%= form.label :country %>
-      <%= form.select :country, ISO3166::Country.all.map(&:name).sort, include_blank: true %>
+      <%= form.select :country, all_countries, include_blank: true %>
     </div>
 
     <%= workshop_text_field(form, :city, "") %>

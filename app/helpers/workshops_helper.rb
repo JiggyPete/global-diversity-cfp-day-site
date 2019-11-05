@@ -160,4 +160,13 @@ module WorkshopsHelper
   def yes_no_html(value)
     value == true ? "Yes" : "No"
   end
+
+  def all_countries
+    countries = ISO3166::Country.all.map(&:name)
+
+    index = countries.index("Taiwan, Province of China")
+    countries[index] = "Taiwan"
+
+    countries.sort
+  end
 end
