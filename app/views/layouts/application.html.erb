@@ -78,6 +78,17 @@
         </div>
       <% end %>
 
+      <% if current_user.present? && current_user.workshop.present? && !current_user.coc_training_complete? %>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          Please complete your
+          <%= link_to "Code of Conduct training", new_coc_training_path %>
+          before Sunday, January 5th 2020
+        </div>
+      <% end %>
+
       <%= yield %>
     </div>
 

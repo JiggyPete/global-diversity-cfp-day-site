@@ -3,34 +3,62 @@
 
 <br/>
 <p>
+  Thank you for coming to complete your Code of Conduct Training, which should take around 10 minutes.
+</p>
+<p>
   This is a mandatory requirement for all workshop team members.
 </p>
 <p>
-  For the safety of all participants, all workshop team members must have listened to the Code of Conduct audio training. This is so that you know how to best respond to any issues or violations raised by attendees.
+  Having updated the training material for 2020, if you have participated before you will need to go over this again.
 </p>
 <p>
-  This will take 20 minutes, thereafter please confirm that you have completed the training by clicking the green button.
+  For the safety of all participants, all workshop team members must have gone through one of the following Code of Conduct training methods. This is so that you know how to best respond to any issues or violations raised by attendees.
 </p>
 <p>
-  If a team is unable to do this then unfortauntely they cannot be in the position of responsibility of looking after attendees comfort and safety.
+  This will take around 10 minutes, thereafter please confirm that you have completed the training by clicking the green button.
 </p>
 <p>
-  If you have any questions feel free to reach out to peter@globaldiversitycfpday.com or @peter in Discord.
+  If a team member is unable to do this then unfortauntely they cannot be in the position of responsibility of looking after attendees comfort and safety.
+</p>
+<p>
+  You will be able to see the current status of your team on your <%= link_to "workshop page", workshop_path(current_user.workshop) %>, with each team member marked with ✅ which means "Complete" or 🚫 which means "still to Complete".
+</p>
+<p>
+  If you have any questions feel free to reach out to coc@globaldiversitycfpday.com or @global-coc-team in Discord.
 </p>
 
+<p>
+  Please also bare in mind that these materials are solely for Global Diversity CFP Day, and are not for sharing purposes.
+</p>
 <br/>
 <br/>
 
-<%= button_to "Download Audio: Training (20 mins, 9M)", { action: "create", coc_training_downloaded: true }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
 
-<%= button_to "Confirm Training Complete", { action: "create", coc_training_complete: true }, remote: true, class: 'ticket-button btn btn-success pull-right', form: { "data-type" => "json" } %>
+  <ul class="coc-training-downloads">
+    <li>
+      <%= button_to "Watch Video: Training (10 mins, 90M)", { action: "create", coc_training_downloaded: true, coc_training_type: 'video' }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
+    </li>
+    <li>
+      <%= button_to "Listen to Audio: Training (10 mins, 9M)", { action: "create", coc_training_downloaded: true, coc_training_type: 'audio' }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
+    </li>
+    <li>
+      <%= button_to "Read PDF Text: Training (129K)", { action: "create", coc_training_downloaded: true, coc_training_type: 'pdf' }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
+    </li>
+  </ul>
 
 <br/>
 <br/>
-<hr>
+<br/>
+<br/>
+
+<%= button_to "Confirm Training Complete", { action: "create", coc_training_complete: true }, remote: true, class: 'ticket-button btn btn-success pull-left', form: { "data-type" => "json" } %>
 
 <br/>
 <br/>
+<!--<hr>
+
+<br/>
+ <br/>
 
 <h1>Workshop Advice Video</h1>
 <br/>
@@ -38,5 +66,5 @@
 
 <%= button_to "Download Video: Workshop advice (1 hour, 3G)", { action: "create", call_downloaded: true }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
 <br/>
-<br/>
+ --><br/>
 <%= workshop_link_button %>

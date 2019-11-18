@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190823081633) do
+ActiveRecord::Schema.define(version: 20191118123514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,6 +108,7 @@ ActiveRecord::Schema.define(version: 20190823081633) do
     t.boolean "call_downloaded", default: false
     t.boolean "coc_training_downloaded", default: false
     t.boolean "coc_training_complete", default: false
+    t.string "coc_training_type"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
