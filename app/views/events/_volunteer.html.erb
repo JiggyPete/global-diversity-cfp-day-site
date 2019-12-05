@@ -5,7 +5,8 @@
       <div class="col col-sm-4">
         <% if volunteer.picture_url.present? %>
           <div class="col">
-            <%= image_tag volunteer.picture_url, class: 'volunteer--profile-picture' %>
+            <% default_profile_picture = asset_url("default-profile-picture.jpg") %>
+            <%= image_tag volunteer.picture_url, class: 'volunteer--profile-picture', onerror: "this.onerror=null;this.src='#{default_profile_picture}';" %>
           </div>
         <% end %>
       </div>
