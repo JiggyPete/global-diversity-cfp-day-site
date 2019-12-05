@@ -58,7 +58,7 @@
   <% end %>
 <% end %>
 
-<% if @workshop.access_information_prodivded %>
+<% if @workshop.venue_address.present? %>
   <%= render "event_access_information", workshop: @workshop %>
 <% end %>
 
