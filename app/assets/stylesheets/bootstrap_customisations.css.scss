@@ -103,6 +103,27 @@ h1, h2, h3, comfortaa {
   height: 600px;
 }
 
+.background-amr-speaking {
+  background-image: image-url("blog/amr/speaking.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+}
+
+.background-amr-relaxing {
+  background-image: image-url("blog/amr/relaxed.png");
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+}
+
+.background-amr-pose {
+  background-image: image-url("blog/amr/pose.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+}
+
 .background-ana {
   background-image: image-url("people/ana.jpg");
   background-size: cover;
