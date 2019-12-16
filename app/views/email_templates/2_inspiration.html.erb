@@ -329,7 +329,7 @@
                                     <p style="margin: 0;">
                                         Podcasts:
                                         <ul>
-                                            <li><a href="http://pursuitpod.libsyn.com/tips-and-tricks-for-public-speaking-andrew-lightheart">The Pursuit Podcast - Jessica Rose and Andrew Lightheart</a></li>
+                                            <li><a href="http://pursuitpod.libsyn.com/tips-and-tricks-for-public-speaking-andrew-lightheart">Tips and Tricks for Public Speaking<br/>The Pursuit Podcast - Jessica Rose and Andrew Lightheart</a></li>
                                         </ul>
                                     </p>
                                 </td>
@@ -375,14 +375,14 @@
                                     <table width="180" align="left">
                                         <tr>
                                           <td width="70">
-                                            <img src="<%= @workshop.organiser.first.picture_url %>" width="62" height="62" style="margin:0; padding:0; border:none; display:block;" border="0" alt="">
+                                            <img src="<%= @workshop.organisers.first.picture_url %>" width="62" height="62" style="margin:0; padding:0; border:none; display:block;" border="0" alt="">
                                           </td>
                                           <td width="110">
 
                                             <table width="" cellpadding="0" cellspacing="0" border="0">
                                               <tr>
                                                 <td align="left" style="font-family: sans-serif; font-size:14px; line-height:20px; color:#222222; font-weight:bold;" class="body-text">
-                                                  <p style="font-family: 'Comfortaa', sans-serif; font-size:14px; line-height:20px; color:#222222; font-weight:bold; padding:0; margin:0;" class="body-text"><%= @workshop.first.organiser.full_name %></p>
+                                                  <p style="font-family: 'Comfortaa', sans-serif; font-size:14px; line-height:20px; color:#222222; font-weight:bold; padding:0; margin:0;" class="body-text"><%= @workshop.organisers.first.full_name %></p>
                                                 </td>
                                               </tr>
                                               <tr>
