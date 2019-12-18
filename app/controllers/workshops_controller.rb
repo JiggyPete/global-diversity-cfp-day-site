@@ -93,7 +93,6 @@ class WorkshopsController < ApplicationController
     :google_maps_url,
     :start_time,
     :end_time,
-    :time_zone,
     :alternative_date,
     :ticketing_url,
     :notes,

@@ -13,47 +13,6 @@ module WorkshopsHelper
     link_to label, workshop_path(current_user.workshop), class: "btn btn-warning pull-right"
   end
 
-  def timezone_codes
-    [
-     "ACST",
-     "ACWST",
-     "AEST",
-     "AKDT",
-     "ANAT",
-     "ART",
-     "AoE",
-     "BST",
-     "CDT",
-     "CEST",
-     "CHAST",
-     "CST",
-     "CVT",
-     "EDT",
-     "GMT",
-     "GST",
-     "HADT",
-     "HAST",
-     "IRDT",
-     "IST",
-     "JST",
-     "LHST",
-     "LINT",
-     "MART",
-     "MMT",
-     "MSK",
-     "NDT",
-     "NPT",
-     "NUT",
-     "PDT",
-     "PYT",
-     "SBT",
-     "TOT",
-     "UZT",
-     "WGST",
-     "WIB"
-    ]
-  end
-
   def workshop_text_field(form, attribute, label_text=nil)
     displayed_label_text = label_text.nil? ? form.object.class.human_attribute_name(attribute) : label_text
     result = <<-HTML

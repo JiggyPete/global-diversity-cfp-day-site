@@ -12,7 +12,6 @@ class Workshop < ApplicationRecord
     "google_maps_url",
     "start_time",
     "end_time",
-    "time_zone",
     "ticketing_url",
     "organisers",
     "facilitators",
@@ -118,21 +117,7 @@ class Workshop < ApplicationRecord
     "pending"
   end
 
-  def percentage_complete
-    return 100 if status != "draft"
-
-    ((number_of_mandatory_fields_complete.to_f/number_of_mandatory_fields)*100).round
-  end
-
   private
-
-  def number_of_mandatory_fields
-    MANDATORY_FIELDS_FOR_APPROVAL.length
-  end
-
-  def number_of_mandatory_fields_complete
-    mandatory_values.select{|value| value.present? }.length
-  end
 
   def necessary_attrs_supplied?
     mandatory_values.all?{|value| value.present? }
