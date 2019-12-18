@@ -34,32 +34,49 @@ $md: 768px;
 }
 
 .app-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
+  width:100%;
   background-color: $site-yellow;
-  z-index: 100;
-  width: 100%;
 
-  label {
+  button {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  h1 {
     color: $banner-text-color;
     margin-top: 1rem;
     font-family: 'Comfortaa', cursive;
     font-size: 3rem;
+
+    @media (max-width: $md) {
+      font-size: 2rem;
+    }
   }
 
-  a label {
+  @media (min-width: $md) {
+    ul {
+      margin-top: 1rem;
+    }
+  }
+
+  li {
+    padding-left: 2rem;
+  }
+
+  a h1 {
     color: $banner-text-color;
   }
 
-  a label:hover {
+  a:hover, h1:hover {
     color: $banner-text-color;
+  }
+
+  a.navbar-brand:hover {
+    background-color: $site-yellow;
   }
 }
 
-.navbar-brand:hover {
-  background-color: none;
-}
+
 
 .custom-nav {
   margin-top: 1rem;
