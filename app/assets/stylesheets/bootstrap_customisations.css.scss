@@ -79,7 +79,9 @@ $md: 768px;
 }
 
 .main-content {
-  margin-top: 10rem;
+  @media (min-width: $md) {
+    margin-top: 10rem;
+  }
 }
 
 h1, h2, h3, comfortaa {
@@ -403,8 +405,15 @@ h1, h2, h3, comfortaa {
 }
 
 .ticket-button {
-  float: right;
   margin-right: 0.5em;
+
+  @media (min-width: $md) {
+    float: right;
+  }
+
+  @media (max-width: $md) {
+    margin-top: 0.5em;
+  }
 }
 
 footer
