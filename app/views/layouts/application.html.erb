@@ -35,26 +35,26 @@
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse pull-right" id="navbar-links">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "Code of Conduct", code_of_conduct_path, class: "navbar-brand" %></li>
-              <% if user_signed_in? %>
-                <li><%= link_to "Workshop", workshop_landing_page_for(current_user), class: "navbar-brand" %></li>
-                <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-brand" %></li>
-              <% else %>
-                <li><%= link_to "Blog", blog_index_path, class: "navbar-brand" %></li>
-                <li><%= link_to "Log in", new_user_session_path, class: "navbar-brand" %></li>
-              <% end %>
-              <li>
-                <a href="https://twitter.com/gdcfpday" target="_blank" class="navbar-brand twitter-nav-wrapper">
-                  <i class="twitter-nav"></i>
-                  <span class="sr-only">Follow Global Diversity CFP Day on Twitter</span>
-                </a>
-              </li>
-          </ul>
-        </div>
+      <div class="collapse navbar-collapse" id="navbar-links">
+        <ul class="nav navbar-nav pull-right">
+          <li><%= link_to "Code of Conduct", code_of_conduct_path, class: "navbar-brand" %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "Workshop", workshop_landing_page_for(current_user), class: "navbar-brand" %></li>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-brand" %></li>
+          <% else %>
+            <li><%= link_to "Blog", blog_index_path, class: "navbar-brand" %></li>
+            <li><%= link_to "Log in", new_user_session_path, class: "navbar-brand" %></li>
+          <% end %>
+          <li>
+            <a href="https://twitter.com/gdcfpday" target="_blank" class="navbar-brand twitter-nav-wrapper">
+              <i class="twitter-nav"></i>
+              <span class="sr-only">Follow Global Diversity CFP Day on Twitter</span>
+            </a>
+          </li>
+        </ul>
       </div>
-		</nav>
+    </div>
+  </nav>
 
     <div class="container main-content">
       <% if flash[:success] %>

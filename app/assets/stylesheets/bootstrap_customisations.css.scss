@@ -63,10 +63,6 @@ $md: 768px;
     padding-left: 2rem;
   }
 
-  a h1 {
-    color: $banner-text-color;
-  }
-
   a:hover, h1:hover {
     color: $banner-text-color;
   }
@@ -74,16 +70,11 @@ $md: 768px;
   a.navbar-brand:hover {
     background-color: $site-yellow;
   }
-}
 
-
-
-.custom-nav {
-  margin-top: 1rem;
-
-  a:hover {
-    background-color: $site-yellow;
-    color: $banner-text-color-hover;
+  @media (max-width: $md) {
+    ul, li, a {
+      width: 100%;
+    }
   }
 }
 
