@@ -5,6 +5,12 @@ class CocTrainingsController < ApplicationController
     "pdf" => "https://www.dropbox.com/s/upv72s8jivlz4sm/CoC%20Training.pdf?dl=0"
   }
 
+  YOUR_WORKSHOP_TYPES = {
+    "video" => "https://www.dropbox.com/s/8j0g60ak41dsa0e/Your%20Workshop.mp4?dl=0",
+    "audio" => "https://www.dropbox.com/s/kymjmg8odu2vm8o/Your%20Workshop.mp3?dl=0",
+    "doc" => "https://docs.google.com/document/d/1VEDWRYPsU3C4OS5XDB1GA7yB0xuZ2Fftka0udaGLZb0/edit?usp=sharing"
+  }
+
   def new
   end
 
@@ -18,7 +24,7 @@ class CocTrainingsController < ApplicationController
       redirect_to new_coc_training_path
     elsif params[:call_downloaded]
       current_user.update call_downloaded: true
-      redirect_to "https://www.dropbox.com/s/em65115ic721p95/gdcfpday%20prep.mp4?dl=0"
+      redirect_to YOUR_WORKSHOP_TYPES[params[:your_workshop_type]]
     else
       redirect_to workshop_path(current_workshop)
     end
