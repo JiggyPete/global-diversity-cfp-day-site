@@ -7,7 +7,7 @@ end
 
 gem 'rails', '~> 5.1.1'
 gem 'pg', '0.18.4'
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', '3.4.1'
 gem 'countries'
 gem 'devise', '~> 4.3'
 gem 'devise_invitable', '~> 1.7.0'
