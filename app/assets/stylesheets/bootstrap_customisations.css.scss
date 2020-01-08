@@ -34,44 +34,54 @@ $md: 768px;
 }
 
 .app-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
+  width:100%;
   background-color: $site-yellow;
-  z-index: 100;
-  width: 100%;
 
-  label {
+  button {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  h1 {
     color: $banner-text-color;
     margin-top: 1rem;
     font-family: 'Comfortaa', cursive;
     font-size: 3rem;
+
+    @media (max-width: $md) {
+      font-size: 2rem;
+    }
   }
 
-  a label {
+  @media (min-width: $md) {
+    ul {
+      margin-top: 1rem;
+    }
+  }
+
+  li {
+    padding-left: 2rem;
+  }
+
+  a:hover, h1:hover {
     color: $banner-text-color;
   }
 
-  a label:hover {
-    color: $banner-text-color;
-  }
-}
-
-.navbar-brand:hover {
-  background-color: none;
-}
-
-.custom-nav {
-  margin-top: 1rem;
-
-  a:hover {
+  a.navbar-brand:hover {
     background-color: $site-yellow;
-    color: $banner-text-color-hover;
+  }
+
+  @media (max-width: $md) {
+    ul, li, a {
+      width: 100%;
+    }
   }
 }
 
 .main-content {
-  margin-top: 10rem;
+  @media (min-width: $md) {
+    margin-top: 10rem;
+  }
 }
 
 h1, h2, h3, comfortaa {
@@ -395,8 +405,15 @@ h1, h2, h3, comfortaa {
 }
 
 .ticket-button {
-  float: right;
   margin-right: 0.5em;
+
+  @media (min-width: $md) {
+    float: right;
+  }
+
+  @media (max-width: $md) {
+    margin-top: 0.5em;
+  }
 }
 
 footer

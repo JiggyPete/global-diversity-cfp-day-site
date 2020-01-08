@@ -1,0 +1,11 @@
+$md: 768px;
+
+@media (max-width: $md) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
