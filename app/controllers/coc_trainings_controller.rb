@@ -6,7 +6,7 @@ class CocTrainingsController < ApplicationController
   }
 
   YOUR_WORKSHOP_TYPES = {
-    "video" => "https://www.dropbox.com/s/8j0g60ak41dsa0e/Your%20Workshop.mp4?dl=0",
+    "video" => "https://www.dropbox.com/s/t7oi0nimljfnudb/Global%20Diversity%20CFP%20Day%20-%20Your%20Workshop%20%28improved%20audio%29.mp4?dl=0",
     "audio" => "https://www.dropbox.com/s/kymjmg8odu2vm8o/Your%20Workshop.mp3?dl=0",
     "doc" => "https://docs.google.com/document/d/1VEDWRYPsU3C4OS5XDB1GA7yB0xuZ2Fftka0udaGLZb0/edit?usp=sharing"
   }
