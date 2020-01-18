@@ -38,4 +38,8 @@ module ApplicationHelper
   def coc_completed(user)
     user.coc_training_complete? ? "✅" : "🚨"
   end
+
+  def celebrate_url
+    "https://goo.gl/forms/2kN6msbKrLhb2dIc2"
+  end
 end
