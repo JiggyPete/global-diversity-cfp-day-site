@@ -44,18 +44,22 @@ module ApplicationHelper
   end
 
   def sign_up_data_supplied_by_workshops
-    Workshop.all.select{|w| w.number_of_sign_ups.present? &&  w.number_of_sign_ups != 0}.length
+    workshops_with_attendee_data.select{|w| w.number_of_sign_ups.present? &&  w.number_of_sign_ups != 0}.length
   end
 
   def attendee_data_supplied_by_workshops
-    Workshop.all.select{|w| w.number_of_attendees.present? &&  w.number_of_attendees != 0}.length
+    workshops_with_attendee_data.length
+  end
+
+  def workshops_with_attendee_data
+    Workshop.all.select{|w| w.number_of_attendees.present? &&  w.number_of_attendees != 0}
   end
 
   def number_of_sign_ups
-    Workshop.all.map(&:number_of_sign_ups).compact.sum
+    workshops_with_attendee_data.map(&:number_of_sign_ups).compact.sum
   end
 
   def number_of_attendees
-    Workshop.all.map(&:number_of_attendees).compact.sum
+    workshops_with_attendee_data.map(&:number_of_attendees).compact.sum
   end
 end
