@@ -42,4 +42,20 @@ module ApplicationHelper
   def celebrate_url
     "https://goo.gl/forms/2kN6msbKrLhb2dIc2"
   end
+
+  def sign_up_data_supplied_by_workshops
+    Workshop.all.select{|w| w.number_of_sign_ups.present? &&  w.number_of_sign_ups != 0}.length
+  end
+
+  def attendee_data_supplied_by_workshops
+    Workshop.all.select{|w| w.number_of_attendees.present? &&  w.number_of_attendees != 0}.length
+  end
+
+  def number_of_sign_ups
+    Workshop.all.map(&:number_of_sign_ups).compact.sum
+  end
+
+  def number_of_attendees
+    Workshop.all.map(&:number_of_attendees).compact.sum
+  end
 end

@@ -1,5 +1,17 @@
 <h1>Admin Workshops</h1>
 
+  Workshops that supplied sign up data:
+  <%= sign_up_data_supplied_by_workshops %>
+  <br>
+  Workshops that supplied sign up data:
+  <%= attendee_data_supplied_by_workshops %>
+  <br>
+
+  Number of sign ups <%= number_of_sign_ups %>
+  <br>
+  Number of attendees <%= number_of_attendees %>
+
+
   <% @workshops.keys.each do |continent| %>
     <h2><%= continent %></h2>
     <% @workshops[continent].keys.each do |country| %>
