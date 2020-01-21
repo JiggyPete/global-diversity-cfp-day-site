@@ -14,6 +14,8 @@
   <br>
   <br>
   Average Attendees per Workshop: <%= number_of_attendees / attendee_data_supplied_by_workshops %>
+  <br>
+  Number of no-shows: <%= number_of_sign_ups - number_of_attendees %>
 
 
   <% @workshops.keys.each do |continent| %>
