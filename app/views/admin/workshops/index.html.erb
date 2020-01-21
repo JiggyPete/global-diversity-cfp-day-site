@@ -6,10 +6,14 @@
   Workshops that supplied attendee data:
   <%= attendee_data_supplied_by_workshops %>
   <br>
+  <br>
 
   Number of sign ups <%= number_of_sign_ups %>
   <br>
   Number of attendees <%= number_of_attendees %>
+  <br>
+  <br>
+  Average Attendees per Workshop: <%= number_of_attendees / attendee_data_supplied_by_workshops %>
 
 
   <% @workshops.keys.each do |continent| %>
