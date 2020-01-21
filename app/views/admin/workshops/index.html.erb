@@ -6,8 +6,9 @@
   Workshops that supplied attendee data:
   <%= attendee_data_supplied_by_workshops %>
   <br>
+  Workshops reporting data: <%= workshops_with_attendee_data.map(&:city).join(" ") %>
   <br>
-
+  <br>
   Number of sign ups <%= number_of_sign_ups %>
   <br>
   Number of attendees <%= number_of_attendees %>
