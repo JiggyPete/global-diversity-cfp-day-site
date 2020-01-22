@@ -1,8 +1,8 @@
 class CocTrainingsController < ApplicationController
   TRAINING_TYPES = {
-    "video" => "https://www.dropbox.com/s/ygdwxxpaum63adv/CoC%20Training%20Video.mp4?dl=0",
-    "audio" => "https://www.dropbox.com/s/lcezb1yoag1whuh/CoC%20Training%20Audio.mp3?dl=0",
-    "pdf" => "https://www.dropbox.com/s/upv72s8jivlz4sm/CoC%20Training.pdf?dl=0"
+    "video" => "https://www.dropbox.com/s/oi3uvm58x78q3z9/CoC%20Training%20Video.mp4?dl=0",
+    "audio" => "https://www.dropbox.com/s/w2tzo9tofwtmtcl/CoC%20Training%20Audio.mp3?dl=0",
+    "pdf" => "https://www.dropbox.com/s/tjfyuw7gn4wcf0v/CoC%20Training.pdf?dl=0"
   }
 
   YOUR_WORKSHOP_TYPES = {
