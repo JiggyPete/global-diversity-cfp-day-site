@@ -62,4 +62,8 @@ module ApplicationHelper
   def number_of_attendees
     workshops_with_attendee_data.map(&:number_of_attendees).compact.sum
   end
+
+  def average_attendees_per_workshop
+    number_of_attendees / attendee_data_supplied_by_workshops
+  end
 end
