@@ -1,21 +1,17 @@
 <% if @workshop.present? %>
   <h1>Workshop Management</h1>
-  <p>
+  <div class="Workshops__EditBar wrap-reverse">
     <%= link_to 'Edit Workshop', edit_workshop_path(@workshop), class: 'btn btn-warning' %>
     <%= link_to 'Edit Account', edit_account_path(@workshop), class: 'btn btn-warning' %>
     <%= link_to "Log Incidents", incidents_path, class: "btn btn-danger pull-right" %>
-  </p>
-  <p>
+  </div>
+  <div class="Workshops__EditBar">
     <%= link_to "CoC Training", new_coc_training_path, class: "btn btn-info" %>
     <%= link_to "Preparation", preparation_index_path, class: "btn btn-info" %>
     <%= link_to "Schedule", schedule_index_path, class: "btn btn-info" %>
     <%= link_to "CFPs", cfps_path, class: "btn btn-info" %>
     <%= link_to "Example Proposals", proposals_path, class: "btn btn-info" %>
-  </p>
-
-
-  <br/>
-  <br/>
+  </div>
 
   <div class="grouping">
     <h2>Team</h2>

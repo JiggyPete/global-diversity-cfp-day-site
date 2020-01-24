@@ -1,6 +1,6 @@
 <%= form_tag invite_team_members_path do %>
   <%= label_tag "Invite #{user_type} by email" %>
-  <%= email_field_tag 'email', '' %>
+  <%= email_field_tag 'email', '', class: "input" %>
   <%= hidden_field_tag user_type.downcase, true %>
   <%= submit_tag "Send Invititation", class: "btn btn-warning" %>
 <% end %>
