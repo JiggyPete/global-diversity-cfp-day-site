@@ -660,3 +660,25 @@ footer {
     border: 2px solid lightgrey;
   }
 }
+
+.partnership-events {
+  tbody {
+    width: 100%;
+
+    .city {
+      width: 20%;
+    }
+
+    .date {
+      width: 40%;
+    }
+
+    .cfp-status {
+      width: 40%;
+    }
+
+    a {
+      color: blue;
+    }
+  }
+}
