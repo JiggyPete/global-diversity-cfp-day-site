@@ -19,12 +19,10 @@
   <% link_to "Open CFPs", cfps_path, class: "ticket-button btn btn-warning right-margin" %>
   <% link_to "Example Proposals", proposals_path, class: "ticket-button btn btn-warning right-margin" %>
   <% link_to "Schedule", schedule_index_path, class: "btn btn-warning pull-right right-margin" %>
-<br/>
-<br/>
-<br/>
+
 <% render  partial: "newest_workshops",  :locals => {:workshops => @newest_workshops} %>
 
-<%= render "upcoming_talks" %>
+<% render "upcoming_talks" %>
 
 <div>
   <h2>Call For Proposals (CFP)</h2>
@@ -37,7 +35,7 @@
 </div>
 <br />
 
-<%= render "partnership_announcement"  %>
+<% render "partnership_announcement"  %>
 
 <div>
   <p>
