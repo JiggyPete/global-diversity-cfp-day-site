@@ -38,4 +38,32 @@ module ApplicationHelper
   def coc_completed(user)
     user.coc_training_complete? ? "✅" : "🚨"
   end
+
+  def celebrate_url
+    "https://goo.gl/forms/2kN6msbKrLhb2dIc2"
+  end
+
+  def sign_up_data_supplied_by_workshops
+    workshops_with_attendee_data.select{|w| w.number_of_sign_ups.present? &&  w.number_of_sign_ups != 0}.length
+  end
+
+  def attendee_data_supplied_by_workshops
+    workshops_with_attendee_data.length
+  end
+
+  def workshops_with_attendee_data
+    Workshop.all.select{|w| w.number_of_attendees.present? &&  w.number_of_attendees != 0}
+  end
+
+  def number_of_sign_ups
+    workshops_with_attendee_data.map(&:number_of_sign_ups).compact.sum
+  end
+
+  def number_of_attendees
+    workshops_with_attendee_data.map(&:number_of_attendees).compact.sum
+  end
+
+  def average_attendees_per_workshop
+    number_of_attendees / attendee_data_supplied_by_workshops
+  end
 end

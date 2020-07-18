@@ -1,5 +1,27 @@
 <h1>Admin Workshops</h1>
 
+  Workshops that supplied sign up data:
+  <%= sign_up_data_supplied_by_workshops %>
+  <br>
+  Workshops that supplied attendee data:
+  <%= attendee_data_supplied_by_workshops %>
+  <br>
+  Workshops reporting data: <%= workshops_with_attendee_data.map(&:city).join(" ") %>
+  <br>
+  <br>
+  Number of sign ups <%= number_of_sign_ups %>
+  <br>
+  Number of attendees <%= number_of_attendees %>
+  <br>
+  <br>
+  Average Attendees per Workshop: <%= average_attendees_per_workshop %>
+  <br>
+  Number of no-shows: <%= number_of_sign_ups - number_of_attendees %>
+  <br>
+  <br>
+  Extrapolated global attendance: <%= average_attendees_per_workshop * 82 %>
+
+
   <% @workshops.keys.each do |continent| %>
     <h2><%= continent %></h2>
     <% @workshops[continent].keys.each do |country| %>
@@ -38,10 +60,14 @@
 
           <br/>
 
-          <%= workshop.signed_up_team.map(&:email).join(", ") %>
+          <% emails = workshop.signed_up_team.map(&:email) %>
+          <% emails.insert(-2, "&") if emails.length >=2 %>
+          <%= emails.join(" ") %>
           <br/>
           <br/>
-          <%= workshop.signed_up_team.map(&:displayed_twitter).map{|twitter| twitter[0] == "@" ? twitter : "@#{twitter}"}.join(", ") %>
+          <% twitter_handles = workshop.signed_up_team.map(&:displayed_twitter).map{|twitter| twitter[0] == "@" ? twitter : "@#{twitter}"} %>
+          <% twitter_handles.insert(-2, "&") if twitter_handles.length >=2 %>
+          <%= twitter_handles.join(" ") %>
 
         </li>
       <% end %>

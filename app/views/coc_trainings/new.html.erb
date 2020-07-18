@@ -34,17 +34,17 @@
 <br/>
 
 
-  <ul class="coc-training-downloads">
-    <li>
-      <%= button_to "Watch Video: Training (10 mins, 90M)", { action: "create", coc_training_downloaded: true, coc_training_type: 'video' }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
-    </li>
-    <li>
-      <%= button_to "Listen to Audio: Training (10 mins, 9M)", { action: "create", coc_training_downloaded: true, coc_training_type: 'audio' }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
-    </li>
-    <li>
-      <%= button_to "Read PDF Text: Training (129K)", { action: "create", coc_training_downloaded: true, coc_training_type: 'pdf' }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
-    </li>
-  </ul>
+<ul class="coc-training-downloads">
+  <li>
+    <%= button_to "Watch Video: Training (10 mins, 90M)", { action: "create", coc_training_downloaded: true, coc_training_type: 'video' }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
+  </li>
+  <li>
+    <%= button_to "Listen to Audio: Training (10 mins, 9M)", { action: "create", coc_training_downloaded: true, coc_training_type: 'audio' }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
+  </li>
+  <li>
+    <%= button_to "Read PDF Text: Training (129K)", { action: "create", coc_training_downloaded: true, coc_training_type: 'pdf' }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
+  </li>
+</ul>
 
 <br/>
 <br/>
@@ -55,7 +55,7 @@
 
 <br/>
 <br/>
-<!--<hr>
+<hr>
 
 <br/>
  <br/>
@@ -64,7 +64,18 @@
 <br/>
 <br/>
 
-<%= button_to "Download Video: Workshop advice (1 hour, 3G)", { action: "create", call_downloaded: true }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
+<ul class="coc-training-downloads">
+  <li>
+    <%= button_to "Watch Video: Your Workshop (53 mins, 1.92G)", { action: "create", call_downloaded: true, your_workshop_type: "video" }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
+  </li>
+  <li>
+    <%= button_to "Listen to Audio: Your Workshop (53 mins, 103.5M)", { action: "create", call_downloaded: true, your_workshop_type: 'audio' }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
+  </li>
+  <li>
+    <%= button_to "Read Text: Your Workshop", { action: "create", call_downloaded: true, your_workshop_type: 'doc' }, remote: true, class: 'ticket-button btn btn-warning pull-left', form: { "data-type" => "json" } %>
+  </li>
+</ul>
+
 <br/>
- --><br/>
+<br/>
 <%= workshop_link_button %>
