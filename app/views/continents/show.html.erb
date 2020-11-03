@@ -1,0 +1,32 @@
+<div id="intro" class="jumbotron">
+  <h1><%= @continent["name"] %></h1>
+    <h2>
+      <% if @continent["start_time"].present? && @continent["end_time"].present? %>
+        <%= @continent["start_time"] %> untill <%= @continent["end_time"] %>
+      <% end %>
+      Saturday January 23rd 2021
+    </h2>
+
+  <%= link_to "Book your free ticket", @continent["ticketing_url"], class: "ticket-button btn btn-warning", target: "blank" %>
+</div>
+
+<% lead = @continent["lead"] %>
+<h2><%= @continent["name"] %> Lead</h2>
+<%= render "yml_volunteer", volunteer: lead %>
+
+<% hosts = @continent["hosts"] %>
+<% if hosts..present? %>
+  <% hosts_title = hosts.length > 1 ? "Hosts" : "Host" %>
+  <h2><%= hosts_title %></h2>
+  <% hosts.each do |host| %>
+    <%= render "yml_volunteer", volunteer: host %>
+  <% end %>
+<% end %>
+
+<% speakers = @continent["speakers"] %>
+<% if speakers.present? %>
+  <h2>Speakers</h2>
+  <% speakers.each do |speaker| %>
+    <%= render "yml_volunteer", volunteer: speaker %>
+  <% end %>
+<% end %>

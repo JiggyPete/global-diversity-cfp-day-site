@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   post "/workshop/duplicate" => "workshops#duplicate"
   get "/workshop/new_duplicate" => "workshops#new_duplicate"
+  resources :continents, only: :show
   resources :workshops, only: [:new, :show, :create, :edit, :update, :destroy]
   resources :parents, only: :index
   resources :users, only: [:destroy]
