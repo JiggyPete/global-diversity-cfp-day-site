@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
 
   def after_sign_in_path_for(user)
-    workshop_landing_page_for(user)
+    continent_leads_path
+    # workshop_landing_page_for(user)
   end
 
   def current_workshop

@@ -35,7 +35,7 @@
           <div class="pull-right custom-nav">
             <%= link_to "Code of Conduct |", code_of_conduct_path, class: "navbar-brand" %>
             <% if user_signed_in? %>
-              <%= link_to "Workshop |", workshop_landing_page_for(current_user), class: "navbar-brand" %>
+              <%= link_to "Continent Leads |", continent_leads_path, class: "navbar-brand" %>
               <%= link_to "Log out |", destroy_user_session_path, method: :delete, class: "navbar-brand" %>
             <% else %>
             <%= link_to "Blog |", blog_index_path, class: "navbar-brand" %>
