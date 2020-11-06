@@ -1,0 +1,30 @@
+<div class="jumbotron volunteer">
+  <div class="container ">
+    <div class="row twitter-padding">
+      <div class="col col-sm-4">
+        <div class="col">
+          <% default_profile_picture = asset_url("default-profile-picture.jpg") %>
+          <%= image_tag volunteer["profile_picture"], class: 'volunteer--profile-picture', onerror: "this.onerror=null;this.src='#{default_profile_picture}';" %>
+        </div>
+      </div>
+      <div class="col col-sm-7 justify-content-sm-center volunteer--details">
+        <div class="volunteer-name"><%= volunteer["name"] %></div>
+        <br/>
+        <%= volunteer["message"].html_safe %>
+        <br/>
+        <br/>
+         <% if volunteer["bio"].present? %>
+            Bio: <%= volunteer["bio"].html_safe %>
+         <% end %>
+      </div>
+
+      <div class="col col-sm-1 volunteer-twitter">
+        <a href="https://twitter.com/<%= volunteer["twitter"] %>" target="_blank" class="">
+          <i class="twitter"></i>
+          <span class="sr-only">Follow <%= volunteer["name"] %> on Twitter</span>
+        </a>
+        &nbsp;
+      </div>
+    </div>
+  </div>
+</div>
