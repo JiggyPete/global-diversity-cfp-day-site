@@ -1,3 +1,19 @@
+australia_and_oceania:
+  name: "Australia and Oceania"
+  ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/australia-and-oceania"
+
+asia:
+  name: "Asia"
+  ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/asia"
+
+africa:
+  name: "Africa"
+  ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/africa"
+
+europe:
+  name: "Europe"
+  ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/africa"
+
 north_america:
   name: "North America"
   start_time: "11am (ET)"
@@ -56,3 +72,7 @@ north_america:
     twitter: "sara_ann_marie"
     message: "Hey there!"
     bio: "By day Sara enjoys......"
+
+south_america:
+  name: "South America"
+  ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/south-america"
