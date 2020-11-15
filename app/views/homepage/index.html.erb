@@ -68,7 +68,9 @@
   <hr/>
 
   <div id="all-workshops">
-    <h1>Workshops</h1>
+    <h1>Online Sessions</h1>
+    <%#= render 'online-workshops' %>
+
     <%= render 'workshops', workshops: Workshop.workshops_grouped_for_homepage
     %>
   </div>

@@ -12,14 +12,14 @@
 
 <% lead = @continent["lead"] %>
 <h2><%= @continent["name"] %> Lead</h2>
-<%= render "yml_volunteer", volunteer: lead %>
+<%= render "shared/yml_volunteer", volunteer: lead %>
 
 <% hosts = @continent["hosts"] %>
 <% if hosts..present? %>
   <% hosts_title = hosts.length > 1 ? "Hosts" : "Host" %>
   <h2><%= hosts_title %></h2>
   <% hosts.each do |host| %>
-    <%= render "yml_volunteer", volunteer: host %>
+    <%= render "shared/yml_volunteer", volunteer: host %>
   <% end %>
 <% end %>
 
@@ -27,6 +27,6 @@
 <% if speakers.present? %>
   <h2>Speakers</h2>
   <% speakers.each do |speaker| %>
-    <%= render "yml_volunteer", volunteer: speaker %>
+    <%= render "shared/yml_volunteer", volunteer: speaker %>
   <% end %>
 <% end %>

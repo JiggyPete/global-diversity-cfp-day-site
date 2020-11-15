@@ -1,0 +1,12 @@
+<div class="homepage-continents">
+  <% Continents.all.each do |key, continent| %>
+    <% if continent["lead"].present? %>
+    <br/>
+      <h2 class="continent-title"><%= continent["name"] %></h2>
+      <%= link_to "Find out more", continent_path(key), class: "ticket-button btn btn-warning" %>
+      <br/>
+      <br/>
+      <%= render "shared/yml_volunteer", volunteer: continent["lead"] %>
+    <% end %>
+  <% end %>
+</div>
