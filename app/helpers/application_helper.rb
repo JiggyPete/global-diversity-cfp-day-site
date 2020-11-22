@@ -66,4 +66,10 @@ module ApplicationHelper
   def average_attendees_per_workshop
     number_of_attendees / attendee_data_supplied_by_workshops
   end
+
+  def community_partner_link(name, url, filename)
+    link_to url do
+      image_tag("community-groups/#{filename}", alt: name, class: "community-group")
+    end
+  end
 end
