@@ -1,78 +1,119 @@
 australia_and_oceania:
-  name: "Australia and Oceania"
+  name: "Australia / Oceania"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/australia-and-oceania"
+
+  lead:
+    name: "Amy Kapers"
+    profile_picture: "https://pbs.twimg.com/profile_images/1227504031301431298/Lm0Rsah4_400x400.jpg"
+    twitter: "Amys_Kapers"
+    message: ""
+    bio: ""
+
 
 asia:
   name: "Asia"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/asia"
 
+  lead:
+    name: "HJ Chen"
+    profile_picture: "https://pbs.twimg.com/profile_images/1138414735500595200/MfOU2-0K_400x400.png"
+    twitter: "hj_chen"
+    message: ""
+    bio: ""
+
+
 africa:
   name: "Africa"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/africa"
+
+  lead:
+    name: "Oliver Mensah"
+    profile_picture: "https://pbs.twimg.com/profile_images/1237246752283078657/K960GN4m_400x400.jpg"
+    twitter: "OliverMensahDev"
+    message: "Hey there!
+    <br>
+    I can't wait to welcome you all to CFP Day 2021"
+    bio: "Oliver is a Software Engineer who currently specializes in creating resilient web services. He has a working understanding of modern software engineering and always looking for better principles and practices to design software.
+Apart from his professional career, Oliver actively participates in the development of the Ghana Developer Ecosystem."
+
 
 europe:
   name: "Europe"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/africa"
 
+  lead:
+    name: "Suze Shardlow"
+    profile_picture: "https://pbs.twimg.com/profile_images/1160159491364704256/AVZpDOSg_400x400.jpg"
+    twitter: "SuzeShardlow"
+    message: ""
+    bio: ""
+
+
+
 north_america:
   name: "North America"
-  start_time: "11am (ET)"
-  end_time: "5pm (ET)"
+  # start_time: "11am (ET)"
+  # end_time: "5pm (ET)"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/north-america"
 
   lead:
     name: "Aisha Blake"
     profile_picture: "https://pbs.twimg.com/profile_images/1312184097062694912/ZBYeYZzI_400x400.jpg"
     twitter: "AishaBlake"
-    message: "Hey there!
-    <br>
-    I can't wait to welcome you all to CFP Day 2021"
-    bio: "By day Aisha enjoys......"
+    message: ""
+    bio: ""
 
-  hosts:
-  - name: "Henri Helvetica"
-    profile_picture: "https://pbs.twimg.com/profile_images/960605708202004481/MMNCgNgM_400x400.jpg"
-    twitter: "HenriHelvetica"
-    message: "Hey there!"
-    bio: "By day Henri enjoys......"
-  - name: "Raquel Vélez"
-    profile_picture: "https://pbs.twimg.com/profile_images/1270728520394665985/IG37--2e_400x400.jpg"
-    twitter: "rockbot"
-    message: "Hey there!"
-    bio: "By day Raquel enjoys......"
+  # hosts:
+  # - name: "Henri Helvetica"
+  #   profile_picture: "https://pbs.twimg.com/profile_images/960605708202004481/MMNCgNgM_400x400.jpg"
+  #   twitter: "HenriHelvetica"
+  #   message: "Hey there!"
+  #   bio: "By day Henri enjoys......"
+  # - name: "Raquel Vélez"
+  #   profile_picture: "https://pbs.twimg.com/profile_images/1270728520394665985/IG37--2e_400x400.jpg"
+  #   twitter: "rockbot"
+  #   message: "Hey there!"
+  #   bio: "By day Raquel enjoys......"
 
-  speakers:
-  - name: "Ariba Jahan"
-    profile_picture: "https://pbs.twimg.com/profile_images/1319287612465500160/3Rca1OwX_400x400.jpg"
-    twitter: "aribajahan"
-    message: "Hey there!"
-    bio: "By day Ariba enjoys......"
-  - name: "Danielle Barnes"
-    profile_picture: "https://149359630.v2.pressablecdn.com/wp-content/uploads/2018/08/Danielle-Barnes-235x235.jpg"
-    twitter: "womentalkdesign"
-    message: "Hey there!"
-    bio: "By day Danielle enjoys......"
-  - name: "Lara Hogan"
-    profile_picture: "https://pbs.twimg.com/profile_images/982267171425239040/4d8Fg864_400x400.jpg"
-    twitter: "lara_hogan"
-    message: "Hey there!"
-    bio: "By day Lara enjoys......"
-  - name: "Nitya Narasimhan"
-    profile_picture: "https://pbs.twimg.com/profile_images/1311415667053285381/ZqN7ec3U_400x400.png"
-    twitter: "nitya"
-    message: "Hey there!"
-    bio: "By day Nitya enjoys......"
-  - name: "Olivia Liddell"
-    profile_picture: "https://pbs.twimg.com/profile_images/1192088605528907776/Ra11xh4z_400x400.jpg"
-    twitter: "oliravi"
-    message: "Hey there!"
-    bio: "By day Olivia enjoys......"
-  - name: "Sara Wachter-Boettcher"
-    profile_picture: "https://pbs.twimg.com/profile_images/1289198962445094913/jFTMtxjL_400x400.jpg"
-    twitter: "sara_ann_marie"
-    message: "Hey there!"
-    bio: "By day Sara enjoys......"
+  # speakers:
+  # - name: "Ariba Jahan"
+  #   profile_picture: "https://pbs.twimg.com/profile_images/1319287612465500160/3Rca1OwX_400x400.jpg"
+  #   twitter: "aribajahan"
+  #   message: "Hey there!"
+  #   bio: "By day Ariba enjoys......"
+  # - name: "Danielle Barnes"
+  #   profile_picture: "https://149359630.v2.pressablecdn.com/wp-content/uploads/2018/08/Danielle-Barnes-235x235.jpg"
+  #   twitter: "womentalkdesign"
+  #   message: "Hey there!"
+  #   bio: "By day Danielle enjoys......"
+  # - name: "Lara Hogan"
+  #   profile_picture: "https://pbs.twimg.com/profile_images/982267171425239040/4d8Fg864_400x400.jpg"
+  #   twitter: "lara_hogan"
+  #   message: "Hey there!"
+  #   bio: "By day Lara enjoys......"
+  # - name: "Nitya Narasimhan"
+  #   profile_picture: "https://pbs.twimg.com/profile_images/1311415667053285381/ZqN7ec3U_400x400.png"
+  #   twitter: "nitya"
+  #   message: "Hey there!"
+  #   bio: "By day Nitya enjoys......"
+  # - name: "Olivia Liddell"
+  #   profile_picture: "https://pbs.twimg.com/profile_images/1192088605528907776/Ra11xh4z_400x400.jpg"
+  #   twitter: "oliravi"
+  #   message: "Hey there!"
+  #   bio: "By day Olivia enjoys......"
+  # - name: "Sara Wachter-Boettcher"
+  #   profile_picture: "https://pbs.twimg.com/profile_images/1289198962445094913/jFTMtxjL_400x400.jpg"
+  #   twitter: "sara_ann_marie"
+  #   message: "Hey there!"
+  #   bio: "By day Sara enjoys......"
 
 south_america:
   name: "South America"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/south-america"
+
+  lead:
+    name: "Elizabeth Portilla"
+    profile_picture: "https://pbs.twimg.com/profile_images/1245182655144001538/Pm5Pzb5C_400x400.jpg"
+    twitter: "lizita136"
+    message: ""
+    bio: ""
