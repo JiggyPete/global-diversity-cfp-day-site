@@ -73,7 +73,6 @@ north_america:
   #   twitter: "rockbot"
   #   message: "Hey there!"
   #   bio: "By day Raquel enjoys......"
-
   # speakers:
   # - name: "Ariba Jahan"
   #   profile_picture: "https://pbs.twimg.com/profile_images/1319287612465500160/3Rca1OwX_400x400.jpg"
@@ -105,6 +104,18 @@ north_america:
   #   twitter: "sara_ann_marie"
   #   message: "Hey there!"
   #   bio: "By day Sara enjoys......"
+    # moderators:
+    # - name: "Henri Helvetica"
+    #   profile_picture: "https://pbs.twimg.com/profile_images/960605708202004481/MMNCgNgM_400x400.jpg"
+    #   twitter: "HenriHelvetica"
+    #   message: "Hey there!"
+    #   bio: "By day Henri enjoys......"
+    # - name: "Raquel Vélez"
+    #   profile_picture: "https://pbs.twimg.com/profile_images/1270728520394665985/IG37--2e_400x400.jpg"
+    #   twitter: "rockbot"
+    #   message: "Hey there!"
+    #   bio: "By day Raquel enjoys......"
+
 
 south_america:
   name: "South America"
