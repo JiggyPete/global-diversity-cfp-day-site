@@ -1,11 +1,25 @@
 <div id="intro" class="jumbotron">
   <h1><%= @continent["name"] %></h1>
     <h2>
-      <% if @continent["start_time"].present? && @continent["end_time"].present? %>
-        <%= @continent["start_time"] %> untill <%= @continent["end_time"] %>
-      <% end %>
       Saturday January 23rd 2021
     </h2>
+
+    <% if @continent["start_times"].present? %>
+      <h3>Start time:</h3>
+      <ul>
+        <% @continent["start_times"].each do |start_time| %>
+          <li><%= start_time %></li>
+        <% end %>
+      </ul>
+    <% end%>
+    <% if @continent["end_times"].present? %>
+      <h3>End time:</h3>
+      <ul>
+        <% @continent["end_times"].each do |end_time| %>
+          <li><%= end_time %></li>
+        <% end %>
+      </ul>
+    <% end%>
 
   <%= link_to "Book your free ticket", @continent["ticketing_url"], class: "ticket-button btn btn-warning", target: "blank" %>
 </div>

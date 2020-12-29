@@ -1,6 +1,14 @@
 australia_and_oceania:
   name: "Australia / Oceania"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/australia-and-oceania"
+  start_times:
+    - "08:00 Australian Western Standard Time"
+    - "11:00 Australian Eastern Daylight Time"
+    - "13:00 New Zealand Daylight Time"
+  end_times:
+    - "14:00 Australian Western Standard Time"
+    - "17:00 Australian Eastern Daylight Time"
+    - "19:00 New Zealand Daylight Time"
 
   lead:
     name: "Amy Kapernick"
@@ -13,6 +21,14 @@ australia_and_oceania:
 asia:
   name: "Asia"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/asia"
+  start_times:
+    - "09:30 India Standard Time"
+    - "12:00 Singapore Standard Time"
+    - "13:00 Japan Standard Time"
+  end_times:
+    - "15:30 India Standard Time"
+    - "18:00 Singapore Standard Time"
+    - "19:00 Japan Standard Time"
 
   lead:
     name: "HJ Chen"
@@ -25,6 +41,12 @@ asia:
 africa:
   name: "Africa"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/africa"
+  start_times:
+    - "09:00 Greenwich Mean Time"
+    - "12:00 East Africa Time"
+  end_times:
+    - "15:00 Greenwich Mean Time"
+    - "18:00 East Africa Time"
 
   lead:
     name: "Oliver Mensah"
@@ -40,6 +62,14 @@ Apart from his professional career, Oliver actively participates in the developm
 europe:
   name: "Europe"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/europe"
+  start_times:
+    - "09:00 Greenwich Mean Time"
+    - "10:00 Central European Time"
+    - "12:00 Moscow Time"
+  end_times:
+    - "15:00 Greenwich Mean Time"
+    - "16:00 Central European Time"
+    - "18:00 Moscow Time"
 
   lead:
     name: "Suze Shardlow"
@@ -55,6 +85,14 @@ north_america:
   # start_time: "11am (ET)"
   # end_time: "5pm (ET)"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/north-america"
+  start_times:
+    - "07:00 Hawaii-Aleutian Standard Time"
+    - "09:00 Pacific Standard Time"
+    - "12:00 Eastern Standard Time"
+  end_times:
+    - "13:00 Hawaii-Aleutian Standard Time"
+    - "15:00 Pacific Standard Time"
+    - "18:00 Eastern Standard Time"
 
   lead:
     name: "Aisha Blake"
@@ -120,6 +158,15 @@ north_america:
 south_america:
   name: "South America"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/south-america"
+  start_times:
+    - "10:00 Peru Standard Time"
+    - "11:00 Bolivia Time"
+    - "12:00 Argentina Standard Time"
+  end_times:
+    - "16:00 Peru Standard Time"
+    - "17:00 Bolivia Time"
+    - "18:00 Argentina Standard Time"
+
 
   lead:
     name: "Elizabeth Portilla"
