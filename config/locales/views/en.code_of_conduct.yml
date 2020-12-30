@@ -1,0 +1,64 @@
+en:
+  code_of_conduct:
+    index:
+      title: Code of Conduct
+      description:
+        - All attendees, speakers, hosts and organisers involved in Global Diversity CFP Day are required to agree with the following code of conduct.
+        - Team members will enforce this code of conduct throughout the event.
+        - We value the diversity and inclusion of underrepresented and marginalized people in tech.
+        - Be mindful that this will likely be the most diverse group of people that you have been around and can expect to meet people from a wide range of religions, ethnicities, genders, gender identities, nationalities, sexual orientations, body sizes, physical appearance, mental abilities and physical abilities.
+        - Use this as an opportunity to respectfully interact with a diverse group of individuals in a professional and safe environment.
+        - We are all here to learn and grow. This event, being a professional and safe environment, is not the appropriate venue to question individuals on their underrepresented status.
+        - Anyone found to be behaving in any way that makes participants uncomfortable or impedes the intended goals of this event will be in violation of this Code of Conduct and will be ejected from Global Diversity CFP Day.
+        - Offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, unwelcome photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention are also considered inappropriate behaviour.
+        - If your behavior proves to be harmful to others you will have to be removed from all Global Diversity CFP Day events.
+        - If you or someone else are subjected to inappropriate behaviour or have any other concerns please follow the Reporting steps below.
+      reporting-steps:
+        title: Reporting Steps
+        description:
+          - The Global Code of Conduct Team is here to help attendees feel safe for the duration of Global Diversity CFP Day. We value your participation.
+          - If you need to report an incident please reach out to the %{cta} via email.
+      team:
+        title: Global Code of Conduct Team
+        description:
+          - The top priority for the Global CoC Team is the safety of the attendees. In our decisions we work to proritize the most vulnerable.
+          - After receiving a report we will follow this general process to deal with it.
+        process:
+          - Take the necessary steps to protect the reporter's anonymity
+          - Evaluate the report
+          - Take any required action
+          - Notify the reporter of our decision
+          - Update the issues log on CoC page if appropriate
+
+      issues:
+        title: Issue Log
+        incidents:
+          - date: January 2020
+            description:
+              - During the global event in January 2020, incidents were reported at three of our workshops where attendees displayed exclusionary behaviour
+              - In two of these instances, after discussion, the group was satisfied that the handling of the issue was sufficient. In the third, the offender was asked to leave as they had not demonstrated willingness to comply with the CoC.
+          - date: October 2019
+            description:
+              - We have received a report regarding the behaviour of one of our mentors outside of Global Diversity CFP Day.
+              - The reported behaviour is in violation of our Code of Conduct.
+              - As a result we have been in touch with the individual and they will not be participating in upcoming or future Global Diversity CFP Day events.
+          - date: March 2019
+            description:
+              - One of our mentors has been removed during a workshop for enabling exclusionary language
+              - We work hard to setup future speakers to give successful talks using inclusive language.
+              - As such, this incident demonstrated the mentors values were not inline with that of Global Diversity CFP Day and they will not participate in future events.
+          - date: February 2019
+            description:
+              - We have received reports from the community that one of our workshop organisers behaved in an inappropriate manner out with Global Diversity CFP Day.
+              - In order to maintain the safety of people from marginalised groups, this organiser will no longer be allowed to participate in any Global Diversity CFP Day events.
+          - date: January 2019
+            description:
+              - Thank you to numerous members of the community for reaching out to inform us that an individual publicly considering running a Global Diversity CFP Day workshop, would not provide the safe, inclusive environment our attendees deserve.
+              - We have been in touch with the individual and they will not be participating in any Global Diversity CFP Day events.
+          - date: September 2018
+            description:
+              - Having received a number of reports about the inappropriate behaviour of two workshop organisers, outside of Global Diversity CFP Day, they have been banned from participating in any future Global Diversity CFP Day events.
+              - Our workshop organisers are expected to be role models for attendees. Given they are in charge of attendee safety, organisers are held to the highest standard.
+              - We take your safety and trust very seriously.
+              - Our aim is to cultivate a positive, inclusive environment and it is our responsibility is to maintain this environment for everyone.
+

@@ -1,5 +1,6 @@
 en:
-  hello: "Hello world"
+  general:
+    follow_on_twitter: "Follow %{name} on Twitter"
 
   activerecord:
     models:

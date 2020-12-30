@@ -3,7 +3,7 @@
     <% if continent["lead"].present? %>
     <br/>
       <h2 class="continent-title"><%= continent["name"] %> lead by</h2>
-      <%= link_to "Book your free ticket", continent_path(key), class: "ticket-button btn btn-warning" %>
+      <%= link_to t(".cta"), continent_path(key), class: "ticket-button btn btn-warning" %>
       <br/>
       <br/>
       <%= render "shared/yml_volunteer", volunteer: continent["lead"] %>

@@ -1,77 +1,29 @@
 <section class="CodeOfConduct__Section">
-  <h1>Code of Conduct</h1>
+  <h1><%= t(".title") %></h1>
 
-  <p>
-    All attendees, speakers, hosts and organisers involved in Global Diversity CFP Day are required to agree with the following code of conduct.
-  </p>
-  <p>
-    Team members will enforce this code of conduct throughout the event.
-  </p>
-  <br/>
-  <p>
-    <b>We value the diversity and inclusion of underrepresented and marginalized people in tech.</b>
-  </p>
-  <p>
-    Be mindful that this will likely be the most diverse group of people that you have been around and can expect to meet people from a wide range of religions, ethnicities, genders, gender identities, nationalities, sexual orientations, body sizes, physical appearance, mental abilities and physical abilities.
-  </p>
-  <p>
-    Use this as an opportunity to respectfully interact with a diverse group of individuals in a professional and safe environment.
-  </p>
-
-  <p>
-    We are all here to learn and grow. This event, being a professional and safe environment, is not the appropriate venue to question individuals on their underrepresented status.
-  </p>
-  <p>
-    Anyone found to be behaving in any way that makes participants uncomfortable or impedes the intended goals of this event will be in violation of this Code of Conduct and will be ejected from Global Diversity CFP Day.
-  </p>
-
-  <p>
-    Offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, unwelcome photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention are also considered inappropriate behaviour.
-  </p>
-  <p>
-    If your behavior proves to be harmful to others you will have to be removed from all Global Diversity CFP Day events.
-  </p>
-  <p>
-    If you or someone else are subjected to inappropriate behaviour or have any other concerns please follow the Reporting steps below.
-  </p>
+  <% t(".description").each do |para| %>
+    <p><%= para %></p>
+  <% end %>
 </section>
 
 <section class="CodeOfConduct__Section">
-  <h2>Reporting Steps</h2>
-  <p>
-    The Global Code of Conduct Team is here to help attendees feel safe for the duration of Global Diversity CFP Day. We value your participation.
-  </p>
-  <p>
-    If you need to report an incident please reach out to the
-    <a class="btn btn-warning" href="mailto:coc@globaldiversitycfpday.com?Subject=Code%20of%20Conduct%20Issue&body=Location%0A%0AIssue">Global Code of Conduct Team</a> via email.
-  </p>
+  <h2><%= t(".reporting-steps.title") %></h2>
+  <% t(".reporting-steps.description", cta: '<a class="btn btn-warning" href="mailto:coc@globaldiversitycfpday.com?Subject=Code%20of%20Conduct%20Issue&body=Location%0A%0AIssue">Global Code of Conduct Team</a>').each do |para| %>
+    <p><%= raw para %></p>
+  <% end %>
 </section>
-<section class="CodeOfConduct__Section">
-<h2>Global Code of Conduct Team</h2>
-<p>
-  The top priority for the Global CoC Team is the safety of the attendees. In our decisions we work to proritize the most vulnerable.
-</p>
-<p>
-After receiving a report we will follow this general process to deal with it.
 
-<ol>
- <li>
-  Take the necessary steps to protect the reporter's anonymity
- </li>
- <li>
-  Evaluate the report
- </li>
- <li>
-  Take any required action
- </li>
- <li>
-  Notify the reporter of our decision
- </li>
- <li>
-  Update the issues log on CoC page if appropriate
- </li>
-</ol>
-</p>
+<section class="CodeOfConduct__Section">
+  <h2><%= t(".team.title") %></h2>
+  <% t(".team.description").each do |para| %>
+    <p><%= para %></p>
+  <% end %>
+
+  <ol>
+    <% t(".team.process").each do |example| %>
+      <li><%= example %></li>
+    <% end %>
+  </ol>
 
 <!-- <div class="jumbotron volunteer">
   <div class="container ">
@@ -297,71 +249,11 @@ After receiving a report we will follow this general process to deal with it.
 
 </section>
 <section class="CodeOfConduct__Section">
-<h2>Issue Log</h2>
-<div class="CodeOfConduct__Issue">
-<h3>January 2020</h3>
-  <p>
-    During the global event in January 2020, incidents were reported at three of our workshops where attendees displayed exclusionary behaviour.
-  </p>
-  <p>
-    In two of these instances, after discussion, the group was satisfied that the handling of the issue was sufficient. In the third, the offender was asked to leave as they had not demonstrated willingness to comply with the CoC.
-  </p>
-</div>
-<div class="CodeOfConduct__Issue">
-<h3>October 2019</h3>
-  <p>
-    We have received a report regarding the behaviour of one of our mentors outside of Global Diversity CFP Day.
-  </p>
-  <p>
-    The reported behaviour is in violation of our Code of Conduct.
-  </p>
-   <p>
-    As a result we have been in touch with the individual and they will not be participating in upcoming or future Global Diversity CFP Day events.
-  </p>
-</div>
-<div class="CodeOfConduct__Issue">
-  <h3>March 2019</h3>
-  <p>
-    One of our mentors has been removed during a workshop for enabling exclusionary language.
-  </p>
-  <p>
-    We work hard to setup future speakers to give successful talks using inclusive language.
-  </p>
-  <p>
-    As such, this incident demonstrated the mentors values were not inline with that of Global Diversity CFP Day and they will not participate in future events.
-  </p>
-</div>
-<div class="CodeOfConduct__Issue">
-  <h3>February 2019</h3>
-  <p>
-    We have received reports from the community that one of our workshop organisers behaved in an inappropriate manner out with Global Diversity CFP Day.
-   </p>
-  <p>
-    In order to maintain the safety of people from marginalised groups, this organiser will no longer be allowed to participate in any Global Diversity CFP Day events.
-  </p>
-</div>
-<div class="CodeOfConduct__Issue">
-  <h3>January 2019</h3>
-  <p>
-    Thank you to numerous members of the community for reaching out to inform us that an individual publicly considering running a Global Diversity CFP Day workshop, would not provide the safe, inclusive environment our attendees deserve.
-  </p>
-  <p>
-    We have been in touch with the individual and they will not be participating in any Global Diversity CFP Day events.
-  </p>
-</div>
-<div class="CodeOfConduct__Issue">
-  <h3>September 2018</h3>
-  <p>
-    Having received a number of reports about the inappropriate behaviour of two workshop organisers, outside of Global Diversity CFP Day, they have been banned from participating in any future Global Diversity CFP Day events.
-  </p>
-  <p>
-    Our workshop organisers are expected to be role models for attendees. Given they are in charge of attendee safety, organisers are held to the highest standard.
-  </p>
-  <p>
-    We take your safety and trust very seriously.
-  </p>
-  <p>
-    Our aim is to cultivate a positive, inclusive environment and it is our responsibility is to maintain this environment for everyone.
-  </p>
-</div>
+  <h2><%= t(".issues.title") %></h2>
+  <% t(".issues.incidents").each do |incident| %>
+    <h3><%= incident[:date] %></h3>
+    <% incident[:description].each do |para| %>
+      <p><%= para %></p>
+    <% end %>
+  <% end %>
 </section>

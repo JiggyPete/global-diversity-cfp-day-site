@@ -4,7 +4,7 @@
       <div class="col col-sm-4">
         <div class="col">
           <% default_profile_picture = asset_url("default-profile-picture.jpg") %>
-          <%= image_tag volunteer["profile_picture"], class: 'volunteer--profile-picture', onerror: "this.onerror=null;this.src='#{default_profile_picture}';" %>
+          <%= image_tag volunteer["profile_picture"], class: 'volunteer--profile-picture', alt: volunteer["name"], onerror: "this.onerror=null;this.src='#{default_profile_picture}';" %>
         </div>
       </div>
       <div class="col col-sm-7 justify-content-sm-center volunteer--details">
@@ -21,7 +21,7 @@
       <div class="col col-sm-1 volunteer-twitter">
         <a href="https://twitter.com/<%= volunteer["twitter"] %>" target="_blank" class="">
           <i class="twitter"></i>
-          <span class="sr-only">Follow <%= volunteer["name"] %> on Twitter</span>
+          <span class="sr-only"><%= t("general.follow_on_twitter", name: volunteer["name"]) %></span>
         </a>
         &nbsp;
       </div>
