@@ -12,6 +12,7 @@ australia_and_oceania:
 
   lead:
     name: "Amy Kapernick"
+    pronouns: "(She/Her)"
     profile_picture: "https://on.notist.cloud/profile/pr-amyskapers-large-5b47451882f976c0.jpg"
     twitter: "Amys_Kapers"
     message: ""
@@ -96,6 +97,7 @@ north_america:
 
   lead:
     name: "Aisha Blake"
+    pronouns: "(She/Her)"
     profile_picture: "https://pbs.twimg.com/profile_images/1312184097062694912/ZBYeYZzI_400x400.jpg"
     twitter: "AishaBlake"
     message: "Hi!! I've loved seeing new speakers take the stage after participating in CFP Day. I can't wait to hear what you have to say!"
@@ -170,6 +172,7 @@ south_america:
 
   lead:
     name: "Elizabeth Portilla"
+    pronouns: "(She/Her)"
     profile_picture: "https://pbs.twimg.com/profile_images/1245182655144001538/Pm5Pzb5C_400x400.jpg"
     twitter: "lizita136"
     message: ""
