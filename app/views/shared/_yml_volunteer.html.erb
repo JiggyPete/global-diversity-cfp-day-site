@@ -10,21 +10,31 @@
       <div class="col col-sm-7 justify-content-sm-center volunteer--details">
         <div class="volunteer-name"><%= volunteer["name"] %> <%= volunteer["pronouns"] %></div>
         <br/>
-        <%= volunteer["message"].html_safe %>
+        <% if volunteer["message"].present? %>
+          <%= volunteer["message"].html_safe %>
+        <% end %>
         <br/>
         <br/>
+
+         <% if volunteer["talk_title"].present? %>
+           <div class="volunteer-talk-title">
+              <%= volunteer["talk_title"].html_safe %>
+            </div>
+         <% end %>
          <% if volunteer["bio"].present? %>
             <b>Bio:</b> <%= volunteer["bio"].html_safe %>
          <% end %>
       </div>
 
-      <div class="col col-sm-1 volunteer-twitter">
-        <a href="https://twitter.com/<%= volunteer["twitter"] %>" target="_blank" class="">
-          <i class="twitter"></i>
-          <span class="sr-only"><%= t("general.follow_on_twitter", name: volunteer["name"]) %></span>
-        </a>
-        &nbsp;
-      </div>
+      <% if volunteer["twitter"].present? %>
+        <div class="col col-sm-1 volunteer-twitter">
+          <a href="https://twitter.com/<%= volunteer["twitter"] %>" target="_blank" class="">
+            <i class="twitter"></i>
+            <span class="sr-only"><%= t("general.follow_on_twitter", name: volunteer["name"]) %></span>
+          </a>
+          &nbsp;
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
