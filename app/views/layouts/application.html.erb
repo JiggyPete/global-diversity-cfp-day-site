@@ -33,6 +33,7 @@
             </label>
           </a>
           <div class="pull-right custom-nav">
+            <%= link_to "EN |", "?locale=en", class: "navbar-brand first-locale" %><%= link_to "ES ", "?locale=es", class: "navbar-brand" %>
             <%= link_to "Code of Conduct |", code_of_conduct_path, class: "navbar-brand" %>
             <% if user_signed_in? %>
               <%= link_to "Continent Leads |", continent_leads_path, class: "navbar-brand" %>

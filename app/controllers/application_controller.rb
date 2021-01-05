@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_locale
 
   include ApplicationHelper
 
@@ -22,4 +23,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:accept_invitation, keys: [:full_name, :biography, :picture_url, :run_workshop_explaination, :displayed_email, :displayed_twitter, :displayed_github])
   end
 
+  def set_locale
+    locale = I18n.default_locale
+    locale = session[:locale] if session[:locale].present?
+    locale = params[:locale] if params[:locale].present?
+
+    session[:locale] = locale
+    I18n.locale = locale
+  end
 end
