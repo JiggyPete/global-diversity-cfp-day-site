@@ -1,0 +1,63 @@
+es:
+  code_of_conduct:
+    index:
+      title: Código de Conducta
+      description:
+        - Se requiere que todas las personas asistentes, oradores, anfitriones y organizadores involucrados/as en el Día Global de Llamado a Propuestas por la Diversidad estén de acuerdo con el siguiente código de conducta.
+        - Integrantes del equipo van a hacer cumplir este código de conducta a lo largo del evento.
+        - Valoramos la diversidad e inclusión de personas subrepresentadas y marginadas en la industria de la tecnología.
+        - Ten en cuenta que éste será probablemente el grupo de personas más diverso del que has estado rodeada/o y puedes esperar conocer gente de una amplia gama de religiones, etnias, géneros, identidades de género, nacionalidades, orientación sexual, tamaños corporales, apariencia física, habilidades mentales y habilidades físicas.
+        - Usa esto como una oportunidad para interactuar de manera respetuosa con un grupo diverso de individuos en un ambiente seguro y profesional.
+        - Todas y todos estamos aquí para aprender y crecer. Este evento, siendo un ambiente seguro y profesional, no es el lugar apropiado para cuestionar a personas por su estado subrepresentado.
+        - Cualquier persona que se encuentre comportándose de cualquier manera que incomode a participantes o impida las metas previstas de este evento se encontrará en violación de este Código de Conducta y será expulsada de Día Global de Llamado a Propuestas por la Diversidad.
+        - Comentarios verbales ofensivos relacionados a género, orientación sexual, discapacidad, apariencia física, tamaño corporal, raza, religión, imágenes sexuales en espacios públicos, intimidación deliberada, acecho, seguimiento, fotografiado o video filmación no deseada, interrupción prolongada de presentaciones o eventos, contacto físico inapropiado y avances sexuales no deseados también son considerados comportamientos inapropiados.
+        - Si tu comportamiento demuestra ser dañino hacia otros/as tendrás que ser expulsado/a de todos los eventos de Día Global de Llamado a Propuestas por la Diversidad.
+        - Si tú o alguien más es sometida/o a comportamientos inapropiados o tienes alguna otra preocupación por favor sigue los Pasos para Reportar más abajo.
+      reporting-steps:
+        title: Pasos para Reportar
+        description:
+          - El equipo del Código Global de Conducta está aquí para ayudar a asistentes a sentirse seguros/as durante la duración del Día Global de Llamado a Propuestas por la Diversidad. Valoramos tu participación.
+          - Si necesitas reportar un incidente, por favor contacta al %{cta} via email.
+      team:
+        title: Equipo del Código Global de Conducta
+        description:
+          - La máxima prioridad para el Equipo del Código Global de Conducta es la seguridad de los y las asistentes. En nuestra decisiones trabajamos para priorizar a los y las más vulnerables.
+          - Tras recibir un reporte vamos a seguir este proceso general para tratar con él.
+        process:
+          - Tomar los pasos necesarios para proteger la anonimidad de quien reporta
+          - Evaluar el reporte
+          - Tomar cualquier acción requerida
+          - Notificar a quien reporta de nuestra decisión
+          - Actualizar el registro de incidentes en la página del código si es apropiado
+
+      issues:
+        title: Registro de incidentes
+        incidents:
+          - date: Enero 2020
+            description:
+              - Durante el evento global en Enero de 2020, se reportaron incidentes en tres de nuestros talleres donde asistentes demostraron comportamientos excluyentes
+              - En dos de estas instancias, tras discutirlo, el grupo estuvo conforme con la manera de manejar el incidente y consideraron que fue suficiente. En el tercero, se le pidió a la persona reportada que se retirara ya que no habíá demostrado voluntad de cumplir con el Código de Conducta.
+          - date: Octubre 2019
+            description:
+              - Hemos recibido un reporte sobre uno de nuestros mentores afuera del Día Global de Llamado a Propuestas por la Diversidad.
+              - El comportamiento reportado está en violación de nuestro Código de Conducta.
+              - Como resultado nos hemos puesto en contacto con la persona y no estarán participando en actuales o futuros eventos de Día Global de Llamado a Propuestas por la Diversidad.
+          - date: Marzo 2019
+            description:
+              - Uno de nuestros mentores ha sido retirado durante un taller por permitir lenguaje excluyente.
+              - Trabajamos duro para preparar a futuros oradores para dar presentaciones exitosas usando un lenguaje inclusivo.
+              - Como tal, este incidente demostró que los valores del mentor no estaban alineados con los de Día Global de Llamado a Propuestas por la Diversidad y no participarán en futuros eventos.
+          - date: Febrero 2019
+            description:
+              - Hemos recibido reportes de la comunidad que una persona en la organización de uno de nuestros talleres se comportó de manera inapropiada con Día Global de Llamado a Propuestas por la Diversidad.
+              - Para mantener la seguridad de las personas de grupos marginados, esta persona no tendrá permitido participar en ningún evento de Día Global de Llamado a Propuestas por la Diversidad.
+          - date: Enero 2019
+            description:
+              - Gracias a numerosas personas miembras de la comunidad por ponerse en contacto e informarnos que alguien que consideraba públicamente llevar a cabo un taller de Globa Diversity CFP Day, no proveería el ambiente seguro e inclusivo que nuestros y nuestras asistentes merecen.
+              - Hemos estado en contacto con la persona y no estarán participando de ningún evento de Día Global de Llamado a Propuestas por la Diversidad.
+          - date: Setiembre 2018
+            description:
+              - Habiendo recibido un número de reportes sobre el comportamiento inapropiado de dos personas que organizaban un taller, por fuera de Día Global de Llamado a Propuestas por la Diversidad, se les ha prohibido la participación en cualquier evento a futuro de Día Global de Llamado a Propuestas por la Diversidad.
+              - Se espera que las personas que organizan nuestros talleres sean modelos a seguir para quienes asisten. Dado que están a cargo de la seguridad de los y las asistentes, quienes organizan se miden con los más altos estándares.
+              - Nos tomamos muy en serio tu seguridad y confianza.
+              - Nuestro objetivo es cultivar un ambiente positivo, inclusivo y es nuestra responsabilidad mantener este ambiente para todos y todas.

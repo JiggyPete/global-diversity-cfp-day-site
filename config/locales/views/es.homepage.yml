@@ -1,0 +1,44 @@
+es:
+  homepage:
+    index:
+      jumbotron:
+        title: "Día Global de Llamado a Propuestas por la Diversidad"
+        sub-titles:
+          - ¿Integras un grupo subrepresentado o marginado?
+          - ¿Siempre has querido convertirte en orador/a de conferencias técnicas?
+          - ¡Que 2021 sea el año que conviertas tu sueño en realidad!
+          - Regístrate para un taller en tu región el Sábado, 23 de enero de 2021.
+        cta:
+          celebrate: "Celebra que tu presentación fue aceptada 🎉 "
+
+      cfp-description:
+        title: Llamado a propuestas
+        description:
+          - "Los eventos o conferencias que buscan oradoras/es inician un proceso con el nombre 'Llamado a propuestas' (en inglés: Call for Proposals abreviado a CFP). Esto es una invitación para cualquier persona interesada en participar de enviar su idea para una presentación o taller. Las propuestas son una idea general sobre el tema del que querrías hablar y ayuda a quienes organizan a elegir presentaciones para sus eventos."
+          - "El día global de llamado a propuestas por la diversidad (en inglés: global diversity CFP day) está aquí para ayudarte a crear tu propuesta y reducir cualquier preocupación que puedas tener a la hora de enviarla."
+
+      event-info:
+        title: Sábado, 23 de enero de 2021
+        description:
+          - El sábado 23 de enero de 2021 vamos a tener la cuarta edición del día global de llamado a propuestas por la diversidad - ¡esta vez en línea!
+          - Va a haber 6 transmisiones alrededor del mundo alentando y asesorando a principiantes en presentaciones a armar tu primera propuesta de presentación y compartir tu perspectiva individual sobre cualquier tema de interés para personas en la industria de la tecnología.
+          - "Cada transmisión tendrá oradores expertos y expertas con experiencia compartiendo su experiencia de:"
+        schedule_examples:
+          - armar una propuesta para presentación
+          - crear esa biografía tan importante
+          - planear y estructurar tu presentación
+          - dar tu presentación
+          - ¡y un montón de consejos y sugerencias!
+
+      subject-matter:
+        title: Temas
+        description: Éstas sesiones no tienen lenguaje, framework o proceso específico como foco. Aunque tu presentación no esté relacionada a la tecnología ¡queremos darte soporte también! En resumen, si hay algo que quieras gritar al mundo estamos aquí para ayudarte a llegar hasta ahí, independientemente de los límites de la tecnología o comunidades.
+
+      online-sessions:
+        title: Sesiones en línea
+        lead-by: liderada por
+
+      join-us: Han habido varios esfuerzos de alcance en diversidad en el pasado, y estamos todavía en un largo camino para alcanzar la igualdad en la industria de la tecnología. Por favor únete en 2021 para dar el primer paso hacia poner tu voz única en el escenario.
+
+    online-workshops:
+      cta: Reserva tu entrada gratuita

@@ -2,7 +2,7 @@
   <% Continents.all.each do |key, continent| %>
     <% if continent["lead"].present? %>
     <br/>
-      <h2 class="continent-title"><%= continent["name"] %> lead by</h2>
+      <h2 class="continent-title"><%= continent["name"] %> t(".online-sessions.lead-by")</h2>
       <%= link_to t(".cta"), continent_path(key), class: "ticket-button btn btn-warning" %>
       <br/>
       <br/>
