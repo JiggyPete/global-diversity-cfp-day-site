@@ -36,9 +36,10 @@ en:
 
       online-sessions:
         title: Online Sessions
-        lead-by: lead by
+        lead-by: led by
 
       join-us: There have been many diversity outreach efforts in the past, and we are still on the long journey to achieve equality in tech. Please join us in 2021 to take that first step to bring your unique voice to the stage.
 
     online-workshops:
       cta: Book your free ticket
+      led-by: led by

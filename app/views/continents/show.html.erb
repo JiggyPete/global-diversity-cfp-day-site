@@ -21,7 +21,7 @@
       </ul>
     <% end%>
 
-  <%= link_to "Book your free ticket", @continent["ticketing_url"], class: "ticket-button btn btn-warning", target: "blank" %>
+  <%= link_to t("homepage.online-workshops.cta"), @continent["ticketing_url"], class: "ticket-button btn btn-warning", target: "blank" %>
 </div>
 
 <% lead = @continent["lead"] %>
