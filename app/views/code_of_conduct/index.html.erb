@@ -8,7 +8,8 @@
 
 <section class="CodeOfConduct__Section">
   <h2><%= t(".reporting-steps.title") %></h2>
-  <% t(".reporting-steps.description", cta: '<a class="btn btn-warning" href="mailto:coc@globaldiversitycfpday.com?Subject=Code%20of%20Conduct%20Issue&body=Location%0A%0AIssue">Global Code of Conduct Team</a>').each do |para| %>
+  <% team_name = t(".team.title") %>
+  <% t(".reporting-steps.description", cta: ('<a class="btn btn-warning" href="mailto:coc@globaldiversitycfpday.com?Subject=Code%20of%20Conduct%20Issue&body=Location%0A%0AIssue">' + team_name + '</a>')).each do |para| %>
     <p><%= raw para %></p>
   <% end %>
 </section>
