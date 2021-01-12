@@ -52,3 +52,11 @@
     <%= render "shared/yml_volunteer", volunteer: moderator %>
   <% end %>
 <% end %>
+
+<% producers = @continent["producers"] %>
+<% if producers.present? %>
+  <h2>Producers</h2>
+  <% producers.each do |producer| %>
+    <%= render "shared/yml_volunteer", volunteer: producer %>
+  <% end %>
+<% end %>
