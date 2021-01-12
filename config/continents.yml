@@ -74,7 +74,6 @@ europe:
 
   lead:
     name: "Suze Shardlow"
-    pronouns: "(She/Her)"
     profile_picture: "https://pbs.twimg.com/profile_images/1160159491364704256/AVZpDOSg_400x400.jpg"
     twitter: "SuzeShardlow"
     message: ""
@@ -172,7 +171,7 @@ north_america:
   producers:
   - name: "Kurt Kemple"
     pronouns: "(He/Him)"
-    profile_picture: "https://pbs.twimg.com/profile_images/1346083581765021697/rkt0ENe4_400x400.jpg"
+    profile_picture: "/images/Kurt.png"
     twitter: "theworstdev"
 
 
