@@ -21,7 +21,7 @@ es:
         title: Sábado, 23 de enero de 2021
         description:
           - El sábado 23 de enero de 2021 vamos a tener la cuarta edición del día global de llamado a propuestas por la diversidad - ¡esta vez en línea!
-          - Va a haber 6 transmisiones alrededor del mundo alentando y asesorando a principiantes en presentaciones a armar tu primera propuesta de presentación y compartir tu perspectiva individual sobre cualquier tema de interés para personas en la industria de la tecnología.
+          - Va a haber 6 transmisiones alrededor del mundo alentándote y asesorándote como principiante en presentaciones a armar tu primera propuesta de presentación y compartir tu perspectiva individual sobre cualquier tema de interés para personas en la industria de la tecnología.
           - "Cada transmisión tendrá oradores expertos y expertas con experiencia compartiendo su experiencia de:"
         schedule_examples:
           - armar una propuesta para presentación
@@ -32,7 +32,7 @@ es:
 
       subject-matter:
         title: Temas
-        description: Éstas sesiones no tienen lenguaje, framework o proceso específico como foco. Aunque tu presentación no esté relacionada a la tecnología ¡queremos darte soporte también! En resumen, si hay algo que quieras gritar al mundo estamos aquí para ayudarte a llegar hasta ahí, independientemente de los límites de la tecnología o comunidades.
+        description: Éstas sesiones no tienen lenguaje, framework o proceso específico como foco. Aunque tu presentación no esté relacionada a la tecnología ¡queremos darte soporte también! En resumen, si hay algo que quieras gritar al mundo estamos aquí para ayudarte a llegar hasta ahí, independientemente de los límites de la tecnología o las comunidades.
 
       online-sessions:
         title: Sesiones en línea
@@ -42,3 +42,9 @@ es:
     online-workshops:
       cta: Reserva tu entrada gratuita
       led-by: liderada por
+    community-partners: Socios comunitarios
+    code-of-conduct: Código de Conducta
+    continent-leads: Líderes por Continente
+    log-in: Iniciar Sesión
+    log-out: Cerrar Sesión
+  footer: "Global Diversity CFP Day es un evento tecnológico inter-comunidades basado en los exitosos talleres realizados previo a <a href='http://scotlandcss.com' class='footer-link'>ScotlandCSS</a> y <a href='http://scotlandjs.com' class='footer-link'>ScotlandJS</a> 2016"

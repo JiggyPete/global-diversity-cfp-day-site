@@ -43,3 +43,9 @@ en:
     online-workshops:
       cta: Book your free ticket
       led-by: led by
+    community-partners: Community Partners
+    code-of-conduct: Code of Conduct
+    log-in: Log in
+    log-out: Log out
+    continent-leads: Continent Leads
+  footer: "Global Diversity CFP Day is a tech-wide cross-community event based on the successful workshops held in advance of <a href='http://scotlandcss.com' class='footer-link'>ScotlandCSS</a> and <a href='http://scotlandjs.com' class='footer-link'>ScotlandJS</a> 2016"

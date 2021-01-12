@@ -34,13 +34,13 @@
           </a>
           <div class="pull-right custom-nav">
             <%= link_to "EN |", "?locale=en", class: "navbar-brand first-locale" %><%= link_to "ES ", "?locale=es", class: "navbar-brand" %>
-            <%= link_to "Code of Conduct |", code_of_conduct_path, class: "navbar-brand" %>
+            <%= link_to "#{t('homepage.code-of-conduct')} |", code_of_conduct_path, class: "navbar-brand" %>
             <% if user_signed_in? %>
-              <%= link_to "Continent Leads |", continent_leads_path, class: "navbar-brand" %>
-              <%= link_to "Log out |", destroy_user_session_path, method: :delete, class: "navbar-brand" %>
+              <%= link_to "#{t('homepage.continent-leads')} |", continent_leads_path, class: "navbar-brand" %>
+              <%= link_to "#{t('homepage.log-out')} |", destroy_user_session_path, method: :delete, class: "navbar-brand" %>
             <% else %>
             <%= link_to "Blog |", blog_index_path, class: "navbar-brand" %>
-              <%= link_to "Log in |", new_user_session_path, class: "navbar-brand" %>&nbsp;
+              <%= link_to "#{t('homepage.log-in')} |", new_user_session_path, class: "navbar-brand" %>&nbsp;
             <% end %>
               <a href="https://twitter.com/gdcfpday" target="_blank" class="navbar-brand twitter-nav-wrapper">
                 <i class="twitter-nav"></i>
@@ -96,7 +96,7 @@
     <br/>
 
     <footer>
-      Global Diversity CFP Day is a tech-wide cross-community event based on the successful workshops held in advance of <a href="http://scotlandcss.com" class="footer-link">ScotlandCSS</a> and <a href="http://scotlandjs.com" class="footer-link">ScotlandJS</a> 2016
+      <%= t('footer').html_safe %>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
