@@ -92,8 +92,23 @@ asia:
     profile_picture: "https://pbs.twimg.com/profile_images/1138414735500595200/MfOU2-0K_400x400.png"
     twitter: "hj_chen"
     message: ""
-    bio: ""
-
+    bio: "Chen Hui Jing is a self-taught designer and developer with an inordinate love for CSS. Reducing lines of code in her web projects makes her extremely happy. She used to play basketball full-time and launched her web career during downtime between training sessions. Hui Jing is currently a web developer at Shopify."
+  speakers:
+  - name: "Shawn Wang"
+    pronouns: "(He/Him)"
+    profile_picture: "https://avatars3.githubusercontent.com/u/6764957?s=460&v=4"
+    twitter: "swyx"
+    talk_title: "Prerecording Talks for Online Conferences"
+  - name: "Seo Jiyeon"
+    pronouns: "(She/Her)"
+    profile_picture: "https://i.imgur.com/nfZBZQW.jpg"
+    twitter: "seojeee"
+    talk_title: "Quick start! for tech talk beginners"
+  - name: "Tan Li Hau"
+    pronouns: "(He/Him)"
+    profile_picture: "https://pbs.twimg.com/profile_images/1100040104754610178/kSgYjCmM_400x400.png"
+    twitter: "lihautan"
+    talk_title: "My New Year Resolution - Speak at a conference"
 
 africa:
   name: "Africa"
