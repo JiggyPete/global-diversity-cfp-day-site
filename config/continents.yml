@@ -125,6 +125,12 @@ africa:
     I can't wait to welcome you all to CFP Day 2021"
     bio: "Oliver is a Software Engineer who currently specializes in creating resilient web services. He has a working understanding of modern software engineering and always looking for better principles and practices to design software.
 Apart from his professional career, Oliver actively participates in the development of the Ghana Developer Ecosystem."
+  speakers:
+  - name: "Peter Mbanugo"
+    pronouns: "(He/Him)"
+    profile_picture: "https://pbs.twimg.com/profile_images/1104395843711451137/xAwVJnBg_400x400.png"
+    twitter: "p_mbanugo"
+    talk_title: "Picking a talk topic"
 
 
 europe:
