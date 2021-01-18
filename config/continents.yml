@@ -68,6 +68,26 @@ australia_and_oceania:
     profile_picture: "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F806d4fe1-0801-44fc-bbc8-f3dfd6b47223%2Fprofile.jpg?table=block&id=6a57a5a6-2816-4736-9c88-302e2c563f80&width=600&userId=&cache=v2"
     twitter: "williamsrabia"
     talk_title: "Panel: How to get in to conference speaking"
+  - name: "Katrina Clokie"
+    pronouns: "(She/Her)"
+    profile_picture: "https://pbs.twimg.com/profile_images/585624785302003713/IwRMMxVR_400x400.jpg"
+    twitter: "katrinaclokie"
+    talk_title: "Panel: What Makes a Good Talk Abstract"
+  - name: "Wagner Silveira"
+    pronouns: "(He/Him)"
+    profile_picture: "https://pbs.twimg.com/profile_images/873012448789282816/3PT5HR91_400x400.jpg"
+    twitter: "wsilveiranz"
+    talk_title: "Panel: Presenting as an ESL Speaker"
+  - name: "Sandy Mamoli"
+    pronouns: ""
+    profile_picture: "https://pbs.twimg.com/profile_images/891795587036700672/km-tFgSY_400x400.jpg"
+    twitter: "smamol"
+    talk_title: "Panel: So Now You're a Conference Speaker"
+  - name: "Nelly Sattari"
+    pronouns: "She/Her"
+    profile_picture: "https://pbs.twimg.com/profile_images/1282137150478143488/tz95_pRf_400x400.jpg"
+    twitter: "nelly_sattari"
+    talk_title: ""
 
 
 asia:
@@ -147,7 +167,7 @@ Apart from his professional career, Oliver actively participates in the developm
     profile_picture: "https://pbs.twimg.com/profile_images/1290585109515599872/q2e0gKAZ_400x400.png"
     twitter: "larrygify"
     talk_title: " Structuring your talk and Slide design"
-    producers:
+  producers:
   - name: "Botsyoe Edinam Lily"
     pronouns: "(She/Her)"
     profile_picture: "https://pbs.twimg.com/profile_images/1331218834641080327/0OBUbTOi_400x400.jpg"
@@ -172,9 +192,8 @@ europe:
     pronouns: "(She/Her)"
     profile_picture: "https://pbs.twimg.com/profile_images/1160159491364704256/AVZpDOSg_400x400.jpg"
     twitter: "SuzeShardlow"
-    message: ""
+    message: "Hi!  Whether you're trying to find a topic for your next tech talk, or want to submit your first conference talk proposal, we've got actionable advice for you.  I look forward to welcoming you to the first online Global Diversity CFP Day on Saturday 23rd January 2021!"
     bio: "Suze Shardlow is a software engineer, coding instructor, event MC and writer who has spoken at tech conferences and meetups in several countries.  She loves crafting and running and is currently trying to improve her 5k and 10k times."
-
 
 
 north_america:
