@@ -1,3 +1,10 @@
+<h1>Stream Tickets</h1>
+<div class="ticket-nav">
+  <% Continents.all.each do |key, continent| %>
+  <%= link_to continent["name"], continent["ticketing_url"], class: "continent-ticket btn btn-warning", target: "blank" %>
+  <% end %>
+</div>
+
 <div id="intro" class="jumbotron">
   <h1><%= t(".jumbotron.title") %></h1>
   <% t(".jumbotron.sub-titles").each do |subtitle| %>
