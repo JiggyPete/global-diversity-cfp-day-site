@@ -412,7 +412,7 @@ south_america:
   speakers:
   - name: "Leonidas Esteban"
     pronouns: "(He/his)"
-    profile_picture: "https://pbs.twimg.com/profile_images/1324801908851298314/IAhTiaPE_400x400.jpg"
+    profile_picture: "/images/Leonidas-Esteban.jpg"
     twitter: "@LeonidasEsteban"
     talk_title: "How to Secure Speaking Engagements "
   - name: "Mike Nieva"
@@ -422,7 +422,7 @@ south_america:
     talk_title: "Caring for Your Audience"
   - name: "Paulina Treviño"
     pronouns: "(She/her)"
-    profile_picture: ""
+    profile_picture: "/images/Paulina-Trevino.jpg"
     twitter: "@mebrainstorming"
     talk_title: "Working Through Anxiety"
   - name: "Lesly Zerna"
