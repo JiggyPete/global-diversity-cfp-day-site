@@ -178,6 +178,11 @@ africa:
 Apart from his professional career, Oliver actively participates in the development of the Ghana Developer Ecosystem."
 
   speakers:
+  - name: "Samuel Adranyi"
+    pronouns: "(He/Him)"
+    profile_picture: "/images/Samuel_Adranyi.png"
+    twitter: "sadranyi"
+    talk_title: "Putting Together Biography and Talk proposal"
   - name: "Lebogang Madise"
     pronouns: "(She/Her)"
     profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-a0uuJ8izRJJAYG1zkI1p36hrqLHJbI6VUQ&usqp=CAU"
@@ -203,6 +208,7 @@ Apart from his professional career, Oliver actively participates in the developm
     profile_picture: https://africa.pycon.org/static/2019/img/mannie.png
     twitter: "mawy_7"
     talk_title: "How to Secure Speaking Engagements"
+
   producers:
   - name: "Botsyoe Edinam Lily"
     pronouns: "(She/Her)"
