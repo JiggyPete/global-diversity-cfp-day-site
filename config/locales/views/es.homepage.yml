@@ -32,7 +32,7 @@ es:
 
       subject-matter:
         title: Temas
-        description: Éstas sesiones no tienen lenguaje, framework o proceso específico como foco. Aunque tu presentación no esté relacionada a la tecnología ¡queremos darte soporte también! En resumen, si hay algo que quieras gritar al mundo estamos aquí para ayudarte a llegar hasta ahí, independientemente de los límites de la tecnología o comunidades.
+        description: Éstas sesiones no tienen lenguaje, framework o proceso específico como foco. Aunque tu presentación no esté relacionada a la tecnología ¡queremos darte soporte también! En resumen, si hay algo que quieras gritar al mundo estamos aquí para ayudarte a llegar hasta ahí, independientemente de los límites de la tecnología o las comunidades.
 
       online-sessions:
         title: Sesiones en línea
@@ -42,3 +42,9 @@ es:
     online-workshops:
       cta: Reserva tu entrada gratuita
       led-by: liderada por
+    community-partners: Socios comunitarios
+    code-of-conduct: Código de Conducta
+    continent-leads: Líderes por Continente
+    log-in: Iniciar Sesión
+    log-out: Cerrar Sesión
+  footer: "Global Diversity CFP Day es un evento tecnológico inter-comunidades basado en los exitosos talleres realizados previo a <a href='http://scotlandcss.com' class='footer-link'>ScotlandCSS</a> y <a href='http://scotlandjs.com' class='footer-link'>ScotlandJS</a> 2016"
