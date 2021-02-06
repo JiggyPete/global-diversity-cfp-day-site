@@ -1,3 +1,26 @@
+.ticket-nav {
+  height: 12em;
+}
+
+@media only screen and (min-width: 650px) {
+  .ticket-nav {
+    height: 9em;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .ticket-nav {
+    height: 6em;
+  }
+}
+
+
+.continent-ticket {
+  margin-top: 1em;
+  width: 12.1em;
+  margin-right: 1%;
+}
 .homepage-continents {
   .continent-title {
     display: inline;

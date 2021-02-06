@@ -72,4 +72,10 @@ module ApplicationHelper
       image_tag("community-groups/#{filename}", alt: name, class: "community-group")
     end
   end
+
+  def sponsor_link(name, url, filename)
+    link_to url do
+      image_tag("sponsors/#{filename}", alt: name, class: "community-group")
+    end
+  end
 end

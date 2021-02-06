@@ -1,3 +1,10 @@
+<h1>Stream Tickets</h1>
+<div class="ticket-nav">
+  <% Continents.all.each do |key, continent| %>
+  <%= link_to continent["name"], continent["ticketing_url"], class: "continent-ticket btn btn-warning", target: "blank" %>
+  <% end %>
+</div>
+
 <div id="intro" class="jumbotron">
   <h1><%= t(".jumbotron.title") %></h1>
   <% t(".jumbotron.sub-titles").each do |subtitle| %>
@@ -15,6 +22,8 @@
 <% render  partial: "newest_workshops",  :locals => {:workshops => @newest_workshops} %>
 
 <% render "upcoming_talks" %>
+
+<%= render "announcement_reschedule_2021" %>
 
 <div>
   <h2><%= t(".cfp-description.title") %></h2>
@@ -60,6 +69,9 @@
 
 <div id="community-partners">
   <%= render 'community_groups' %>
+</div>
+<div id="sponsors">
+  <%= render '2021_sponsors' %>
 </div>
 
 <hr/>
