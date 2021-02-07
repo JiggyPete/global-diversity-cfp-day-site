@@ -1,0 +1,51 @@
+en:
+  homepage:
+    index:
+      jumbotron:
+        title: "global diversity CFP day"
+        sub-titles:
+          - Fazes parte dum grupo sub-representado ou marginalizado?
+          - Alguma vez sonhaste ser um orador/palestrante num evento sobre tecnologia?
+          - Então 2021 pode ser o ano que tornas o teu sonho realidade!
+          - Inscreve-te num workshop na tua região no sábado, 20 de fevereiro de 2021.
+        cta:
+          celebrate: "Celebra a tua sessão ser aceite 🎉 "
+
+      cfp-description:
+        title: Convite para apresentação de propostas - Call For Proposals (CFP)
+        description:
+          - Eventos ou conferências que procuram oradores/palestrantes iniciam um processo chamado "Call for Proposals" (convite para apresentação de propostas). Este é um convite para qualquer pessoa interessada em participar, para submeter a sua ideia para uma sessão ou workshop. As propostas são um esboço do que se pretende apresentar e ajuda os organizadores a escolher as sessões.
+          - O global diversity CFP day existe para ajudar a criar essas propostas e reduzir as dificuldades durante o processo de submissão.
+
+      event-info:
+        title: Sábado, 20 de fevereiro de 2021
+        description:
+          - No sábado, dia 20 de fevereiro de 2021 será organizada a 4ª edição do global diversity CFP day - desta vez em ambiente virtual!
+          - Haverá 6 emissões globais (uma por cada continente), para encorajar e aconselhar oradores/palestrantes novatos sobre como preparar uma proposta de sessão, para partilhar a sua perspectiva individual sobre qualquer assunto de interesse para uma audiência técnica.
+          - "Cada emissão terá oradores/palestrantes experientes a partilhar a sua experiência em:"
+        schedule_examples:
+          - preparar uma proposta de sessão
+          - criar a tão relevante biografia
+          - planear e estruturar a sessão
+          - apresentar a sessão
+          - e muito mais dicas e conselhos!
+
+      subject-matter:
+        title: Temas
+        description: Estas sessões não têm como âmbito nenhuma língua, estrutura ou processo especificamente. Mesmo que a tua sessão não seja relacionada com tecnologias, queremos ajudar-te também! Resumidamente, se há algo que queres partilhar com o mundo, estamos aqui para te ajudar a cumprir esse objectivo, independementemente de tecnologia ou comunidades.
+
+      online-sessions:
+        title: Sessões online
+        lead-by: organizada por
+
+      join-us: Têm sido feitos esforços para garantir diversidade no passado, e ainda estamos a percorrer um longo caminho para garantir igualdade nas áreas de tecnologias. Junta-te a nós em 2021 e dá o primeiro passo para subires a um palco e partilhares a tua voz única.
+
+    online-workshops:
+      cta: Reserva o teu bilhete grátis
+      led-by: organizada por
+    community-partners: Parceiros comunitários
+    code-of-conduct: Código de Conduta
+    log-in: Log in
+    log-out: Log out
+    continent-leads: Organizadores de evento continental
+  footer: "Global Diversity CFP Day é um evento multi-comunidade abrangendo toda a área de tecnologia, baseado nos workshops organizados antes dos eventos <a href='http://scotlandcss.com' class='footer-link'>ScotlandCSS</a> e <a href='http://scotlandjs.com' class='footer-link'>ScotlandJS</a> 2016"
