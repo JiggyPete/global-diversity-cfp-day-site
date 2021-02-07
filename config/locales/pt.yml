@@ -1,0 +1,84 @@
+en:
+  general:
+    follow_on_twitter: "Segue %{name} no Twitter"
+
+  activerecord:
+    models:
+      user: Utilizador
+    attributes:
+      user:
+        email: Endereço de email
+        full_name: Nome completo
+        biography: Biografia
+        picture_url: URL de fotografia de perfil quadrada
+        run_workshop_explaination: Porque queres participar num workshop?
+        displayed_email: Que endereço de email pretendes que seja apresentado no site? Será usado por participantes e potenciais voluntários para te contactar.
+        displayed_twitter: Qual é o teu utilizador no Twitter? Será mostrado no site (opcional)
+        displayed_github: Qual é o teu utilizador no GitHub? Será mostrado no site (opcional)
+      workshop:
+        public_transport_near_venue: Há paragem de transportes públicos perto do local do evento?
+        public_transport_near_venue_notes: Notas sobre a paragem de transportes públicos
+        
+        public_transport_accessible_mobility_devices: As paragens de transportes públicos são acessíveis para pessoas com problemas de mobilidade?
+        public_transport_accessible_mobility_devices_notes: Notas para pessoas com problemas de mobilidade
+
+        public_transport_accessible_service_animals: As paragens de transportes públicos são acessíveis para pessoas com cães-guia?
+        public_transport_accessible_service_animals_notes: Notas para pessoas com cães-guia
+
+        public_transport_accessible_sight_impaired:  As paragens de transportes públicos são acessíveis para pessoas invisuais?
+        public_transport_accessible_sight_impaired_notes: Notas para pessoas invisuais
+
+        area_around_venue_safe: A área perto do local do evento é segura e bem iluminada?
+        area_around_venue_safe_notes: Notas sobre segurança
+
+        parking_well_lit: O parque de estacionamento é bem iluminado?
+        parking_well_lit_notes: Notas sobre o parque de estacionamento
+
+        parking_gated: O parque de estacionamento tem acesso controlado?
+        parking_gated_notes: Notas sobre acesso ao parque de estacionamento
+
+        parking_gaurded: O parque de estacionamento é vigiado?
+        parking_gaurded_notes: Notas sobre vigilância ao parque de estacionamento
+
+        quiet_room: Há uma sala tranquila no local?
+        quiet_room_notes: Notas sobre sala tranquila
+
+        nursing_room_for_new_mothers: Há um berçário (ou outro apoio) para pais com recém-nascidos?
+        nursing_room_for_new_mothers_notes: Notas sobre berçário (ou outro apoio)
+
+        safe_for_small_children: O local do evento é seguro para crianças pequenas?
+        safe_for_small_children_notes: Notas sobre segurança para crianças pequenas
+
+        navigable_by_disabled: O local do evento pode ser facilmente usado por pessoas com problemas de mobilidade ou invisuais com cães-guia?
+        navigable_by_disabled_notes: Notas sobre utilização por pessoas com problemas de mobilidade ou invisuais com cães-guia
+
+        chairs_arms: As cadeiras no evento têm braços?
+        chairs_arms_notes: Notas sobre cadeiras
+
+        drinks_allowed: São permitidas comida e bebidas (sem álcool) no local?
+        drinks_allowed_notes: Notas sobre comida e bebidas
+
+        how_far_parking: Qual a distância do parque de estacionamento para o local do evento?
+        cost_of_parking: O estacionamento tem custos?
+        venue_security: Há vigilância no edifício?
+        venue_access_process: Qual o procedimento para entrar?
+        steps: Há degraus para entrar no edifício?
+        ramps_or_elevators: Há rampas e/ou elevadores?
+        elevators_buttons: Os botões do elevador são acessíveis por pessoas em cadeira de rodas?
+        childcare_nearby: Há serviços para cuidar de crianças a preço acessível no local ou junto ao local do evento?
+        
+        number_of_bathrooms: Quantas casas de banho (individuais ou multi-utilizador) estão disponíveis?
+        number_of_handicap_stalls: Quantas casas de banho acessíveis para cadeiras de rodas estão disponíveis?
+        number_of_gender_neutral_stalls: "Quantas casas de banho unisexo estão disponíveis?"
+  workshop:
+    continents:
+      - África
+      - Antártica
+      - Ásia
+      - "Austrália/Oceania"
+      - Europa
+      - América do Norte
+      - América do Sul
+  time:
+    formats:
+      default: "%H:%M %p"
