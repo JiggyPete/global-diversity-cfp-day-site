@@ -385,11 +385,6 @@ north_america:
     profile_picture: "/images/t.png"
     twitter: "tsripunv"
     talk_title: "Slide Design"
-  - name: "Carina C. Zona"
-    pronouns: "(She/Her)"
-    profile_picture: "https://pbs.twimg.com/profile_images/3448372624/fbfdda29ff5fcee3ff0ad60e2d3932ae_400x400.jpeg"
-    twitter: "cczona"
-    talk_title: "You The Keynoter"
   producers:
   - name: "Kurt Kemple"
     pronouns: "(He/Him)"
