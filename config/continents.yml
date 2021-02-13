@@ -18,11 +18,6 @@ australia_and_oceania:
     message: ""
     bio: "Amy is a freelance developer, who spends her time volunteering at various community events in Perth, works as an evangelist for YOW! and is a Twilio Champion and Microsoft MVP. In her spare time she blogs about tech, the web and life and speaks at various conferences all over the world."
   speakers:
-  - name: "Katrina Clokie"
-    pronouns: "(She/Her)"
-    profile_picture: "https://pbs.twimg.com/profile_images/585624785302003713/IwRMMxVR_400x400.jpg"
-    twitter: "katrinaclokie"
-    talk_title: ""
   - name: "Sonia Cuff"
     pronouns: "(She/Her)"
     profile_picture: "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F22191da2-f3a1-46a5-9cd6-48f0ad9a5f03%2FSoniaCuff_HIGHRES_Colour_DarkBack_Crop.jpg?table=block&id=aae41a31-cac8-4903-a28f-8dfd91913190&width=600&userId=&cache=v2"
