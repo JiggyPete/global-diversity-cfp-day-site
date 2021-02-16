@@ -111,13 +111,13 @@ asia:
   name: "Asia"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/asia"
   start_times:
-    - "09:30 India Standard Time"
-    - "12:00 Singapore Standard Time"
-    - "13:00 Japan Standard Time"
+    - "10:30 India Standard Time"
+    - "13:00 Singapore Standard Time"
+    - "14:00 Japan Standard Time"
   end_times:
-    - "15:30 India Standard Time"
-    - "18:00 Singapore Standard Time"
-    - "19:00 Japan Standard Time"
+    - "16:30 India Standard Time"
+    - "19:00 Singapore Standard Time"
+    - "20:00 Japan Standard Time"
 
   lead:
     name: "HJ Chen"
