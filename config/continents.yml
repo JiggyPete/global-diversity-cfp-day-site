@@ -115,9 +115,9 @@ asia:
     - "13:00 Singapore Standard Time"
     - "14:00 Japan Standard Time"
   end_times:
-    - "16:30 India Standard Time"
-    - "19:00 Singapore Standard Time"
-    - "20:00 Japan Standard Time"
+    - "16:00 India Standard Time"
+    - "18:30 Singapore Standard Time"
+    - "19:30 Japan Standard Time"
 
   lead:
     name: "HJ Chen"
