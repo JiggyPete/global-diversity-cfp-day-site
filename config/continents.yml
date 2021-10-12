@@ -43,6 +43,17 @@ australia_and_oceania:
     profile_picture: "https://pbs.twimg.com/profile_images/1222632216963899392/R6TXpcLw_400x400.jpg"
     twitter: "_rebeccajackson"
     talk_title: "Personalise your PowerPoint presentation with your own Sketches"
+    resources:
+      name: Twitter
+      url: "https://twitter.com/_rebeccajackson"
+      name: Blog
+      url: "https://rebeccajacksonblogs.wordpress.com/"
+      name: LinkedIn
+      url: "https://www.linkedin.com/in/RebeccaJLJackson"
+      name: Facebook
+      url: "https://www.facebook.com/rebeccajljackson"
+      name: Flickr
+      url: "https://flickr.com/photos/_rebeccajackson"
   - name: "Larene Le Gassick"
     pronouns: "(She/Her)"
     profile_picture: "https://pbs.twimg.com/profile_images/955384570731413504/ZFHTOLvV_400x400.jpg"
@@ -63,11 +74,17 @@ australia_and_oceania:
     profile_picture: "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3fa4f271-b90f-44e1-951f-3e305aef0157%2F44528974930_e3a328cd02_o20(2).jpg?table=block&id=1c85756f-2e24-4a68-8b60-41d5ebebe4c2&width=600&userId=&cache=v2"
     twitter: "micheleplayfair"
     talk_title: "Death by Powerpoint"
+    resources:
+      name: Slides
+      url: "https://www.slideshare.net/MicheleCross/death-by-powerpoint-243592801"
   - name: "Allison Ravenhall"
     pronouns: "(She/Her)"
     profile_picture: "/images/Allison_Ravenhall.png"
     twitter: "RavenAlly"
     talk_title: "How to present inclusively"
+    resources:
+      name: Inclusive Design For Accessible Presentations
+      url: "http://bit.ly/accessible-presentations-smashing"
   - name: "Lilly Ryan"
     pronouns: "(She/Her)"
     profile_picture: "/images/Lilly-Ryan.png"
@@ -83,6 +100,9 @@ australia_and_oceania:
     profile_picture: "https://pbs.twimg.com/profile_images/1282137150478143488/tz95_pRf_400x400.jpg"
     twitter: "nelly_sattari"
     talk_title: "Panel: Presenting as an ESL Speaker"
+    resources:
+      name: Blog Post
+      url: "https://www.nellysattari.com/challenges-of-public-speaking/"
   - name: "Wagner Silveira"
     pronouns: "(He/Him)"
     profile_picture: "https://pbs.twimg.com/profile_images/873012448789282816/3PT5HR91_400x400.jpg"
@@ -171,6 +191,11 @@ asia:
     profile_picture: "https://pbs.twimg.com/profile_images/1312313756743995393/44yymS-B_400x400.jpg"
     twitter: "tuttiq"
     talk_title: "Preparing for your talk"
+    resources:
+      name: Website
+      url: "https://tuttiq.me/"
+      name: Twitter
+      url: "https://twitter.com/tuttiq"
   - name: "Kit Valmadrid"
     pronouns: "(She/Her)"
     profile_picture: "https://i.imgur.com/UPOsaUA.jpg"
@@ -229,6 +254,11 @@ Apart from his professional career, Oliver actively participates in the developm
     profile_picture: "https://pbs.twimg.com/profile_images/1104395843711451137/xAwVJnBg_400x400.png"
     twitter: "p_mbanugo"
     talk_title: "Picking a talk topic"
+    resources:
+      name: Website
+      url: "https://www.pmbanugo.me/"
+      name: Twitter
+      url: "https://twitter.com/p_mbanugo"
   - name: "Faith Mpara"
     pronouns: "(She/Her)"
     profile_picture: "/images/Mpara_Faith.png"
@@ -294,6 +324,17 @@ europe:
     profile_picture: "https://pbs.twimg.com/profile_images/1276318426747854848/mSVK0hJd_400x400.jpg"
     twitter: "EriolDoesDesign"
     talk_title: "Caring For Your Audience"
+    resources:
+      name: Slides
+      url: "https://noti.st/eriolfox/atLHGh/caring-for-your-audience"
+      name: Twitter
+      url: "https://twitter.com/EriolDoesDesign"
+      name: LinkedIn
+      url: "https://www.linkedin.com/in/eriolfox"
+      name: GitHub
+      url: "https://github.com/EriolDoesDesign"
+      name: Medium
+      url: "https://medium.com/@EriolDoesDesign"
   - name: "Ramón Huidobro"
     pronouns: "(He/Him)"
     profile_picture: "https://pbs.twimg.com/profile_images/1360253097466019847/lMIyq6SZ_400x400.jpg"
@@ -304,6 +345,9 @@ europe:
     profile_picture: "https://pbs.twimg.com/profile_images/1222657312088825858/n1aoGRAj_400x400.jpg"
     twitter: "jayjayjpg"
     talk_title: "A World Of Opportunities"
+    resources:
+      name: Slides
+      url: "https://speakerdeck.com/jayjayjpg/a-world-of-opportunities"
   - name: "Ali King"
     pronouns: "(They/Them)"
     profile_picture: "/images/Ali-King.jpg"
@@ -319,6 +363,12 @@ europe:
     profile_picture: "/images/Nathaniel Okenwa.jpg"
     twitter: "chatterboxCoder"
     talk_title: "Let's Talk About Talks"
+    resources:
+      name: Slides
+      url: "https://speakerdeck.com/chatterboxcoder/lets-talk-about-talks"
+      name: "Book: Now You're Talking by Lyn Roseaman"
+      url: "https://www.goodreads.com/book/show/49249030-now-you-re-talking"
+
   - name: "Florence Okoye"
     pronouns: "(She/Her)"
     profile_picture: "https://pbs.twimg.com/profile_images/1004714557405835264/jQiNy4Yq_400x400.jpg"
@@ -329,8 +379,6 @@ europe:
 
 north_america:
   name: "North America"
-  # start_time: "11am (ET)"
-  # end_time: "5pm (ET)"
   ticketing_url: "https://ti.to/global-diversity-cfp-day-2021/north-america"
   start_times:
     - "07:00 Hawaii-Aleutian Standard Time"
@@ -348,23 +396,32 @@ north_america:
     twitter: "AishaBlake"
     message: "Hi!! I've loved seeing new speakers take the stage after participating in CFP Day. I can't wait to hear what you have to say!"
     bio: "Aisha is a champion of feedback, a fierce accessibility advocate, and a steward of strong teams. She's the creator of <a href='https://www.titleofconf.org/'>&lt;title of conf&gt;</a>, a musical tech conference. She also co-organizes <a href='https://selfconference.org/''>self.conference</a> and <a href='https://twitter.com/SpeakersInTech'>Detroit Speakers in Tech</a>. A theatre kid turned tech community leader, she uses speaking and teaching to help others shine as brightly as they can. In her spare time, Aisha sings karaoke and pets dogs."
-  # hosts:
-  # - name: "Henri Helvetica"
-  #   profile_picture: "https://pbs.twimg.com/profile_images/960605708202004481/MMNCgNgM_400x400.jpg"
-  #   twitter: "HenriHelvetica"
-  #   message: ""
-  #   bio: ""
-  # - name: "Raquel Vélez"
-  #   profile_picture: "https://pbs.twimg.com/profile_images/1270728520394665985/IG37--2e_400x400.jpg"
-  #   twitter: "rockbot"
-  #   message: ""
-  #   bio: ""
+
   speakers:
   - name: "Laurie Barth"
     pronouns: "(She/Her)"
     profile_picture: "https://pbs.twimg.com/profile_images/1334855286213980162/HdoG7aht_400x400.jpg"
     twitter: "laurieontech"
     talk_title: "CFP Advice & Finding a Topic"
+    resources:
+      name: Slides
+      url: "https://www.slideshare.net/LaurieBarth/finding-a-topic-243140298"
+      name: Sketchnotes
+      url: "https://twitter.com/nitya/status/1363190407555911682"
+  - name: "Aisha Blake"
+    pronouns: "(She/Her)"
+    profile_picture: "https://pbs.twimg.com/profile_images/1312184097062694912/ZBYeYZzI_400x400.jpg"
+    twitter: "AishaBlake"
+    talk_title: "Live Streaming"
+    resources:
+      name: Slides
+      url: "https://docs.google.com/presentation/d/1bjIAoU9uyssEK322i5msbKLIucY-HeHT4P0Rpq5q73A/edit?usp=sharing"
+      name: Website
+      url: "https://aisha.codes/"
+      name: Twitch
+      url: "https://www.twitch.tv/AishaCodes"
+      name: Sketchnotes
+      url: "https://twitter.com/nitya/status/1363245516302254082"
   - name: "Henri Helvetica"
     profile_picture: "/images/Henri_Helvetica.jpg"
     twitter: "HenriHelvetica"
@@ -375,6 +432,19 @@ north_america:
     twitter: "bencodezen"
     pronouns: "(He/Him)"
     talk_title: "CFP Advice & How to Prepare"
+    resources:
+      name: Slides
+      url: "https://noti.st/bencodezen/SaWKXd/how-to-prepare-for-your-talk"
+      name: Website
+      url: "https://www.bencodezen.io/"
+      name: YouTube
+      url: "https://www.youtube.com/channel/UC0cNqew5aUOzYB5XmmkriWw"
+      name: Twitch
+      url: "https://www.twitch.tv/bencodezen"
+      name: GitHub
+      url: "https://github.com/bencodezen"
+      name: Sketchnotes
+      url: "https://twitter.com/nitya/status/1363224181475803141"
   - name: "Ariba Jahan"
     profile_picture: "/images/Ariba_Jahan.jpg"
     twitter: "aribajahan"
@@ -385,11 +455,25 @@ north_america:
     profile_picture: "https://pbs.twimg.com/profile_images/1319649316965736451/-XOCbnFu_400x400.jpg"
     twitter: "techgirl1908"
     talk_title: "How to Secure Speaking Engagements"
+    resources:
+      name: Website
+      url: "https://angiejones.tech/"
+      name: Nadia Odunayo - The case of the missing method — a Ruby mystery story
+      url: "https://www.youtube.com/watch?v=wkz-B1w2GVM"
+      name: TechVoices Website
+      url: "https://techvoices.org/"
+      name: Sketchnotes
+      url: "https://twitter.com/nitya/status/1363259693972545538"
   - name: "Tatiana Mac"
     pronouns: "(She/They/Hän)"
     profile_picture: "https://pbs.twimg.com/profile_images/1329703467124813825/K8VnCIn9_400x400.jpg"
     twitter: "TatianaTMac"
     talk_title: "Caring for Your Audience"
+    resources:
+      name: Self-Defined
+      url: "https://www.selfdefined.app/"
+      name: Sketchnotes
+      url: "https://twitter.com/nitya/status/1363215249164353536"
   - name: "EJ Mason"
     pronouns: "(They/Them/Theirs)"
     profile_picture: "https://pbs.twimg.com/profile_images/1218293785748099072/aEABOOXN_400x400.jpg"
@@ -400,30 +484,31 @@ north_america:
     profile_picture: ""
     twitter: "cotufa82"
     talk_title: "Structuring a Talk"
+    resources:
+      name: Slides
+      url: "https://slides.com/superdiana/structuring-your-talk"
+      name: Website
+      url: "https://superdi.dev"
+      name: Sketchnotes
+      url: "https://twitter.com/nitya/status/1363199207985848321"
   - name: "T Sripunvoraskul"
     pronouns: "(They/Them)"
     profile_picture: "/images/t.png"
     twitter: "tsripunv"
     talk_title: "Make Better Decks"
+    resources:
+      name: Slides
+      url: "http://bit.ly/makingbetterdecks"
+      name: Website
+      url: "https://tsripunv.com/"
+      name: Sketchnotes
+      url: "https://twitter.com/nitya/status/1363230078474342400"
+
   producers:
   - name: "Kurt Kemple"
     pronouns: "(He/Him)"
     profile_picture: "/images/Kurt.png"
     twitter: "theworstdev"
-
-
-    # moderators:
-    # - name: "Henri Helvetica"
-    #   profile_picture: "https://pbs.twimg.com/profile_images/960605708202004481/MMNCgNgM_400x400.jpg"
-    #   twitter: "HenriHelvetica"
-    #   message: ""
-    #   bio: ""
-    # - name: "Raquel Vélez"
-    #   profile_picture: "https://pbs.twimg.com/profile_images/1270728520394665985/IG37--2e_400x400.jpg"
-    #   twitter: "rockbot"
-    #   message: ""
-    #   bio: ""
-
 
 south_america:
   name: "South America"
