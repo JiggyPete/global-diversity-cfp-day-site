@@ -1,0 +1,64 @@
+en:
+  code_of_conduct:
+    index:
+      title: Código de Conduta
+      description:
+        - Todos os participantes, oradores/palestrantes, anfitriões e organizadores envolvidos no Global Diversity CFP Day têm que aceitar o presente Código de Conduta.
+        - Os membros da equipa garantirão o cumprimento deste Código de Conduta durante o evento.
+        - É valorizada a diversidade e inclusão de pessoas marginalizadas ou com baixa representação na área de tecnologia.
+        - Tem em atenção que este será provavelmente o grupo mais diverso de pessoas que conhecerás, com pessoas de várias religiões, etnias, géneros, identidades de género, nacionalidades, orientações sexuais, dimensões corporais, aparências físicas, e capacidades mentais e físicas.
+        - Usa este evento como uma oportunidade de interagir com respeito com este grupo diversificado de pessoas num ambiente profissional e seguro.
+        - Estamos todos aqui para aprender e crescer. Este evento, num ambiente profissional e seguro, não é o local apropriado para questionar pessoas sobre o seu estatuto de baixa representação.
+        - Qualquer pessoa que se comporte de forma a tornar participantes desconfortáveis ou que impede os objectivos deste evento, estará em violação deste Código de Conduta, e será convidado a sair do Global Diversity CFP Day.
+        - Comentários verbais ofensivos relacionais com género, orientação sexual, deficiência, aparência física, dimensão corporal, raça ou religião, imagens sexuais em espaço público, intimidação deliberada, perseguição, fotografia ou vídeo não pretendido, disrupção de sessões ou outras actividades, contacto físico inadequado, ou atenção sexualmente explícita, são também considerados comportamentos não apropriados.
+        - Se o comportamento da pessoa for nocivo para outros será impedida de participar no presente e futuros eventos Global Diversity CFP Day.
+        - Se fores vítima ou se tomares conhecimento de alguém que tenha sido vítima de comportamentos não apropriados, ou se tiveres alguma preocupação ou receio, segue os passos para Reportar Ocorrência em baixo.
+      reporting-steps:
+        title: Passos para Reportar Ocorrência
+        description:
+          - A Equipa Global de Código de Conduta está aqui para ajudar os participantes a sentirem-se seguros durante o Global Diversity CFP Day. Agradecemos a tua participação.
+          - Se necessitares de reportar um incidente, contacta %{cta} por email.
+      team:
+        title: Equipa Global de Código de Conduta
+        description:
+          - A prioridade da Equipa Global de Código de Conduta é a segurança dos participantes. Nas decisões tomadas é valorizado quem é mais vulnerável.
+          - Após receber um relatório será seguido um processo para lidar com a ocorrência.
+        process:
+          - Tomar os passos necessários para garantir a anonimidade de quem reporta
+          - Analisar o relatório da ocorrência
+          - Actuar conforme necessário
+          - Notificar quem reportou sobre a decisão tomada
+          - Actualizar a listagem de ocorrências na página de Código de Conduta se apropriado
+
+      issues:
+        title: Listagem de ocorrências
+        incidents:
+          - date: Janeiro de 2020
+            description:
+              - Durante o evento global em janeiro de 2020, foram reportados incidentes em 3 eventos onde participantes demonstraram comportamento discriminatório.
+              - Em 2 destes eventos, após discussão, o grupo ficou satisfeito que o tratamento do incidente foi suficiente. No terceiro, o participante foi convidado a sair por não demonstrar vontade de respeitar o Código de Conduta.
+          - date: Outubro de 2019
+            description:
+              - Foi recebido um relatório relativo ao comportamente de um dos mentores do Global Diversity CFP Day.
+              - O comportamento violou o Código de Conduta.
+              - Consequentemente, a pessoa em causa foi contactada e não participará em futuros eventos Global Diversity CFP Day.
+          - date: Março de 2019
+            description:
+              - Um dos mentores foi convidado a abandonar o workshop por usar linguagem discriminatória.
+              - Há um grande esforço para garantir que futuros oradores/palestrantes apresentam sessões com linguagem inclusiva.
+              - Como tal, este incidente demonstrou que os valores dos mentores não estavam alinhados com os do Global Diversity CFP Day e não participarão em futuros eventos.
+          - date: Fevereiro de 2019
+            description:
+              - Foram recebidos relatórios da comunidade de que um dos organizadores dum workshop teve comportamentos inapropriados no Global Diversity CFP Day.
+              - Para garantir a segurança de pessoas de grupos marginalizados, este organizador não poderá participar em futuros eventos Global Diversity CFP Day.
+          - date: Janeiro de 2019
+            description:
+              - Obrigado aos vários membros da comunidade por nos contactarem para informar que alguém, que publicamente considerou organizar um evento Global Diversity CFP Day, não garantiria o ambiente seguro e inclusivo que os nossos participantes merecem.
+              - Entrámos em contacto com a pessoa em causa e não participará em eventos Global Diversity CFP Day events.
+          - date: Setembro de 2018
+            description:
+              - Tendo recebido alguns relatórios de comportamento não apropriado de dois organizadores de eventos, não relacionado com eventos Global Diversity CFP Day, foram banidos de participar em futuros eventos Global Diversity CFP Day.
+              - Existe a expectativa de que os organizadores de eventos sejam modelos de comportamento para os participantes. Considerando que são responsáveis pela segurança do evento, os organizadores deverão garantir comportamento elevado.
+              - Levamos a segurança e confiança muito a sério.
+              - O nosso objectivo é cultivar um ambiente positivo e inclusivo, e é a nossa responsabilidade manter esse nível para todos.
+
